@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dungeon Café — Clube de Assinatura de Cafés Especiais</title>
+  <meta name="description" content="Dungeon Café: clube de assinatura de cafés especiais das 5 regiões do Brasil, com jornada RPG 16 bits guiada pelos professores-mentores do IFRR Zona Oeste.">
+  <meta name="theme-color" content="#1f130b">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Texturina:opsz,wght@12..72,400;12..72,600;12..72,800&family=Pixelify+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#entrar">Pular para o login</a>
+
+  <!-- ===== Cabeçalho ===== -->
+  <header class="topbar">
+    <a class="brand" href="#topo" aria-label="Dungeon Café — início">
+      <img src="assets/img/xicara-icone.png" alt="" width="36" height="50">
+      <span class="brand__name">Dungeon <em>Café</em></span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="sr-only">Abrir menu</span>
+      <span class="nav-toggle__bar"></span>
+    </button>
+
+    <nav id="menu" class="nav" aria-label="Principal">
+      <a href="#jornada">A Jornada</a>
+      <a href="#regioes">As Regiões</a>
+      <a href="#mentores">Os Mentores</a>
+      <a href="#planos">Assinatura</a>
+      <a href="brandbook.html">Brandbook</a>
+      <a class="btn btn--small btn--gold" href="#entrar">Entrar</a>
+    </nav>
+  </header>
+
+  <main id="topo">
+    <!-- ===== Hero (banner principal) ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" role="img" aria-label="Banner em pixel art: a taverna de madeira do IFRR Campus Boa Vista Zona Oeste entre cafezais, com os cinco mentores — Ellem sentada com a guitarra-machado, Vitor com duas canecas, Vagner com o cajado, Simone ajoelhada perto do lago e Viviane cuidando de um pé de café"></div>
+
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow">Linha Mestres do Brasil · IFRR Zona Oeste</p>
+          <h1 id="hero-title">A jornada do herói <span>cafeeiro</span> começa aqui.</h1>
+          <p class="hero__lead">
+            Cafés especiais das cinco regiões do Brasil na sua porta — e cada pacote
+            vira nível, item e batalha contra os chefes do folclore brasileiro.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--gold" href="#entrar">Entrar na taverna</a>
+            <a class="btn btn--ghost" href="#planos">Ver planos</a>
+          </div>
+          <ul class="hero__stats" aria-label="Destaques">
+            <li><strong>5</strong> regiões cafeeiras</li>
+            <li><strong>10</strong> níveis de jornada</li>
+            <li><strong>2</strong> chefes lendários</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Login ===== -->
+    <section class="section section--dark taverna" aria-labelledby="taverna-title">
+      <div class="container taverna__inner">
+        <div class="taverna__copy">
+          <p class="eyebrow">Área do aventureiro</p>
+          <h2 class="section__title" id="taverna-title">Sua caneca está esperando</h2>
+          <p class="section__lead">
+            Entre com seu e-mail ou matrícula para acompanhar seu nível, ver os itens conquistados
+            e escolher o próximo café da jornada.
+          </p>
+        </div>
+
+        <!-- Cartão de login (pergaminho) -->
+        <div class="login" id="entrar">
+          <form class="login__form" id="login-form" novalidate>
+            <h3 class="login__title">Entrar na Taverna</h3>
+            <p class="login__subtitle">Identifique-se, aventureiro.</p>
+
+            <div class="field">
+              <label for="login-user">E-mail ou matrícula</label>
+              <input id="login-user" name="user" type="text" autocomplete="username" inputmode="email"
+                     placeholder="voce@ifrr.edu.br" required aria-describedby="login-user-error">
+              <p class="field__error" id="login-user-error" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="login-pass">Senha</label>
+              <div class="field__pass">
+                <input id="login-pass" name="password" type="password" autocomplete="current-password"
+                       placeholder="••••••••" required minlength="6" aria-describedby="login-pass-error">
+                <button type="button" class="field__toggle" id="toggle-pass" aria-pressed="false" aria-controls="login-pass">
+                  Mostrar
+                </button>
+              </div>
+              <p class="field__error" id="login-pass-error" aria-live="polite"></p>
+            </div>
+
+            <div class="login__row">
+              <label class="check">
+                <input type="checkbox" name="remember" id="login-remember">
+                <span>Lembrar de mim</span>
+              </label>
+              <a href="#" class="link" data-soon="Recuperação de senha">Esqueci a senha</a>
+            </div>
+
+            <button class="btn btn--gold btn--block" type="submit">
+              <span class="btn__label">Entrar</span>
+            </button>
+
+            <p class="login__footer">
+              Novo na taverna? <a href="#planos" class="link">Escolha seu plano</a>
+            </p>
+          </form>
+
+          <!-- Estado logado (preenchido via JS) -->
+          <div class="login__welcome" id="login-welcome" hidden>
+            <img src="assets/img/xicara-icone.png" alt="" width="64" height="90" class="login__cup">
+            <h3 class="login__title">Bem-vindo de volta!</h3>
+            <p class="login__subtitle">Aventureiro <strong id="welcome-name"></strong>, sua caneca está cheia.</p>
+            <div class="xp" aria-label="Progresso da jornada: nível 1 de 10">
+              <div class="xp__label"><span>Nível 1</span><span>0 / 10</span></div>
+              <div class="xp__bar"><span style="width: 4%"></span></div>
+            </div>
+            <a href="#mentores" class="btn btn--gold btn--block">Escolher mentor</a>
+            <button type="button" class="btn btn--ghost btn--block" id="logout">Sair da taverna</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Como funciona ===== -->
+    <section class="section section--dark" id="jornada" aria-labelledby="jornada-title">
+      <div class="container">
+        <p class="eyebrow">Como funciona</p>
+        <h2 class="section__title" id="jornada-title">Cada xícara é um passo da aventura</h2>
+        <p class="section__lead">
+          O Dungeon Café transforma o café do dia a dia em uma poção de foco e restauração.
+          Você assina ou compra avulso, recebe seus grãos e evolui junto com o seu mentor.
+        </p>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num">1</span>
+            <h3>Assine ou compre avulso</h3>
+            <p>Escolha um plano mensal de 2, 3 ou 4 pacotes de 250 g, em grão ou moído, ou compre um pacote avulso da região que quiser.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">2</span>
+            <h3>Receba o pacote</h3>
+            <p>Cada embalagem representa uma região cafeeira e traz um QR Code de uso único.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">3</span>
+            <h3>Suba de nível</h3>
+            <p>Escaneie o QR Code, ganhe XP e equipe itens inspirados em grãos de café torrado.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">4</span>
+            <h3>Derrote os chefes</h3>
+            <p>No nível 5 e no nível 10, enfrente lendas do folclore e ganhe recompensas reais.</p>
+          </li>
+        </ol>
+
+        <div class="bosses">
+          <article class="boss">
+            <figure class="boss__art">
+              <img src="assets/img/chefes/boitata.png" alt="Boitatá, a serpente de fogo do folclore brasileiro, em pixel art: chefe do nível 5" width="477" height="538" loading="lazy">
+            </figure>
+            <p class="boss__lvl">Nível 5 · Meio da jornada</p>
+            <h3>Boitatá, a serpente de fogo</h3>
+            <p>Vença e receba o título <strong>Guardião da Torra</strong>, um item raro em forma de grão
+              e <strong>5% de desconto</strong> na próxima compra ou mensalidade.</p>
+          </article>
+          <article class="boss boss--final">
+            <figure class="boss__art">
+              <img src="assets/img/chefes/mapinguari.png" alt="Mapinguari, o guardião da floresta, em pixel art: chefe final do nível 10" width="561" height="576" loading="lazy">
+            </figure>
+            <p class="boss__lvl">Nível 10 · Chefe final</p>
+            <h3>Mapinguari, o guardião da floresta</h3>
+            <p>Conquiste o título <strong>Lenda do Grão</strong>, entre no Hall da Fama e ganhe
+              <strong>1 pacote especial grátis</strong> + brinde colecionável.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Regiões ===== -->
+    <section class="section section--dark section--regions" id="regioes" aria-labelledby="regioes-title">
+      <div class="container">
+        <p class="eyebrow">Mapa da Jornada</p>
+        <h2 class="section__title" id="regioes-title">Cinco regiões, cinco cafés</h2>
+        <p class="section__lead">Cada pacote de 250 g é uma região cafeeira do Brasil, guardada por um mentor.</p>
+        <p class="regions__hint" aria-hidden="true">Deslize para ver as cinco regiões →</p>
+
+        <ul class="regions">
+          <li class="region" data-hero="simone">
+            <figure class="region__art">
+              <img src="assets/img/embalagens/Dungeon_Cafe_01_Norte_Roraima-01-01.png" alt="Embalagem de 250 g do Dungeon Café Região Norte, com a mentora Simone" width="448" height="811" loading="lazy">
+            </figure>
+            <h3 class="region__name"><span>Região</span> Norte</h3>
+            <p class="region__terroir"><span>Terroir</span> Roraima — Lavrado e matas roraimenses</p>
+            <p class="region__mentor">Mentora: <strong>Simone · Guerreira</strong></p>
+            <div class="region__actions">
+              <button class="btn btn--small btn--gold btn--block" type="button" data-coffee="simone" aria-haspopup="dialog">Ver café<span class="sr-only">: Região Norte</span></button>
+              <a class="btn btn--small btn--block" href="#mentores" data-goto-hero="simone">Conhecer o mentor<span class="sr-only">: Simone, Região Norte</span></a>
+            </div>
+          </li>
+
+          <li class="region" data-hero="vagner">
+            <figure class="region__art">
+              <img src="assets/img/embalagens/Dungeon_Cafe_02_CentroOeste-02-01.png" alt="Embalagem de 250 g do Dungeon Café Região Centro-Oeste, com o mentor Vagner" width="448" height="811" loading="lazy">
+            </figure>
+            <h3 class="region__name"><span>Região</span> Centro-Oeste</h3>
+            <p class="region__terroir"><span>Terroir</span> Cerrado do Planalto Central</p>
+            <p class="region__mentor">Mentor: <strong>Vagner · Mago</strong></p>
+            <div class="region__actions">
+              <button class="btn btn--small btn--gold btn--block" type="button" data-coffee="vagner" aria-haspopup="dialog">Ver café<span class="sr-only">: Região Centro-Oeste</span></button>
+              <a class="btn btn--small btn--block" href="#mentores" data-goto-hero="vagner">Conhecer o mentor<span class="sr-only">: Vagner, Região Centro-Oeste</span></a>
+            </div>
+          </li>
+
+          <li class="region" data-hero="ellem">
+            <figure class="region__art">
+              <img src="assets/img/embalagens/Dungeon_Cafe_03_Sudeste-03-01.png" alt="Embalagem de 250 g do Dungeon Café Região Sudeste, com a mentora Ellem" width="448" height="811" loading="lazy">
+            </figure>
+            <h3 class="region__name"><span>Região</span> Sudeste</h3>
+            <p class="region__terroir"><span>Terroir</span> Montanhas de Minas Gerais e Alta Mogiana</p>
+            <p class="region__mentor">Mentora: <strong>Ellem · Bárbara</strong></p>
+            <div class="region__actions">
+              <button class="btn btn--small btn--gold btn--block" type="button" data-coffee="ellem" aria-haspopup="dialog">Ver café<span class="sr-only">: Região Sudeste</span></button>
+              <a class="btn btn--small btn--block" href="#mentores" data-goto-hero="ellem">Conhecer o mentor<span class="sr-only">: Ellem, Região Sudeste</span></a>
+            </div>
+          </li>
+
+          <li class="region" data-hero="vitor">
+            <figure class="region__art">
+              <img src="assets/img/embalagens/Dungeon_Cafe_04_Nodeste-04-01.png" alt="Embalagem de 250 g do Dungeon Café Região Nordeste, com o mentor Vitor" width="448" height="811" loading="lazy">
+            </figure>
+            <h3 class="region__name"><span>Região</span> Nordeste</h3>
+            <p class="region__terroir"><span>Terroir</span> Chapada Diamantina, Bahia</p>
+            <p class="region__mentor">Mentor: <strong>Vitor · Bardo</strong></p>
+            <div class="region__actions">
+              <button class="btn btn--small btn--gold btn--block" type="button" data-coffee="vitor" aria-haspopup="dialog">Ver café<span class="sr-only">: Região Nordeste</span></button>
+              <a class="btn btn--small btn--block" href="#mentores" data-goto-hero="vitor">Conhecer o mentor<span class="sr-only">: Vitor, Região Nordeste</span></a>
+            </div>
+          </li>
+          
+          
+          <li class="region" data-hero="viviane">
+            <figure class="region__art">
+              <img src="assets/img/embalagens/Dungeon_Cafe_05_Sul-05-01.png" alt="Embalagem de 250 g do Dungeon Café Região Sul, com a mentora Viviane" width="448" height="747" loading="lazy">
+            </figure>
+            <h3 class="region__name"><span>Região</span> Sul</h3>
+            <p class="region__terroir"><span>Terroir</span> Norte Pioneiro do Paraná</p>
+            <p class="region__mentor">Mentora: <strong>Viviane · Curandeira</strong></p>
+            <div class="region__actions">
+              <button class="btn btn--small btn--gold btn--block" type="button" data-coffee="viviane" aria-haspopup="dialog">Ver café<span class="sr-only">: Região Sul</span></button>
+              <a class="btn btn--small btn--block" href="#mentores" data-goto-hero="viviane">Conhecer o mentor<span class="sr-only">: Viviane, Região Sul</span></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Detalhe do café: uma única janela, preenchida pelo main.js (objeto COFFEES) -->
+      <dialog class="coffee" id="coffee" aria-labelledby="coffee-title">
+        <div class="coffee__frame">
+          <button class="coffee__close" type="button" aria-label="Fechar">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+              <path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="3" stroke-linecap="square" fill="none"/>
+            </svg>
+          </button>
+          <figure class="coffee__pack">
+            <img id="coffee-pack" alt="" width="448" height="811">
+          </figure>
+          <div class="coffee__info">
+            <div class="coffee__head">
+              <img class="coffee__sprite" id="coffee-sprite" alt="" width="432" height="640">
+              <div>
+                <p class="eyebrow coffee__line">Linha Mestres do Brasil</p>
+                <h2 class="coffee__title" id="coffee-title"></h2>
+                <p class="coffee__mentor" id="coffee-mentor"></p>
+              </div>
+            </div>
+            <dl class="coffee__sheet" id="coffee-sheet"></dl>
+            <p class="coffee__note">Cada pacote traz um QR Code de uso único para subir de nível.</p>
+            <div class="coffee__actions">
+              <button class="btn btn--small" type="button" data-coffee-action="mentor">Conhecer o mentor</button>
+              <button class="btn btn--small btn--gold" type="button" data-coffee-action="buy">Comprar avulso · R$ 34,90</button>
+            </div>
+          </div>
+        </div>
+      </dialog>
+    </section>
+
+    <!-- ===== Mentores / Lore ===== -->
+    <section class="section section--tavern" id="mentores" aria-labelledby="mentores-title">
+      <div class="container">
+        <p class="eyebrow">Linha Mestres do Brasil</p>
+        <h2 class="section__title" id="mentores-title">Escolha seu mentor</h2>
+        <p class="section__lead">
+          Cinco mestres do IFRR Zona Oeste, transformados em heróis, guardam os segredos
+          das cinco grandes regiões cafeeiras do Brasil.
+        </p>
+
+        <div class="roster" role="tablist" aria-label="Mentores da Linha Mestres do Brasil">
+          <button class="roster__item" role="tab" id="tab-simone" aria-controls="panel-simone" aria-selected="true" data-hero="simone">
+            <img src="assets/img/heroi-simone.png" alt="" width="432" height="640" loading="lazy">
+            <span class="roster__name">Simone</span>
+            <span class="roster__region">Norte</span>
+          </button>
+          <button class="roster__item" role="tab" id="tab-vagner" aria-controls="panel-vagner" aria-selected="false" tabindex="-1" data-hero="vagner">
+            <img src="assets/img/heroi-vagner.png" alt="" width="426" height="640" loading="lazy">
+            <span class="roster__name">Vagner</span>
+            <span class="roster__region">Centro-Oeste</span>
+          </button>
+          <button class="roster__item" role="tab" id="tab-ellem" aria-controls="panel-ellem" aria-selected="false" tabindex="-1" data-hero="ellem">
+            <img src="assets/img/heroi-ellem.png" alt="" width="330" height="640" loading="lazy">
+            <span class="roster__name">Ellem</span>
+            <span class="roster__region">Sudeste</span>
+          </button>
+          <button class="roster__item" role="tab" id="tab-vitor" aria-controls="panel-vitor" aria-selected="false" tabindex="-1" data-hero="vitor">
+            <img src="assets/img/heroi-vitor.png" alt="" width="364" height="640" loading="lazy">
+            <span class="roster__name">Vitor</span>
+            <span class="roster__region">Nordeste</span>
+          </button>
+          <button class="roster__item" role="tab" id="tab-viviane" aria-controls="panel-viviane" aria-selected="false" tabindex="-1" data-hero="viviane">
+            <img src="assets/img/heroi-viviane.png" alt="" width="397" height="640" loading="lazy">
+            <span class="roster__name">Viviane</span>
+            <span class="roster__region">Sul</span>
+          </button>
+        </div>
+
+        <!-- Simone -->
+        <article class="hero-card" role="tabpanel" id="panel-simone" aria-labelledby="tab-simone" data-hero="simone">
+          <figure class="hero-card__art">
+            <img src="assets/img/heroi-simone.png" alt="Profª. Simone em pixel art: armadura prateada com detalhes dourados, capa verde e espada de ouro" width="432" height="640" loading="lazy">
+          </figure>
+          <div class="hero-card__body">
+            <p class="hero-card__class">Guerreira · Região Norte</p>
+            <h3 class="hero-card__name">Profª. Simone</h3>
+            <p class="hero-card__origin"><span>Terroir</span> Roraima — Lavrado e matas roraimenses</p>
+            <p class="hero-card__lore">
+              Primeira a erguer a espada pelo Dungeon Café, Simone protege as lavouras pioneiras do extremo
+              Norte, onde o café cresce entre o Lavrado e a floresta. Sua lição é a da coragem sustentável:
+              colher sem ferir a terra e servir, em cada xícara, a força da Amazônia.
+            </p>
+            <h4 class="spells__title">Magias</h4>
+            <ul class="spells">
+              <li class="spell">
+                <span class="spell__type">Ataque</span>
+                <strong>Lâmina do Lavrado</strong>
+                <p>Um golpe dourado que corta a névoa do sono e desperta todo o grupo para a primeira aula.</p>
+                <span class="spell__cost">Custo: 2 ☕</span>
+              </li>
+              <li class="spell">
+                <span class="spell__type">Defesa</span>
+                <strong>Escudo da Mata Viva</strong>
+                <p>Folhas de cafeeiro envolvem a guerreira e bloqueiam o cansaço durante a semana de provas.</p>
+                <span class="spell__cost">Custo: 3 ☕</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Vagner -->
+        <article class="hero-card" role="tabpanel" id="panel-vagner" aria-labelledby="tab-vagner" data-hero="vagner" hidden>
+          <figure class="hero-card__art">
+            <img src="assets/img/heroi-vagner.png" alt="Prof. Vagner em pixel art: manto rúnico vermelho e dourado, cajado com cristal azul e grimório aberto" width="426" height="640" loading="lazy">
+          </figure>
+          <div class="hero-card__body">
+            <p class="hero-card__class">Mago · Região Centro-Oeste</p>
+            <h3 class="hero-card__name">Prof. Vagner</h3>
+            <p class="hero-card__origin"><span>Terroir</span> Cerrado do Planalto Central</p>
+            <p class="hero-card__lore">
+              Guardião do grimório da torra, Vagner estuda o grão como um alquimista estuda o ouro.
+              No solo vermelho do Cerrado, ele descobriu que o tempo e o fogo certos transformam
+              uma semente verde em pura energia — e ensina essa alquimia a quem tiver paciência.
+            </p>
+            <h4 class="spells__title">Magias</h4>
+            <ul class="spells">
+              <li class="spell">
+                <span class="spell__type">Alquimia</span>
+                <strong>Alquimia da Torra</strong>
+                <p>Converte grãos verdes em grãos dourados, liberando aromas de chocolate e caramelo.</p>
+                <span class="spell__cost">Custo: 3 ☕</span>
+              </li>
+              <li class="spell">
+                <span class="spell__type">Suporte</span>
+                <strong>Runas do Cerrado</strong>
+                <p>Inscrições arcanas que ampliam a concentração do grupo por uma sessão inteira de estudos.</p>
+                <span class="spell__cost">Custo: 2 ☕</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Ellem -->
+        <article class="hero-card" role="tabpanel" id="panel-ellem" aria-labelledby="tab-ellem" data-hero="ellem" hidden>
+          <figure class="hero-card__art">
+            <img src="assets/img/heroi-ellem.png" alt="Profª. Ellem em pixel art: armadura de couro preto com cravos, botas de combate e uma guitarra em forma de machado de guerra" width="330" height="640" loading="lazy">
+          </figure>
+          <div class="hero-card__body">
+            <p class="hero-card__class">Bárbara · Região Sudeste</p>
+            <h3 class="hero-card__name">Profª. Ellem</h3>
+            <p class="hero-card__origin"><span>Terroir</span> Montanhas de Minas Gerais e Alta Mogiana</p>
+            <p class="hero-card__lore">
+              Vinda das montanhas do Sudeste, berço do ciclo histórico do café, Ellem troca o silêncio
+              da serra pelo rugido da guitarra-machado. Sua fúria é pura energia: ela ensina que
+              intensidade e paixão fazem um grão — e uma turma inteira — chegar ao ponto certo.
+            </p>
+            <h4 class="spells__title">Magias</h4>
+            <ul class="spells">
+              <li class="spell">
+                <span class="spell__type">Ataque</span>
+                <strong>Riff da Montanha</strong>
+                <p>Um golpe de guitarra-machado que estilhaça o desânimo e mói o sono em pó fino, pronto para um espresso encorpado.</p>
+                <span class="spell__cost">Custo: 3 ☕</span>
+              </li>
+              <li class="spell">
+                <span class="spell__type">Fúria</span>
+                <strong>Grito da Serra</strong>
+                <p>Um brado que ecoa pelas montanhas e restaura a moral do grupo depois de uma derrota difícil.</p>
+                <span class="spell__cost">Custo: 2 ☕</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Vitor -->
+        <article class="hero-card" role="tabpanel" id="panel-vitor" aria-labelledby="tab-vitor" data-hero="vitor" hidden>
+          <figure class="hero-card__art">
+            <img src="assets/img/heroi-vitor.png" alt="Prof. Vitor em pixel art: chapéu com pena, roupas coloridas de bardo e alaúde nas mãos" width="364" height="640" loading="lazy">
+          </figure>
+          <div class="hero-card__body">
+            <p class="hero-card__class">Bardo · Região Nordeste</p>
+            <h3 class="hero-card__name">Prof. Vitor</h3>
+            <p class="hero-card__origin"><span>Terroir</span> Chapada Diamantina, Bahia</p>
+            <p class="hero-card__lore">
+              Com o alaúde nas costas e histórias na ponta da língua, Vitor percorre a Chapada
+              Diamantina cantando os cafés especiais que brotam entre pedras e cachoeiras.
+              Cada canção sua ensina que café bom é aquele partilhado em roda, com prosa e música.
+            </p>
+            <h4 class="spells__title">Magias</h4>
+            <ul class="spells">
+              <li class="spell">
+                <span class="spell__type">Suporte</span>
+                <strong>Balada do Espresso</strong>
+                <p>Uma melodia animada que concede +foco e +ânimo a todos os aliados que a ouvem.</p>
+                <span class="spell__cost">Custo: 2 ☕</span>
+              </li>
+              <li class="spell">
+                <span class="spell__type">Controle</span>
+                <strong>Acorde da Chapada</strong>
+                <p>Um acorde que ecoa pelos vales e distrai os chefes, abrindo espaço para o ataque do grupo.</p>
+                <span class="spell__cost">Custo: 3 ☕</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Viviane -->
+        <article class="hero-card" role="tabpanel" id="panel-viviane" aria-labelledby="tab-viviane" data-hero="viviane" hidden>
+          <figure class="hero-card__art">
+            <img src="assets/img/heroi-viviane.png" alt="Profª. Viviane em pixel art: manto branco e vinho, cajado com cristal verde e poções no cinto" width="397" height="640" loading="lazy">
+          </figure>
+          <div class="hero-card__body">
+            <p class="hero-card__class">Curandeira · Região Sul</p>
+            <h3 class="hero-card__name">Profª. Viviane</h3>
+            <p class="hero-card__origin"><span>Terroir</span> Norte Pioneiro do Paraná</p>
+            <p class="hero-card__lore">
+              Mestra das poções, Viviane conhece a doçura dos cafés do Norte Pioneiro do Paraná
+              e todos os métodos de extração — do coado ao cold brew. Para ela, cada xícara é
+              um remédio para o corpo cansado e um carinho para a mente de quem estuda.
+            </p>
+            <h4 class="spells__title">Magias</h4>
+            <ul class="spells">
+              <li class="spell">
+                <span class="spell__type">Cura</span>
+                <strong>Poção do Coado Restaurador</strong>
+                <p>Um coado doce e equilibrado que recupera a energia de um aliado após a madrugada de estudos.</p>
+                <span class="spell__cost">Custo: 2 ☕</span>
+              </li>
+              <li class="spell">
+                <span class="spell__type">Cura em área</span>
+                <strong>Elixir da Extração Lenta</strong>
+                <p>Um cold brew preparado sob a lua que regenera todo o grupo aos poucos, durante o dia inteiro.</p>
+                <span class="spell__cost">Custo: 4 ☕</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Planos ===== -->
+    <section class="section section--dark" id="planos" aria-labelledby="planos-title">
+      <div class="container">
+        <p class="eyebrow">Clube de assinatura</p>
+        <h2 class="section__title" id="planos-title">Escolha sua classe de assinante</h2>
+        <p class="section__lead">Preço pensado para o orçamento estudantil. Cancele quando quiser.</p>
+
+        <div class="plans">
+          <article class="plan">
+            <h3 class="plan__name">Aprendiz</h3>
+            <p class="plan__desc">Assinatura mensal</p>
+            <p class="plan__price"><span class="plan__currency">R$</span>54<span>,90</span><small>/mês</small></p>
+            <ul class="plan__perks">
+              <li>2 pacotes de 250 g por mês</li>
+              <li>QR Code para subir de nível</li>
+              <li>Retirada gratuita no campus</li>
+            </ul>
+            <a href="#entrar" class="btn btn--ghost btn--block">Assinar agora</a>
+          </article>
+
+          <article class="plan plan--featured">
+            <p class="plan__badge">Mais escolhido</p>
+            <h3 class="plan__name">Aventureiro</h3>
+            <p class="plan__desc">Assinatura mensal</p>
+            <p class="plan__price"><span class="plan__currency">R$</span>79<span>,90</span><small>/mês</small></p>
+            <ul class="plan__perks">
+              <li>3 pacotes de 250 g por mês</li>
+              <li>Uma região nova a cada mês</li>
+              <li>Acesso às batalhas contra chefes</li>
+              <li>Retirada gratuita no campus</li>
+            </ul>
+            <a href="#entrar" class="btn btn--gold btn--block">Assinar agora</a>
+          </article>
+
+          <article class="plan">
+            <h3 class="plan__name">Herói</h3>
+            <p class="plan__desc">Assinatura mensal</p>
+            <p class="plan__price"><span class="plan__currency">R$</span>99<span>,90</span><small>/mês</small></p>
+            <ul class="plan__perks">
+              <li>4 pacotes de 250 g por mês</li>
+              <li>Uma região nova a cada mês</li>
+              <li>Acesso às batalhas contra chefes</li>
+              <li>XP em dobro na jornada</li>
+              <li>Item exclusivo de mentor</li>
+              <li>Retirada gratuita no campus ou entrega em Boa Vista</li>
+            </ul>
+            <a href="#entrar" class="btn btn--ghost btn--block">Assinar agora</a>
+          </article>
+        </div>
+
+        <article class="plan plan--single" aria-labelledby="avulsa-title">
+          <div>
+            <h3 class="plan__name" id="avulsa-title">Compra avulsa</h3>
+            <p class="plan__desc">Pacote de 250 g · sem assinatura</p>
+            <p class="plan__single-text">Prefere experimentar antes? Compre um pacote de 250 g da Linha Mestres do Brasil,
+              da região que quiser, com QR Code para subir de nível.</p>
+          </div>
+          <div class="plan__single-buy">
+            <p class="plan__price"><span class="plan__currency">R$</span>34<span>,90</span><small>/pacote</small></p>
+            <a href="#entrar" class="btn btn--gold btn--block">Comprar avulso</a>
+          </div>
+        </article>
+        <p class="plans__note">* Valores ilustrativos para o projeto de extensão.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="brand brand--footer">
+        <img src="assets/img/xicara-icone.png" alt="" width="36" height="50">
+        <span class="brand__name">Dungeon <em>Café</em></span>
+      </div>
+      <p>Projeto de Extensão 2 · Tecnológico em Design Gráfico<br>
+        IFRR — Campus Boa Vista Zona Oeste · Boa Vista, RR · 2026<br>
+        <a href="brandbook.html">Brandbook</a></p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,1031 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brandbook · Dungeon Café</title>
+<meta name="description" content="Manual de identidade visual do Dungeon Café: conceito, logotipo, cores, tipografia, mentores, embalagens e aplicações.">
+<meta name="theme-color" content="#1F130B">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Texturina:opsz,wght@12..72,400;12..72,600;12..72,800&family=Pixelify+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --masmorra:#1F130B; --masmorra-2:#2A1810; --madeira:#5A3526;
+    --ouro:#C9933B; --ouro-escuro:#9C7410; --pergaminho:#F4ECE1; --papel:#FFFAF3;
+    --latte:#E8D3B9; --tinta:#2A1810; --tinta-suave:#6B4A38;
+    --serif:'Texturina', Georgia, serif; --pixel:'Pixelify Sans', 'Courier New', monospace;
+    --max:1240px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--masmorra);color:var(--pergaminho);font-family:var(--serif);font-size:17px;line-height:1.6}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
+  .skip{position:absolute;left:-999px;top:8px;background:var(--ouro);color:var(--masmorra);padding:8px 14px;font-family:var(--pixel);z-index:20}
+  .skip:focus{left:8px}
+
+  /* Cabeçalho: cópia do cabeçalho da home (css/style.css, seção Topbar + menu até 880 px).
+     Todos os seletores começam em .topbar e os tokens ficam no próprio .topbar,
+     para não alcançar as pranchas nem o restante desta página. */
+  html{scroll-padding-top:80px}
+  .topbar{
+    --roast-900:#170d07; --roast-800:#1f130b; --roast-600:#402717;
+    --gold:#c9933b; --gold-light:#e9b25f; --gold-dark:#8f6103;
+    --parchment:#f4ece1; --latte:#e8d3b9; --shadow:#000;
+    --topbar-h:68px; --container:1160px; --font-pixel:'Pixelify Sans','Courier New',monospace;
+    position:sticky;top:0;z-index:10;height:var(--topbar-h);
+    display:flex;align-items:center;justify-content:space-between;
+    padding-inline:max(16px,calc((100% - var(--container)) / 2));
+    background:color-mix(in srgb,var(--roast-900) 72%,transparent);backdrop-filter:blur(8px);
+    border-bottom:2px solid color-mix(in srgb,var(--gold) 25%,transparent);
+    font-family:'Texturina',Georgia,serif;font-size:17px;line-height:1.6;
+  }
+  .topbar :focus-visible{outline-color:var(--gold-light)}
+  .topbar .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+  .topbar .brand img{width:30px;height:auto}
+  .topbar .brand__name{font-weight:800;font-size:1.375rem;letter-spacing:.02em;color:var(--parchment)}
+  .topbar .brand__name em{font-style:normal;color:var(--gold)}
+  .topbar .nav{display:flex;align-items:center;gap:28px}
+  .topbar .nav a:not(.btn){text-decoration:none;font-weight:600;color:var(--latte);position:relative}
+  .topbar .nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .2s ease}
+  .topbar .nav a:not(.btn):hover::after,.topbar .nav a[aria-current="page"]::after{transform:scaleX(1)}
+  .topbar .nav a[aria-current="page"]{color:var(--gold)}
+  /* .btn da home (o .btn desta página tem outro visual: aqui ele é reescrito por completo) */
+  .topbar .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:0;padding:8px 16px;
+    font-family:var(--font-pixel);font-size:.9375rem;font-weight:600;letter-spacing:.04em;text-decoration:none;
+    color:var(--roast-800);background:var(--gold);border:0;border-radius:2px;
+    box-shadow:inset 0 -4px 0 color-mix(in srgb,var(--shadow) 25%,transparent),0 4px 0 var(--gold-dark);
+    cursor:pointer;transition:transform .08s ease,filter .15s ease,box-shadow .08s ease}
+  .topbar .btn:hover{filter:brightness(1.08);transform:none}
+  .topbar .btn:active{transform:translateY(3px);box-shadow:inset 0 -2px 0 color-mix(in srgb,var(--shadow) 25%,transparent),0 1px 0 var(--gold-dark)}
+  .topbar .nav-toggle{display:none;width:44px;height:44px;background:transparent;border:0;cursor:pointer;position:relative}
+  .topbar .nav-toggle__bar,.topbar .nav-toggle__bar::before,.topbar .nav-toggle__bar::after{position:absolute;left:10px;right:10px;height:3px;background:var(--parchment);content:"";transition:transform .2s ease,background .2s ease}
+  .topbar .nav-toggle__bar{top:50%;transform:translateY(-50%)}
+  .topbar .nav-toggle__bar::before{left:0;right:0;top:-9px}
+  .topbar .nav-toggle__bar::after{left:0;right:0;top:9px}
+  .topbar .nav-toggle[aria-expanded="true"] .nav-toggle__bar{background:transparent}
+  .topbar .nav-toggle[aria-expanded="true"] .nav-toggle__bar::before{transform:translateY(9px) rotate(45deg)}
+  .topbar .nav-toggle[aria-expanded="true"] .nav-toggle__bar::after{transform:translateY(-9px) rotate(-45deg)}
+  @media (max-width:960px){ .topbar .nav{gap:18px} }
+  @media (max-width:880px){
+    .topbar .nav-toggle{display:block}
+    .topbar .nav{position:absolute;top:var(--topbar-h);left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:8px 16px 20px;background:var(--roast-900);border-bottom:2px solid color-mix(in srgb,var(--gold) 25%,transparent);display:none}
+    .topbar .nav.is-open{display:flex}
+    .topbar .nav a:not(.btn){padding:14px 4px;border-bottom:1px solid color-mix(in srgb,var(--latte) 10%,transparent)}
+    .topbar .nav a:not(.btn)::after{display:none}
+    .topbar .nav .btn{margin-top:14px}
+  }
+
+  /* Botões de jogo */
+  .btn{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:10px 18px;font-family:var(--pixel);font-weight:600;font-size:15px;letter-spacing:.5px;text-decoration:none;border:2px solid var(--ouro);border-radius:2px;transition:transform .08s, box-shadow .08s}
+  .btn--ouro{background:var(--ouro);color:var(--masmorra);box-shadow:0 4px 0 var(--ouro-escuro)}
+  .btn--linha{background:transparent;color:var(--pergaminho);box-shadow:0 4px 0 var(--madeira)}
+  .btn:hover{transform:translateY(-1px)}
+  .btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--ouro-escuro)}
+  .btn svg{width:18px;height:18px;flex-shrink:0}
+  .btn small{font-family:var(--serif);font-weight:400;font-size:13px;opacity:.85}
+
+  /* Capa do projeto (estilo Behance) */
+  .capa{max-width:var(--max);margin:0 auto;padding:56px 16px 36px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:40px;align-items:end}
+  .eyebrow{font-family:var(--pixel);font-size:14px;letter-spacing:3px;color:var(--ouro);text-transform:uppercase}
+  .capa h1{margin:10px 0 14px;font-size:clamp(2.3rem,5vw,4.2rem);line-height:1.02;font-weight:800}
+  .capa h1 span{color:var(--ouro)}
+  .capa p{margin:0;max-width:58ch;color:var(--latte);font-size:18px}
+  .acoes{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+  .ficha{border:2px solid var(--madeira);background:var(--masmorra-2);padding:20px 22px;display:grid;gap:14px;font-size:15px}
+  .ficha dt{font-family:var(--pixel);font-size:12px;letter-spacing:2px;color:var(--ouro);text-transform:uppercase}
+  .ficha dd{margin:2px 0 0;color:var(--latte)}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+  .tags span{font-family:var(--pixel);font-size:13px;padding:4px 9px;background:var(--masmorra);border:1px solid var(--madeira);color:var(--pergaminho)}
+
+  /* Projeto: pranchas empilhadas */
+  .projeto{max-width:var(--max);margin:0 auto;padding:0 16px 56px}
+  .prancha{margin:0;background:var(--masmorra-2)}
+  .prancha:not(.prancha--html) img{width:100%;height:auto}
+  .prancha + .prancha{margin-top:0}
+  .prancha--html{position:relative;aspect-ratio:1123/794;overflow:hidden}
+  .prancha--html .pg{position:absolute;top:0;left:0;width:1123px;height:794px;transform-origin:0 0;transform:scale(var(--s,1))}
+  .prancha--html .pg h2{font-family:inherit}
+  .prancha--html .pg{font-size:16px;line-height:normal}
+  .prancha--html .pg,.prancha--html .pg *{box-sizing:content-box}
+  .prancha--html .pg img{max-width:none;display:inline}
+  .respiro{background:var(--pergaminho);color:var(--tinta);padding:56px clamp(20px,8vw,120px);text-align:center}
+  .respiro .eyebrow{color:var(--tinta-suave)}
+  .respiro h2{margin:8px 0 12px;font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.1;font-weight:800}
+  .respiro p{margin:0 auto;max-width:62ch;color:var(--tinta);font-size:17px}
+  .respiro--escuro{background:var(--masmorra);color:var(--pergaminho);border-top:1px solid var(--madeira);border-bottom:1px solid var(--madeira)}
+  .respiro--escuro .eyebrow{color:var(--ouro)}
+  .respiro--escuro p{color:var(--latte)}
+
+  /* Fechamento */
+  .fim{max-width:var(--max);margin:0 auto;padding:0 16px 64px}
+  .fim__box{border:3px solid var(--ouro);padding:40px 24px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+  .fim__box img{width:60px;height:84px;object-fit:contain}
+  .fim__box h2{margin:0;font-size:clamp(1.6rem,3vw,2.3rem);font-weight:800}
+  .fim__box p{margin:0;color:var(--latte);max-width:56ch}
+  .rodape{border-top:1px solid var(--madeira);padding:22px 16px;text-align:center;font-size:14px;color:var(--latte)}
+
+  @media (max-width:860px){
+    .capa{grid-template-columns:1fr;padding-top:36px}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  .aviso-mobile{display:none}
+  @media (max-width:760px){
+    .aviso-mobile{display:block;margin:0;padding:14px 16px;background:var(--masmorra-2);border-top:1px solid var(--madeira);border-bottom:1px solid var(--madeira);color:var(--latte);font-size:15px;line-height:1.5;text-align:center}
+    .aviso-mobile a{color:var(--ouro);font-weight:700}
+    .prancha--html{cursor:zoom-in}
+  }
+  .zoom{padding:0;border:0;width:100vw;height:100dvh;max-width:none;max-height:none;margin:0;background:var(--masmorra);color:var(--pergaminho)}
+  .zoom::backdrop{background:rgb(0 0 0 / .8)}
+  .zoom__barra{position:sticky;top:0;left:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 16px;background:var(--masmorra);border-bottom:1px solid var(--madeira);font-size:14px}
+  .zoom__barra button{font:inherit;font-weight:700;background:var(--ouro);color:var(--masmorra);border:0;padding:8px 14px;cursor:pointer}
+  .zoom__area{overflow:auto;height:calc(100dvh - 56px);-webkit-overflow-scrolling:touch}
+  .zoom__box{position:relative;overflow:hidden}
+  .zoom__box .pg{position:absolute;top:0;left:0;width:1123px;height:794px;transform-origin:0 0;font-size:16px;line-height:normal}
+  .zoom__box .pg,.zoom__box .pg *{box-sizing:content-box}
+  .zoom__box .pg img{max-width:none;display:inline}
+
+  /* Ferramentas e autoria */
+  .autoria{max-width:var(--max);margin:0 auto;padding:8px 16px 64px;background:var(--masmorra);text-align:center}
+  .autoria h2{margin:8px 0 32px;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.1;font-weight:800;color:var(--pergaminho)}
+  .autoria__lista{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:32px}
+  .autoria__item{width:150px;display:flex;flex-direction:column;align-items:center;gap:4px}
+  .autoria__icone{width:72px;height:72px;margin-bottom:6px;border:3px solid var(--ouro);border-radius:50%;
+    display:grid;place-items:center;background:var(--bg);color:var(--fg);
+    font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:26px;line-height:1;letter-spacing:-.5px}
+  .autoria__icone svg{width:58%;height:58%;fill:var(--fg)}
+  .autoria__icone--ps{--bg:#001E36;--fg:#31A8FF}
+  .autoria__icone--ai{--bg:#330000;--fg:#FF9A00}
+  .autoria__icone--ff{--bg:#2B0A0A;--fg:#FF4E3A}
+  .autoria__icone--claude{--bg:#F4ECE1;--fg:#D97757}
+  .autoria__foto{object-fit:cover;background:var(--masmorra-2)}
+  .autoria__nome{font-family:var(--serif);font-weight:600;font-size:16px;line-height:1.3;color:var(--pergaminho)}
+  .autoria__papel{font-family:var(--pixel);font-size:12px;line-height:1.4;letter-spacing:1px;text-transform:uppercase;color:var(--ouro)}
+  .autoria__nota{max-width:62ch;margin:32px auto 0;font-size:14px;line-height:1.6;color:var(--latte);text-align:center}
+  @media (max-width:760px){
+    .autoria__item{width:calc((100% - 64px) / 3)}  /* 3 por linha com gap de 32 px */
+    .autoria__icone{width:60px;height:60px;font-size:22px}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#projeto">Pular para o brandbook</a>
+
+<!-- Cabeçalho igual ao da home; links de seção apontam para index.html#secao -->
+<header class="topbar">
+  <a class="brand" href="index.html" aria-label="Dungeon Café — início">
+    <img src="assets/img/xicara-icone.png" alt="" width="36" height="50">
+    <span class="brand__name">Dungeon <em>Café</em></span>
+  </a>
+
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+    <span class="sr-only">Abrir menu</span>
+    <span class="nav-toggle__bar"></span>
+  </button>
+
+  <nav id="menu" class="nav" aria-label="Principal">
+    <a href="index.html#jornada">A Jornada</a>
+    <a href="index.html#regioes">As Regiões</a>
+    <a href="index.html#mentores">Os Mentores</a>
+    <a href="index.html#planos">Assinatura</a>
+    <a href="brandbook.html" aria-current="page">Brandbook</a>
+    <a class="btn btn--small btn--gold" href="index.html#entrar">Entrar</a>
+  </nav>
+</header>
+
+<main>
+  <section class="capa" aria-labelledby="titulo">
+    <div>
+      <div class="eyebrow">Projeto de identidade visual · 2026</div>
+      <h1 id="titulo">Dungeon Café <span>Brandbook</span></h1>
+      <p>Identidade visual de um clube de cafés especiais para a comunidade do IFRR, que mistura RPG em pixel art, folclore brasileiro e as cinco regiões cafeeiras do país, com professores do campus como mentores.</p>
+      <div class="acoes">
+        <a class="btn btn--ouro" href="assets/downloads/Dungeon_Cafe_Manual_de_Identidade_Visual.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 3v12M6 10l6 6 6-6M4 21h16"/></svg>
+          Baixar PDF <small>9,1 MB</small>
+        </a>
+        <a class="btn btn--linha" href="assets/downloads/Dungeon_Cafe_Manual_de_Identidade_Visual.pptx" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 3v12M6 10l6 6 6-6M4 21h16"/></svg>
+          Baixar PowerPoint <small>4,9 MB</small>
+        </a>
+      </div>
+    </div>
+    <dl class="ficha">
+      <div><dt>Autor</dt><dd>Bruno Freitas de Souza</dd></div>
+      <div><dt>Contexto</dt><dd>Projeto de Extensão 2 · Tecnólogo em Design Gráfico · IFRR Campus Boa Vista Zona Oeste</dd></div>
+      <div><dt>Orientação</dt><dd>Prof. Vagner Martins</dd></div>
+      <div><dt>Áreas e ferramentas</dt>
+        <dd class="tags"><span>Branding</span><span>Identidade visual</span><span>Embalagem</span><span>UI</span><span>Illustrator</span><span>Photoshop</span><span>Firefly</span><span>HTML/CSS</span></dd>
+      </div>
+    </dl>
+  </section>
+
+  <p class="aviso-mobile">No celular, toque numa página para ampliar, gire a tela ou <a href="assets/downloads/Dungeon_Cafe_Manual_de_Identidade_Visual.pdf" download>baixe o PDF</a>.</p>
+  <noscript><p class="aviso-mobile" style="display:block">As páginas abaixo precisam de JavaScript para se ajustar à tela. <a href="assets/downloads/Dungeon_Cafe_Manual_de_Identidade_Visual.pdf" download>Baixe o manual em PDF</a>.</p></noscript>
+  <section class="projeto" id="projeto" aria-label="Pranchas do manual de identidade visual">
+    <figure class="prancha prancha--html" aria-label="Página 01 do manual: Capa"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 36px; background: #1F130B; font-family: 'Texturina', Georgia, serif; color: #F4ECE1;">
+<div style="height: 100%; box-sizing: border-box; border: 3px solid #C9933B; outline: 2px solid #5A3526; outline-offset: -12px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 48px 56px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 4px; color: #C9933B;">LINHA MESTRES DO BRASIL · IFRR ZONA OESTE</div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 14px;">
+<img src="assets/img/xicara.png" alt="Símbolo do Dungeon Café: xícara de café em pixel art" style="width: 168px; height: 235px; object-fit: contain;">
+<h2 style="margin: 0; font-weight: 800; font-size: 88px; line-height: 1; letter-spacing: 3px;">DUNGEON CAFÉ</h2>
+<div style="width: 360px; height: 3px; background: #C9933B; margin-top: 10px;"></div>
+<div style="font-weight: 600; font-size: 32px; color: #E8D3B9; margin-top: 4px;">Manual de Identidade Visual</div>
+</div>
+<div style="display: flex; justify-content: space-between; width: 100%; font-size: 14px; color: #E8D3B9;">
+<span>Bruno Freitas de Souza</span>
+<span>Projeto de Extensão 2 · Tecnólogo em Design Gráfico · IFRR · 2026</span>
+<span>Versão 1.0</span>
+</div>
+</div>
+</div></div></figure>
+
+    <div class="respiro">
+      <div class="eyebrow">01 · Conceito</div>
+      <h2>Café, RPG e folclore</h2>
+      <p>Cada xícara é uma poção de foco e cada pacote, um nível conquistado. A marca nasce da taverna dos RPGs e guia o estudante pelas cinco regiões cafeeiras do Brasil.</p>
+    </div>
+    <figure class="prancha prancha--html" aria-label="Página 02 do manual: Conceito criativo"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 44px 56px; background: #F4ECE1; color: #2A1810; font-family: 'Texturina', Georgia, serif; display: flex; flex-direction: column; gap: 22px;">
+<div style="display: flex; justify-content: space-between; font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">
+<span>DUNGEON CAFÉ · MANUAL DE IDENTIDADE VISUAL</span><span>02</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 3px; color: #6B4A38;">01 · CONCEITO CRIATIVO</div>
+<h2 style="margin: 0; font-size: 48px; font-weight: 800; line-height: 1.05;">A jornada do herói cafeeiro</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; flex-grow: 1;">
+<div style="display: flex; flex-direction: column; gap: 14px; font-size: 16px; line-height: 1.55;">
+<p style="margin: 0;">O Dungeon Café é um clube de cafés especiais para a comunidade acadêmica do IFRR. A marca une duas paixões da juventude universitária, os cafés especiais brasileiros e o universo dos jogos de RPG, e transforma as pausas entre aulas em uma jornada: cada xícara é uma poção de foco, cada pacote é um nível conquistado.</p>
+<p style="margin: 0;">O nome vem da <i>dungeon</i>, a masmorra dos RPGs, espaço de desafio e descoberta. A taverna, onde os aventureiros se reúnem antes de cada missão, dá o tom acolhedor da comunicação. Os mentores, inspirados em professores do campus, guiam o assinante pelas cinco regiões cafeeiras do país, e os chefes vêm do folclore brasileiro.</p>
+<div style="border: 2px solid #2A1810; padding: 14px 18px; background: #FFFAF3;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38; margin-bottom: 6px;">MISSÃO</div>
+<div style="font-size: 16px; line-height: 1.5;">Democratizar o café de especialidade brasileiro para o público jovem e universitário, por meio de uma experiência gamificada que valoriza a cafeicultura nacional, celebra o folclore e recompensa a curiosidade.</div>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-content: start;">
+<div style="border-top: 3px solid #2A1810; padding-top: 10px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">PROBLEMA</div>
+<div style="font-size: 15px; line-height: 1.5; margin-top: 6px;">Rotina exaustiva de estudos e café especial visto como caro e distante do estudante.</div>
+</div>
+<div style="border-top: 3px solid #2A1810; padding-top: 10px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">PÚBLICO</div>
+<div style="font-size: 15px; line-height: 1.5; margin-top: 6px;">Comunidade do IFRR, 18 a 34 anos, classes B2 a C2, conectada à cultura pop, aos jogos e ao colecionismo.</div>
+</div>
+<div style="border-top: 3px solid #2A1810; padding-top: 10px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">POSICIONAMENTO</div>
+<div style="font-size: 15px; line-height: 1.5; margin-top: 6px;">Popular, artesanal, jovem e lúdico: café especial acessível, com narrativa de RPG e repertório brasileiro.</div>
+</div>
+<div style="border-top: 3px solid #2A1810; padding-top: 10px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">DIFERENCIAL</div>
+<div style="font-size: 15px; line-height: 1.5; margin-top: 6px;">Educar o paladar pela gamificação: cada café conta a história de um terroir, guiado por um mentor do campus.</div>
+</div>
+<div style="grid-column: 1 / span 2; border-top: 3px solid #2A1810; padding-top: 10px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38; margin-bottom: 10px;">PALAVRAS-CHAVE</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; font-family: 'Pixelify Sans', monospace; font-size: 15px;">
+<span style="background: #1F130B; color: #F4ECE1; padding: 6px 12px;">Aventura</span>
+<span style="background: #1F130B; color: #F4ECE1; padding: 6px 12px;">Alquimia</span>
+<span style="background: #1F130B; color: #F4ECE1; padding: 6px 12px;">Origem</span>
+<span style="background: #1F130B; color: #F4ECE1; padding: 6px 12px;">Comunidade</span>
+<span style="background: #1F130B; color: #F4ECE1; padding: 6px 12px;">Energia</span>
+</div>
+</div>
+</div>
+</div>
+</div></div></figure>
+    <figure class="prancha prancha--html" aria-label="Página 03 do manual: Arquitetura e narrativa"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 44px 56px; background: #1F130B; color: #F4ECE1; font-family: 'Texturina', Georgia, serif; display: flex; flex-direction: column; gap: 22px;">
+<div style="display: flex; justify-content: space-between; font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">
+<span>DUNGEON CAFÉ · MANUAL DE IDENTIDADE VISUAL</span><span>03</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 3px; color: #C9933B;">02 · ARQUITETURA E NARRATIVA</div>
+<h2 style="margin: 0; font-size: 44px; font-weight: 800; line-height: 1.05;">Uma marca, três níveis</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; flex-grow: 1;">
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<div style="border: 3px solid #C9933B; padding: 16px 20px; background: #2A1810;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">NÍVEL 1 · MARCA E PLATAFORMA</div>
+<div style="font-size: 28px; font-weight: 800; margin-top: 4px;">Dungeon Café</div>
+<div style="font-size: 15px; color: #E8D3B9; margin-top: 4px; line-height: 1.45;">Nome da empresa, do clube e da plataforma web.</div>
+</div>
+<div style="border: 3px solid #8A6A3A; padding: 16px 20px; margin-left: 32px; background: #2A1810;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">NÍVEL 2 · PRODUTO</div>
+<div style="font-size: 26px; font-weight: 800; margin-top: 4px;">Linha Mestres do Brasil</div>
+<div style="font-size: 15px; color: #E8D3B9; margin-top: 4px; line-height: 1.45;">Os cinco cafés de 250 g, um por região, cada um guiado por um mentor. Os "mestres" são sempre os professores.</div>
+</div>
+<div style="border: 3px solid #5A3526; padding: 16px 20px; margin-left: 64px; background: #2A1810;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">NÍVEL 3 · PLANOS DO ASSINANTE</div>
+<div style="font-size: 24px; font-weight: 800; margin-top: 4px;">Aprendiz · Aventureiro · Herói</div>
+<div style="font-size: 15px; color: #E8D3B9; margin-top: 4px; line-height: 1.45;">O plano nomeia o estágio do assinante na jornada. Há também a compra avulsa.</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">VOCABULÁRIO DA MARCA</div>
+<div style="display: grid; grid-template-columns: 170px minmax(0, 1fr); row-gap: 0; font-size: 15px; line-height: 1.4;">
+<div style="padding: 9px 0; border-bottom: 1px solid #5A3526; font-weight: 600;">Taverna</div><div style="padding: 9px 0; border-bottom: 1px solid #5A3526; color: #E8D3B9;">Área de acesso e comunidade</div>
+<div style="padding: 9px 0; border-bottom: 1px solid #5A3526; font-weight: 600;">Aventureiro</div><div style="padding: 9px 0; border-bottom: 1px solid #5A3526; color: #E8D3B9;">Forma de tratar o assinante</div>
+<div style="padding: 9px 0; border-bottom: 1px solid #5A3526; font-weight: 600;">Poção</div><div style="padding: 9px 0; border-bottom: 1px solid #5A3526; color: #E8D3B9;">O café, fonte de foco e restauração</div>
+<div style="padding: 9px 0; border-bottom: 1px solid #5A3526; font-weight: 600;">Mentor</div><div style="padding: 9px 0; border-bottom: 1px solid #5A3526; color: #E8D3B9;">Professor que guia cada região</div>
+<div style="padding: 9px 0; border-bottom: 1px solid #5A3526; font-weight: 600;">Terroir</div><div style="padding: 9px 0; border-bottom: 1px solid #5A3526; color: #E8D3B9;">Origem de cada café</div>
+<div style="padding: 9px 0; border-bottom: 1px solid #5A3526; font-weight: 600;">XP e níveis</div><div style="padding: 9px 0; border-bottom: 1px solid #5A3526; color: #E8D3B9;">Cada pacote escaneado vale um nível (1 a 10)</div>
+<div style="padding: 9px 0; border-bottom: 1px solid #5A3526; font-weight: 600;">Chefes</div><div style="padding: 9px 0; border-bottom: 1px solid #5A3526; color: #E8D3B9;">Boitatá (nível 5) e Mapinguari (nível 10)</div>
+<div style="padding: 9px 0; font-weight: 600;">Lenda do Grão</div><div style="padding: 9px 0; color: #E8D3B9;">Título de quem vence o chefe final</div>
+</div>
+<div style="font-size: 14px; color: #E8D3B9; line-height: 1.5; margin-top: 6px;">Tom de voz: acolhedor como uma taverna e animado como o início de uma aventura. Evitar jargão técnico de café sem explicação e linguagem comercial fria.</div>
+</div>
+</div>
+</div></div></figure>
+
+    <div class="respiro respiro--escuro">
+      <div class="eyebrow">02 · Logotipo</div>
+      <h2>Uma xícara em pixel art</h2>
+      <p>O símbolo, redesenhado a partir de uma xícara real, sobre o nome em Texturina. Versões, grid de construção, área de proteção e usos incorretos.</p>
+    </div>
+    <figure class="prancha prancha--html" aria-label="Página 04 do manual: Logotipo"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 44px 56px; background: #F4ECE1; color: #2A1810; font-family: 'Texturina', Georgia, serif; display: flex; flex-direction: column; gap: 22px;">
+<div style="display: flex; justify-content: space-between; font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">
+<span>DUNGEON CAFÉ · MANUAL DE IDENTIDADE VISUAL</span><span>04</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 3px; color: #6B4A38;">03 · LOGOTIPO</div>
+<h2 style="margin: 0; font-size: 44px; font-weight: 800; line-height: 1.05;">Versão principal</h2>
+</div>
+<div style="display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 40px; flex-grow: 1;">
+<div style="border: 3px solid #2A1810; background: #FFFAF3; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;">
+<img loading="lazy" src="assets/img/xicara.png" alt="Símbolo: xícara de café em pixel art com vapor" style="width: 150px; height: 210px; object-fit: contain;">
+<div style="font-weight: 800; font-size: 56px; letter-spacing: 3px; line-height: 1; color: #1F130B;">DUNGEON CAFÉ</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px; font-size: 15px; line-height: 1.55;">
+<div style="border-top: 3px solid #2A1810; padding-top: 10px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">SÍMBOLO</div>
+<div style="margin-top: 6px;">Xícara em pixel art, redesenhada a partir de uma xícara real. O vapor sugere a "poção" de energia e foco; o pixel liga a marca aos RPGs de 16 bits.</div>
+</div>
+<div style="border-top: 3px solid #2A1810; padding-top: 10px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">LOGOTIPO</div>
+<div style="margin-top: 6px;">"DUNGEON CAFÉ" em Texturina ExtraBold, caixa-alta, com espaçamento levemente aberto. A serifa de inspiração medieval traz a taverna sem perder a legibilidade.</div>
+</div>
+<div style="border-top: 3px solid #2A1810; padding-top: 10px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">COMPOSIÇÃO</div>
+<div style="margin-top: 6px;">Símbolo centralizado acima do nome. A largura do nome define o bloco; a xícara ocupa cerca de 30% dessa largura. Não separar nem reposicionar os elementos.</div>
+</div>
+<div style="background: #1F130B; color: #F4ECE1; padding: 12px 16px; font-size: 14px; line-height: 1.5;">Arquivo-mestre: vetorizar em Illustrator (.ai, .eps e .pdf) e exportar PNG em alta resolução, conforme as diretrizes técnicas do projeto.</div>
+</div>
+</div>
+</div></div></figure>
+    <figure class="prancha prancha--html" aria-label="Página 05 do manual: Versões do logotipo"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 44px 56px; background: #F4ECE1; color: #2A1810; font-family: 'Texturina', Georgia, serif; display: flex; flex-direction: column; gap: 20px;">
+<div style="display: flex; justify-content: space-between; font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">
+<span>DUNGEON CAFÉ · MANUAL DE IDENTIDADE VISUAL</span><span>05</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 3px; color: #6B4A38;">03 · LOGOTIPO</div>
+<h2 style="margin: 0; font-size: 44px; font-weight: 800; line-height: 1.05;">Versões</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; flex-grow: 1;">
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<div style="flex-grow: 1; background: #1F130B; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
+<img loading="lazy" src="assets/img/xicara-icone.png" alt="Versão principal colorida sobre fundo escuro" style="width: 90px; height: 126px; object-fit: contain;">
+<div style="font-weight: 800; font-size: 19px; letter-spacing: 1px; white-space: nowrap; color: #F4ECE1;">DUNGEON CAFÉ</div>
+</div>
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">PRINCIPAL</div>
+<div style="font-size: 14px; line-height: 1.45;">Colorida. Preferencial em fundos Masmorra ou Pergaminho.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<div style="flex-grow: 1; background: #FFFAF3; border: 2px solid #2A1810; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
+<img loading="lazy" src="assets/img/logo-mono.png" alt="Versão monocromática em Marrom Masmorra" style="width: 90px; height: 126px; object-fit: contain;">
+<div style="font-weight: 800; font-size: 19px; letter-spacing: 1px; white-space: nowrap; color: #1F130B;">DUNGEON CAFÉ</div>
+</div>
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">MONOCROMÁTICA</div>
+<div style="font-size: 14px; line-height: 1.45;">Uma cor (Masmorra). Para carimbo, gravação, impressão a uma cor e fundos claros.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<div style="flex-grow: 1; background: #1F130B; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
+<img loading="lazy" src="assets/img/logo-neg.png" alt="Versão negativa em Pergaminho sobre fundo escuro" style="width: 90px; height: 126px; object-fit: contain;">
+<div style="font-weight: 800; font-size: 19px; letter-spacing: 1px; white-space: nowrap; color: #F4ECE1;">DUNGEON CAFÉ</div>
+</div>
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">NEGATIVA</div>
+<div style="font-size: 14px; line-height: 1.45;">Uma cor clara (Pergaminho) sobre fundos escuros ou fotos.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<div style="flex-grow: 1; background: #FFFAF3; border: 2px solid #2A1810; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px;">
+<img loading="lazy" src="assets/img/xicara-icone.png" alt="Versão reduzida: somente o símbolo" style="width: 64px; height: 90px; object-fit: contain;">
+<div style="display: flex; align-items: end; gap: 18px;">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 4px;"><img loading="lazy" src="assets/img/favicon-64.png" alt="Favicon 64 px" style="width: 64px; height: 64px; image-rendering: pixelated;"><span style="font-family: 'Pixelify Sans', monospace; font-size: 12px;">64 px</span></div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 4px;"><img loading="lazy" src="assets/img/favicon-32.png" alt="Favicon 32 px" style="width: 32px; height: 32px; image-rendering: pixelated;"><span style="font-family: 'Pixelify Sans', monospace; font-size: 12px;">32 px</span></div>
+</div>
+</div>
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">REDUZIDA / FAVICON</div>
+<div style="font-size: 14px; line-height: 1.45;">Só o símbolo, para avatar, favicon e espaços abaixo do tamanho mínimo.</div>
+</div>
+</div>
+</div></div></figure>
+    <figure class="prancha prancha--html" aria-label="Página 06 do manual: Grid e área de proteção"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 44px 56px; background: #F4ECE1; color: #2A1810; font-family: 'Texturina', Georgia, serif; display: flex; flex-direction: column; gap: 20px;">
+<div style="display: flex; justify-content: space-between; font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">
+<span>DUNGEON CAFÉ · MANUAL DE IDENTIDADE VISUAL</span><span>06</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 3px; color: #6B4A38;">03 · LOGOTIPO</div>
+<h2 style="margin: 0; font-size: 44px; font-weight: 800; line-height: 1.05;">Grid de construção e área de proteção</h2>
+</div>
+<div style="display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 40px; flex-grow: 1;">
+<div style="position: relative; background-color: #FFFAF3; background-image: linear-gradient(#E3D3BD 1px, transparent 1px), linear-gradient(90deg, #E3D3BD 1px, transparent 1px); background-size: 20px 20px; border: 2px solid #2A1810; display: flex; align-items: center; justify-content: center;">
+<div style="position: relative; border: 2px dashed #A3321F; padding: 28px; margin-right: 70px;">
+<div style="position: relative; outline: 1px solid #2A1810; width: max-content; display: flex; flex-direction: column; align-items: center; gap: 14px;">
+<img loading="lazy" src="assets/img/xicara-icone.png" alt="Símbolo sobre o grid" style="width: 70px; height: 98px; object-fit: contain;">
+<div style="font-weight: 800; font-size: 39px; letter-spacing: 2px; line-height: 28px; height: 28px; white-space: nowrap; color: #1F130B;">DUNGEON CAFÉ</div>
+</div>
+<div style="position: absolute; left: 0; top: 0; width: 28px; height: 28px; background: rgba(163, 50, 31, 0.16); display: flex; align-items: center; justify-content: center; font-family: 'Pixelify Sans', monospace; font-size: 14px; color: #A3321F;">x</div>
+<div style="position: absolute; right: 0; bottom: 0; width: 28px; height: 28px; background: rgba(163, 50, 31, 0.16); display: flex; align-items: center; justify-content: center; font-family: 'Pixelify Sans', monospace; font-size: 14px; color: #A3321F;">x</div>
+<div style="position: absolute; right: -66px; top: 28px; height: 98px; border-left: 2px solid #2A1810; padding-left: 8px; display: flex; align-items: center; font-family: 'Pixelify Sans', monospace; font-size: 13px;">3,5x</div>
+<div style="position: absolute; right: -66px; top: 126px; height: 14px; border-left: 2px solid #6B4A38; padding-left: 8px; display: flex; align-items: center; font-family: 'Pixelify Sans', monospace; font-size: 13px;">0,5x</div>
+<div style="position: absolute; right: -66px; top: 140px; height: 28px; border-left: 2px solid #2A1810; padding-left: 8px; display: flex; align-items: center; font-family: 'Pixelify Sans', monospace; font-size: 13px;">1x</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; font-size: 15px; line-height: 1.5;">
+<div style="border-top: 3px solid #2A1810; padding-top: 10px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">MÓDULO X</div>
+<div style="margin-top: 6px;">x = altura da letra "D" do logotipo. O símbolo tem 3,5x de altura, o espaço entre símbolo e nome é 0,5x e o nome tem 1x.</div>
+</div>
+<div style="border-top: 3px solid #2A1810; padding-top: 10px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">ÁREA DE PROTEÇÃO</div>
+<div style="margin-top: 6px;">Mínimo de 1x livre em todos os lados (linha tracejada). Nenhum texto, borda ou imagem pode invadir esse espaço.</div>
+</div>
+<div style="border-top: 3px solid #2A1810; padding-top: 10px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">TAMANHO MÍNIMO</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 12px; margin-top: 6px;">
+<span>Impresso, completo</span><b>25 mm de largura</b>
+<span>Digital, completo</span><b>160 px de largura</b>
+<span>Só o símbolo</span><b>6 mm / 16 px</b>
+</div>
+</div>
+<div style="border-top: 3px solid #2A1810; padding-top: 10px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">GRID DE PIXEL</div>
+<div style="margin-top: 6px;">O símbolo é desenhado sobre uma grade de pixels. Ao ampliar, use escalas inteiras (2x, 3x, 4x) e o modo "vizinho mais próximo", para não borrar os pixels.</div>
+</div>
+</div>
+</div>
+</div></div></figure>
+    <figure class="prancha prancha--html" aria-label="Página 07 do manual: Usos incorretos"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 44px 56px; background: #F4ECE1; color: #2A1810; font-family: 'Texturina', Georgia, serif; display: flex; flex-direction: column; gap: 20px;">
+<div style="display: flex; justify-content: space-between; font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">
+<span>DUNGEON CAFÉ · MANUAL DE IDENTIDADE VISUAL</span><span>07</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 3px; color: #6B4A38;">03 · LOGOTIPO</div>
+<h2 style="margin: 0; font-size: 44px; font-weight: 800; line-height: 1.05;">Usos incorretos</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 18px; flex-grow: 1;">
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="position: relative; flex-grow: 1; background: #FFFAF3; border: 2px solid #2A1810; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; overflow: hidden;">
+<div style="transform: scaleX(1.6); display: flex; flex-direction: column; align-items: center; gap: 6px;"><img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 50px; height: 70px; object-fit: contain;"><div style="font-weight: 800; font-size: 18px; letter-spacing: 1px;">DUNGEON CAFÉ</div></div>
+<svg width="34" height="34" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
+</div>
+<div style="font-size: 15px;">Não distorcer nem esticar.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="position: relative; flex-grow: 1; background: #FFFAF3; border: 2px solid #2A1810; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;">
+<img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 50px; height: 70px; object-fit: contain; filter: hue-rotate(150deg) saturate(1.6);"><div style="font-weight: 800; font-size: 18px; letter-spacing: 1px; color: #1F7A8C;">DUNGEON CAFÉ</div>
+<svg width="34" height="34" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
+</div>
+<div style="font-size: 15px;">Não alterar as cores fora da paleta.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="position: relative; flex-grow: 1; background: #C9933B; border: 2px solid #2A1810; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;">
+<img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 50px; height: 70px; object-fit: contain;"><div style="font-weight: 800; font-size: 18px; letter-spacing: 1px; color: #B07A2A;">DUNGEON CAFÉ</div>
+<svg width="34" height="34" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
+</div>
+<div style="font-size: 15px;">Não aplicar sobre fundo de baixo contraste.<span class="sr-only"> (exemplo incorreto)</span></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="position: relative; flex-grow: 1; background: #FFFAF3; border: 2px solid #2A1810; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+<div style="transform: rotate(-18deg); display: flex; flex-direction: column; align-items: center; gap: 6px;"><img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 50px; height: 70px; object-fit: contain;"><div style="font-weight: 800; font-size: 18px; letter-spacing: 1px;">DUNGEON CAFÉ</div></div>
+<svg width="34" height="34" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
+</div>
+<div style="font-size: 15px;">Não girar nem inclinar.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="position: relative; flex-grow: 1; background: #FFFAF3; border: 2px solid #2A1810; display: flex; align-items: center; justify-content: center; gap: 10px;">
+<div style="font-weight: 400; font-size: 18px; font-family: Arial, sans-serif;">Dungeon café</div><img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 40px; height: 56px; object-fit: contain;">
+<svg width="34" height="34" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
+</div>
+<div style="font-size: 15px;">Não trocar a fonte nem reposicionar os elementos.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="position: relative; flex-grow: 1; background: #FFFAF3; border: 2px solid #2A1810; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;">
+<img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 50px; height: 70px; object-fit: contain; filter: drop-shadow(6px 6px 4px rgba(0,0,0,0.6)) blur(0.6px);"><div style="font-weight: 800; font-size: 18px; letter-spacing: 1px; text-shadow: 3px 3px 4px rgba(0,0,0,0.5), 0 0 10px #F0C24B;">DUNGEON CAFÉ</div>
+<svg width="34" height="34" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
+</div>
+<div style="font-size: 15px;">Não aplicar sombras, brilhos ou desfoque.</div>
+</div>
+</div>
+</div></div></figure>
+
+    <div class="respiro">
+      <div class="eyebrow">03 · Cores e tipografia</div>
+      <h2>Masmorra, ouro e pergaminho</h2>
+      <p>Três cores-base dão unidade à marca, e cada região ganha a sua cor. Texturina para títulos e textos, Pixelify Sans para a interface de jogo.</p>
+    </div>
+    <figure class="prancha prancha--html" aria-label="Página 08 do manual: Cores institucionais"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 44px 56px; background: #F4ECE1; color: #2A1810; font-family: 'Texturina', Georgia, serif; display: flex; flex-direction: column; gap: 20px;">
+<div style="display: flex; justify-content: space-between; font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">
+<span>DUNGEON CAFÉ · MANUAL DE IDENTIDADE VISUAL</span><span>08</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 3px; color: #6B4A38;">04 · CORES</div>
+<h2 style="margin: 0; font-size: 44px; font-weight: 800; line-height: 1.05;">Cores institucionais</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; flex-grow: 1;">
+<div style="display: flex; flex-direction: column; border: 2px solid #2A1810; background: #FFFAF3;">
+<div style="height: 210px; background: #1F130B;"></div>
+<div style="padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; font-size: 14px;">
+<div style="font-size: 22px; font-weight: 800;">Marrom Masmorra</div>
+<div style="color: #6B4A38; line-height: 1.4;">Fundo principal; torra intensa e madeira da taverna.</div>
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; line-height: 1.7; margin-top: 4px;">HEX #1F130B<br>RGB 31 19 11<br>CMYK 0 39 65 88</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; border: 2px solid #2A1810; background: #FFFAF3;">
+<div style="height: 210px; background: #C9933B;"></div>
+<div style="padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; font-size: 14px;">
+<div style="font-size: 22px; font-weight: 800;">Ouro Taverna</div>
+<div style="color: #6B4A38; line-height: 1.4;">Destaques, botões e conquistas.</div>
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; line-height: 1.7; margin-top: 4px;">HEX #C9933B<br>RGB 201 147 59<br>CMYK 0 27 71 21</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; border: 2px solid #2A1810; background: #FFFAF3;">
+<div style="height: 210px; background: #F4ECE1; border-bottom: 2px solid #2A1810;"></div>
+<div style="padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; font-size: 14px;">
+<div style="font-size: 22px; font-weight: 800;">Pergaminho</div>
+<div style="color: #6B4A38; line-height: 1.4;">Fundo de leitura, cartões e rótulos.</div>
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; line-height: 1.7; margin-top: 4px;">HEX #F4ECE1<br>RGB 244 236 225<br>CMYK 0 3 8 4</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; border: 2px solid #2A1810; background: #FFFAF3;">
+<div style="height: 210px; background: #D4A017;"></div>
+<div style="padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; font-size: 14px;">
+<div style="font-size: 22px; font-weight: 800;">Dourado (apoio)</div>
+<div style="color: #6B4A38; line-height: 1.4;">Nome dos mentores e detalhes das molduras.</div>
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; line-height: 1.7; margin-top: 4px;">HEX #D4A017<br>RGB 212 160 23<br>CMYK 0 25 89 17</div>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">PROPORÇÃO DE USO</div>
+<div style="display: flex; height: 30px; border: 2px solid #2A1810;">
+<div style="flex: 50; background: #1F130B;"></div><div style="flex: 30; background: #F4ECE1;"></div><div style="flex: 15; background: #C9933B;"></div><div style="flex: 5; background: #D4A017;"></div>
+</div>
+<div style="font-size: 13px; color: #6B4A38; line-height: 1.5;">Masmorra 50% · Pergaminho 30% · Ouro Taverna 15% · Dourado 5%. Os valores CMYK são conversões aproximadas: confirmar no Illustrator com o perfil de impressão da gráfica (ex.: Coated FOGRA39) antes de imprimir.</div>
+</div>
+</div></div></figure>
+    <figure class="prancha prancha--html" aria-label="Página 09 do manual: Cores das regiões"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 44px 56px; background: #F4ECE1; color: #2A1810; font-family: 'Texturina', Georgia, serif; display: flex; flex-direction: column; gap: 18px;">
+<div style="display: flex; justify-content: space-between; font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">
+<span>DUNGEON CAFÉ · MANUAL DE IDENTIDADE VISUAL</span><span>09</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 3px; color: #6B4A38;">04 · CORES</div>
+<h2 style="margin: 0; font-size: 44px; font-weight: 800; line-height: 1.05;">Cores das regiões</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; flex-grow: 1;">
+<div style="display: flex; flex-direction: column; border: 2px solid #2A1810; background: #FFFAF3;">
+<div style="height: 150px; background: #134E35; color: #F4ECE1; padding: 12px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;"><span style="font-size: 22px; font-weight: 800;">Norte</span><span style="font-family: 'Pixelify Sans', monospace; font-size: 12px;">Simone · Guerreira</span></div>
+<div style="height: 18px; background: #498065;"></div>
+<div style="padding: 12px; font-size: 13px; line-height: 1.45; display: flex; flex-direction: column; gap: 8px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; line-height: 1.7;">HEX #134E35<br>RGB 19 78 53<br>CMYK 76 0 32 69<br>Borda #498065</div>
+<div>Floresta amazônica e preferência da mentora pelo verde.</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; border: 2px solid #2A1810; background: #FFFAF3;">
+<div style="height: 150px; background: #8F3410; color: #F4ECE1; padding: 12px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;"><span style="font-size: 22px; font-weight: 800;">Nordeste</span><span style="font-family: 'Pixelify Sans', monospace; font-size: 12px;">Vitor · Bardo</span></div>
+<div style="height: 18px; background: #B85A39;"></div>
+<div style="padding: 12px; font-size: 13px; line-height: 1.45; display: flex; flex-direction: column; gap: 8px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; line-height: 1.7;">HEX #8F3410<br>RGB 143 52 16<br>CMYK 0 64 89 44<br>Borda #B85A39</div>
+<div>Ocre-terra do sertão, em tom avermelhado.</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; border: 2px solid #2A1810; background: #FFFAF3;">
+<div style="height: 150px; background: #35164D; color: #F4ECE1; padding: 12px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;"><span style="font-size: 22px; font-weight: 800;">Centro-Oeste</span><span style="font-family: 'Pixelify Sans', monospace; font-size: 12px;">Vagner · Mago</span></div>
+<div style="height: 18px; background: #8768A5;"></div>
+<div style="padding: 12px; font-size: 13px; line-height: 1.45; display: flex; flex-direction: column; gap: 8px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; line-height: 1.7;">HEX #35164D<br>RGB 53 22 77<br>CMYK 31 71 0 70<br>Borda #8768A5</div>
+<div>Roxo arcano, ligado ao arquétipo do Mago.</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; border: 2px solid #2A1810; background: #FFFAF3;">
+<div style="height: 150px; background: #19181D; color: #F4ECE1; padding: 12px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;"><span style="font-size: 22px; font-weight: 800;">Sudeste</span><span style="font-family: 'Pixelify Sans', monospace; font-size: 12px;">Ellem · Bárbara</span></div>
+<div style="height: 18px; background: #75747A;"></div>
+<div style="padding: 12px; font-size: 13px; line-height: 1.45; display: flex; flex-direction: column; gap: 8px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; line-height: 1.7;">HEX #19181D<br>RGB 25 24 29<br>CMYK 14 17 0 89<br>Borda #75747A</div>
+<div>Preto do rock, por sugestão da própria mentora.</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; border: 2px solid #2A1810; background: #FFFAF3;">
+<div style="height: 150px; background: #4A1423; color: #F4ECE1; padding: 12px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between;"><span style="font-size: 22px; font-weight: 800;">Sul</span><span style="font-family: 'Pixelify Sans', monospace; font-size: 12px;">Viviane · Curandeira</span></div>
+<div style="height: 18px; background: #A26370;"></div>
+<div style="padding: 12px; font-size: 13px; line-height: 1.45; display: flex; flex-direction: column; gap: 8px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; line-height: 1.7;">HEX #4A1423<br>RGB 74 20 35<br>CMYK 0 73 53 71<br>Borda #A26370</div>
+<div>Vinho/bordô, ligado ao clima subtropical.</div>
+</div>
+</div>
+</div>
+<div style="font-size: 13px; color: #6B4A38; line-height: 1.5;">Regra: a cor da região identifica embalagens, cards e molduras. Sobre fundo claro, use a cor original para textos. Sobre o Marrom Masmorra, use a variante "Borda", porque a cor original tem contraste insuficiente para contornos e textos.</div>
+</div></div></figure>
+    <figure class="prancha prancha--html" aria-label="Página 10 do manual: Tipografia"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 44px 56px; background: #1F130B; color: #F4ECE1; font-family: 'Texturina', Georgia, serif; display: flex; flex-direction: column; gap: 20px;">
+<div style="display: flex; justify-content: space-between; font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">
+<span>DUNGEON CAFÉ · MANUAL DE IDENTIDADE VISUAL</span><span>10</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 3px; color: #C9933B;">05 · TIPOGRAFIA</div>
+<h2 style="margin: 0; font-size: 44px; font-weight: 800; line-height: 1.05;">Tipografia institucional</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; flex-grow: 1;">
+<div style="display: flex; flex-direction: column; gap: 12px; border-top: 3px solid #C9933B; padding-top: 14px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">PRIMÁRIA · TEXTURINA</div>
+<div style="font-size: 120px; font-weight: 800; line-height: 1;">Aa</div>
+<div style="font-size: 22px; line-height: 1.35;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 · ç ã é ô</div>
+<div style="display: flex; gap: 18px; font-size: 18px;"><span style="font-weight: 400;">Regular</span><span style="font-weight: 600;">SemiBold</span><span style="font-weight: 800;">ExtraBold</span></div>
+<div style="font-size: 14px; color: #E8D3B9; line-height: 1.5;">Serifada de inspiração medieval, com boa leitura em telas e impressos. Usada no logotipo, em títulos, nomes de regiões e textos corridos.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; border-top: 3px solid #C9933B; padding-top: 14px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">SECUNDÁRIA · PIXELIFY SANS</div>
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 120px; font-weight: 600; line-height: 1;">Aa</div>
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 20px; line-height: 1.4;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 · XP · NÍVEL 5</div>
+<div style="font-size: 14px; color: #E8D3B9; line-height: 1.5;">Fonte pixelada, restrita a rótulos curtos, botões, níveis e indicadores de jogo. Nunca em textos longos.</div>
+<div style="border: 2px solid #5A3526; padding: 12px 14px; font-size: 14px; line-height: 1.55; color: #E8D3B9;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 2px; color: #C9933B; margin-bottom: 4px;">HIERARQUIA</div>
+Título: Texturina ExtraBold · Subtítulo: Texturina SemiBold · Corpo: Texturina Regular · Rótulo e botão: Pixelify Sans SemiBold, caixa-alta, espaçamento aberto.<br>Nas embalagens, informações técnicas em Arial e notas sensoriais em Georgia Itálico.
+</div>
+</div>
+</div>
+</div></div></figure>
+
+    <div class="respiro respiro--escuro">
+      <div class="eyebrow">04 · Personagens e embalagens</div>
+      <h2>Professores que viram heróis</h2>
+      <p>Cinco professores do campus viram mentores em pixel art, cada um guiando o café da sua região, e dois chefes do folclore guardam a jornada.</p>
+    </div>
+    <figure class="prancha prancha--html" aria-label="Página 11 do manual: Mentores"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 44px 56px; background: #F4ECE1; color: #2A1810; font-family: 'Texturina', Georgia, serif; display: flex; flex-direction: column; gap: 18px;">
+<div style="display: flex; justify-content: space-between; font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">
+<span>DUNGEON CAFÉ · MANUAL DE IDENTIDADE VISUAL</span><span>11</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: end; gap: 24px;">
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 3px; color: #6B4A38;">06 · PERSONAGENS</div>
+<h2 style="margin: 0; font-size: 44px; font-weight: 800; line-height: 1.05;">Os mentores</h2>
+</div>
+<div style="max-width: 520px; font-size: 14px; line-height: 1.5; color: #6B4A38;">Professores do IFRR representados em pixel art 16 bits. Eles autorizaram o uso de nome e imagem e colaboraram na criação dos personagens.</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; flex-grow: 1;">
+<div style="display: flex; flex-direction: column; border: 2px solid #134E35; background: #FFFAF3;">
+<img loading="lazy" src="assets/img/mentor-norte.png" alt="Mentora Simone como Guerreira" style="width: 100%; height: 250px; object-fit: contain; image-rendering: pixelated; background: #EFE7C9;">
+<div style="padding: 12px; display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 1px; color: #134E35;">GUERREIRA · NORTE</div>
+<div style="font-size: 20px; font-weight: 800;">Profª. Simone</div>
+<div style="font-size: 13px; line-height: 1.45;">Única professora natural do Norte; a determinação deu origem à Guerreira.</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; border: 2px solid #8F3410; background: #FFFAF3;">
+<img loading="lazy" src="assets/img/mentor-nordeste.png" alt="Mentor Vitor como Bardo" style="width: 100%; height: 250px; object-fit: contain; image-rendering: pixelated; background: #EFE7C9;">
+<div style="padding: 12px; display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 1px; color: #8F3410;">BARDO · NORDESTE</div>
+<div style="font-size: 20px; font-weight: 800;">Prof. Vitor</div>
+<div style="font-size: 13px; line-height: 1.45;">Formação acadêmica no Nordeste e perfil comunicativo e bem-humorado.</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; border: 2px solid #35164D; background: #FFFAF3;">
+<img loading="lazy" src="assets/img/mentor-centro-oeste.png" alt="Mentor Vagner como Mago" style="width: 100%; height: 250px; object-fit: contain; image-rendering: pixelated; background: #EFE7C9;">
+<div style="padding: 12px; display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 1px; color: #35164D;">MAGO · CENTRO-OESTE</div>
+<div style="font-size: 20px; font-weight: 800;">Prof. Vagner</div>
+<div style="font-size: 13px; line-height: 1.45;">Uma didática que torna simples, quase mágicos, os conteúdos complexos.</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; border: 2px solid #19181D; background: #FFFAF3;">
+<img loading="lazy" src="assets/img/mentor-sudeste.png" alt="Mentora Ellem como Bárbara" style="width: 100%; height: 250px; object-fit: contain; image-rendering: pixelated; background: #EFE7C9;">
+<div style="padding: 12px; display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 1px; color: #19181D;">BÁRBARA · SUDESTE</div>
+<div style="font-size: 20px; font-weight: 800;">Profª. Ellem</div>
+<div style="font-size: 13px; line-height: 1.45;">Trajetória no rock em Roraima; visual sugerido pela própria mentora.</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; border: 2px solid #4A1423; background: #FFFAF3;">
+<img loading="lazy" src="assets/img/mentor-sul.png" alt="Mentora Viviane como Curandeira" style="width: 100%; height: 250px; object-fit: contain; image-rendering: pixelated; background: #EFE7C9;">
+<div style="padding: 12px; display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 1px; color: #4A1423;">CURANDEIRA · SUL</div>
+<div style="font-size: 20px; font-weight: 800;">Profª. Viviane</div>
+<div style="font-size: 13px; line-height: 1.45;">Temperamento acolhedor e alegre, como quem cura o cansaço dos estudos.</div>
+</div>
+</div>
+</div>
+<div style="display: flex; gap: 24px; font-size: 13px; line-height: 1.5; color: #6B4A38;">
+<div style="flex: 1;"><b style="color: #2A1810;">Uso:</b> sempre em pixel art, de corpo inteiro, sobre Pergaminho ou com moldura dourada. Não recortar o rosto, não redesenhar em outro estilo e não usar fora do contexto da marca.</div>
+<div style="flex: 1;"><b style="color: #2A1810;">Chefes do folclore:</b> Boitatá, "a serpente de fogo" (nível 5), e Mapinguari, "o guardião da floresta" (nível 10). Veja a página seguinte.</div>
+</div>
+</div></div></figure>
+    <figure class="prancha prancha--html" aria-label="Página 12 do manual: Chefes do folclore"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 44px 56px; background: #1F130B; color: #F4ECE1; font-family: 'Texturina', Georgia, serif; display: flex; flex-direction: column; gap: 18px;">
+<div style="display: flex; justify-content: space-between; font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">
+<span>DUNGEON CAFÉ · MANUAL DE IDENTIDADE VISUAL</span><span>12</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: end; gap: 24px;">
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 3px; color: #C9933B;">06 · PERSONAGENS</div>
+<h2 style="margin: 0; font-size: 44px; font-weight: 800; line-height: 1.05;">Os chefes do folclore</h2>
+</div>
+<div style="max-width: 460px; font-size: 14px; line-height: 1.5; color: #E8D3B9;">No lugar de dragões e monstros da fantasia europeia, a jornada é guardada por criaturas das lendas brasileiras.</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; flex-grow: 1;">
+<div style="display: flex; flex-direction: column; border: 3px solid #5A3526; background: #2A1810;">
+<div style="flex-grow: 1; display: flex; align-items: end; justify-content: center; padding-top: 14px; background: radial-gradient(ellipse at 50% 65%, rgba(176, 55, 42, 0.45), transparent 62%);">
+<img loading="lazy" src="assets/img/chefe-boitata.png" alt="Boitatá, a serpente de fogo, em pixel art" style="height: 330px; width: auto; image-rendering: pixelated;">
+</div>
+<div style="padding: 16px 20px; display: flex; flex-direction: column; gap: 6px; border-top: 2px solid #5A3526;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">NÍVEL 5 · MEIO DA JORNADA</div>
+<div style="font-size: 26px; font-weight: 800;">Boitatá, a serpente de fogo</div>
+<div style="font-size: 14px; line-height: 1.5; color: #E8D3B9;">Guardiã dos campos contra o fogo. Recompensa: título "Guardião da Torra", item raro em forma de grão e 5% de desconto.</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; border: 3px solid #C9933B; background: #2A1810;">
+<div style="flex-grow: 1; display: flex; align-items: end; justify-content: center; padding-top: 14px; background: radial-gradient(ellipse at 50% 65%, rgba(201, 147, 59, 0.38), transparent 62%);">
+<img loading="lazy" src="assets/img/chefe-mapinguari.png" alt="Mapinguari, o guardião da floresta, em pixel art" style="height: 350px; width: auto; image-rendering: pixelated;">
+</div>
+<div style="padding: 16px 20px; display: flex; flex-direction: column; gap: 6px; border-top: 2px solid #C9933B;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">NÍVEL 10 · CHEFE FINAL</div>
+<div style="font-size: 26px; font-weight: 800;">Mapinguari, o guardião da floresta</div>
+<div style="font-size: 14px; line-height: 1.5; color: #E8D3B9;">A fera amazônica com a boca na barriga. Recompensa: título "Lenda do Grão", Hall da Fama, um pacote grátis e a caneca colecionável.</div>
+</div>
+</div>
+</div>
+<div style="font-size: 13px; line-height: 1.5; color: #E8D3B9;"><b style="color: #F4ECE1;">Uso:</b> os chefes aparecem sempre em pixel art, de corpo inteiro, sobre fundo escuro com brilho na cor do chefe (vermelho no Boitatá, dourado no chefe final). Moldura dourada é exclusiva do chefe final.</div>
+</div></div></figure>
+    <figure class="prancha prancha--html" aria-label="Página 13 do manual: Embalagens"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 44px 56px; background: #1F130B; color: #F4ECE1; font-family: 'Texturina', Georgia, serif; display: flex; flex-direction: column; gap: 18px;">
+<div style="display: flex; justify-content: space-between; font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">
+<span>DUNGEON CAFÉ · MANUAL DE IDENTIDADE VISUAL</span><span>13</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: end; gap: 24px;">
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 3px; color: #C9933B;">07 · APLICAÇÕES</div>
+<h2 style="margin: 0; font-size: 44px; font-weight: 800; line-height: 1.05;">Embalagens · Linha Mestres do Brasil</h2>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; align-items: end; flex-grow: 1;">
+<img loading="lazy" src="assets/img/emb-norte.png" alt="Embalagem Região Norte" style="width: 100%; height: 360px; object-fit: contain;">
+<img loading="lazy" src="assets/img/emb-centro-oeste.png" alt="Embalagem Região Centro-Oeste" style="width: 100%; height: 360px; object-fit: contain;">
+<img loading="lazy" src="assets/img/emb-sudeste.png" alt="Embalagem Região Sudeste" style="width: 100%; height: 360px; object-fit: contain;">
+<img loading="lazy" src="assets/img/emb-nordeste.png" alt="Embalagem Região Nordeste" style="width: 100%; height: 360px; object-fit: contain;">
+<img loading="lazy" src="assets/img/emb-sul.png" alt="Embalagem Região Sul" style="width: 100%; height: 360px; object-fit: contain;">
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; font-size: 14px; line-height: 1.5; color: #E8D3B9;">
+<div style="border-top: 3px solid #C9933B; padding-top: 10px;"><div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 2px; color: #C9933B; margin-bottom: 4px;">ESTRUTURA FIXA</div>Pacote stand-up de 250 g, café torrado e moído. Topo: marca e "Linha Mestres do Brasil". Centro: mentor em moldura de pergaminho com borda dourada.</div>
+<div style="border-top: 3px solid #C9933B; padding-top: 10px;"><div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 2px; color: #C9933B; margin-bottom: 4px;">O QUE VARIA</div>Cor do corpo (cor da região), mentor, faixa de terroir, tipo de café, variedade e notas sensoriais.</div>
+<div style="border-top: 3px solid #C9933B; padding-top: 10px;"><div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 2px; color: #C9933B; margin-bottom: 4px;">QR CODE</div>Cada pacote leva um QR Code de uso único para subir de nível na plataforma. Posição prevista: faixa inferior, ao lado do peso.</div>
+</div>
+</div></div></figure>
+
+    <div class="respiro">
+      <div class="eyebrow">05 · Aplicações</div>
+      <h2>Do balcão à tela</h2>
+      <p>Papelaria, ponto de retirada no campus, uniforme, redes sociais e a interface web seguem a mesma narrativa.</p>
+    </div>
+    <figure class="prancha prancha--html" aria-label="Página 14 do manual: Papelaria"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 44px 56px; background: #E9DFD0; color: #2A1810; font-family: 'Texturina', Georgia, serif; display: flex; flex-direction: column; gap: 18px;">
+<div style="display: flex; justify-content: space-between; font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">
+<span>DUNGEON CAFÉ · MANUAL DE IDENTIDADE VISUAL</span><span>14</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 3px; color: #6B4A38;">07 · APLICAÇÕES</div>
+<h2 style="margin: 0; font-size: 44px; font-weight: 800; line-height: 1.05;">Papelaria</h2>
+</div>
+<div style="display: flex; gap: 32px; flex-grow: 1; align-items: start;">
+<div style="display: flex; flex-direction: column; gap: 18px;">
+<div style="width: 272px; height: 176px; background: #1F130B; box-shadow: 4px 4px 0 #2A1810; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; border: 2px solid #C9933B; box-sizing: border-box;">
+<img loading="lazy" src="assets/img/xicara-icone.png" alt="Cartão de visita, frente" style="width: 54px; height: 76px; object-fit: contain;">
+<div style="font-weight: 800; font-size: 22px; letter-spacing: 1.5px; color: #F4ECE1;">DUNGEON CAFÉ</div>
+</div>
+<div style="width: 272px; height: 176px; background: #F4ECE1; box-shadow: 4px 4px 0 #2A1810; box-sizing: border-box; padding: 16px 18px; display: flex; flex-direction: column; justify-content: space-between; border-left: 10px solid #C9933B;">
+<div><div style="font-weight: 800; font-size: 19px;">Bruno Freitas</div><div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 1px; color: #6B4A38;">DESIGNER · CLASSE AVENTUREIRO</div></div>
+<div style="font-size: 12px; line-height: 1.5;">[e-mail]<br>[@instagram] · [site]<br>Boa Vista · RR</div>
+</div>
+<div style="font-size: 13px; line-height: 1.45; max-width: 272px;"><b>Cartão de visita</b> 85 × 55 mm. Frente em Masmorra com o logotipo; verso em Pergaminho com faixa Ouro Taverna.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<div style="width: 250px; height: 354px; background: #FFFAF3; box-shadow: 4px 4px 0 #2A1810; box-sizing: border-box; padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+<div style="display: flex; align-items: center; gap: 8px; border-bottom: 2px solid #C9933B; padding-bottom: 8px;"><img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 22px; height: 31px; object-fit: contain;"><span style="font-weight: 800; font-size: 13px; letter-spacing: 1px;">DUNGEON CAFÉ</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="height: 4px; background: #D9CBB7; width: 70%;"></div><div style="height: 4px; background: #D9CBB7;"></div><div style="height: 4px; background: #D9CBB7;"></div><div style="height: 4px; background: #D9CBB7; width: 85%;"></div><div style="height: 4px; background: #D9CBB7;"></div><div style="height: 4px; background: #D9CBB7; width: 60%;"></div>
+</div>
+<div style="background: #1F130B; color: #E8D3B9; font-size: 9px; padding: 6px 8px; letter-spacing: 0.5px;">Linha Mestres do Brasil · Boa Vista · RR</div>
+</div>
+<div style="font-size: 13px; line-height: 1.45; max-width: 250px;"><b>Papel timbrado</b> A4. Cabeçalho com logotipo horizontal reduzido; rodapé em Masmorra.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<div style="width: 330px; height: 165px; background: #F4ECE1; box-shadow: 4px 4px 0 #2A1810; box-sizing: border-box; position: relative; overflow: hidden; border-top: 12px solid #1F130B;">
+<div style="position: absolute; left: 16px; top: 14px; display: flex; align-items: center; gap: 8px;"><img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 24px; height: 34px; object-fit: contain;"><span style="font-weight: 800; font-size: 14px; letter-spacing: 1px;">DUNGEON CAFÉ</span></div>
+<div style="position: absolute; right: 22px; bottom: 22px; font-size: 11px; line-height: 1.5; text-align: left;">Para: Aventureiro(a)<br>[endereço]<br>Boa Vista · RR</div>
+<div style="position: absolute; left: 0; bottom: 0; width: 100%; height: 8px; background: #C9933B;"></div>
+</div>
+<div style="font-size: 13px; line-height: 1.45; max-width: 330px;"><b>Envelope</b> DL 220 × 110 mm. Faixa superior em Masmorra e base em Ouro Taverna, como a moldura das embalagens.</div>
+<div style="margin-top: 12px; background: #1F130B; color: #F4ECE1; padding: 14px 16px; font-size: 13px; line-height: 1.5; max-width: 330px;">Impressão: papel offset 240 g (cartão) e 90 g (timbrado e envelope). Os campos entre colchetes são preenchidos com os dados de contato da marca.</div>
+</div>
+</div>
+</div></div></figure>
+    <figure class="prancha prancha--html" aria-label="Página 15 do manual: Ambiente e uniforme"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 44px 56px; background: #F4ECE1; color: #2A1810; font-family: 'Texturina', Georgia, serif; display: flex; flex-direction: column; gap: 18px;">
+<div style="display: flex; justify-content: space-between; font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">
+<span>DUNGEON CAFÉ · MANUAL DE IDENTIDADE VISUAL</span><span>15</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 3px; color: #6B4A38;">07 · APLICAÇÕES</div>
+<h2 style="margin: 0; font-size: 44px; font-weight: 800; line-height: 1.05;">Ambiente e uniforme</h2>
+</div>
+<div style="display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 36px; flex-grow: 1;">
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<div style="flex-grow: 1; background: #DCCFBD; border: 2px solid #2A1810; display: flex; align-items: end; justify-content: center; padding-bottom: 18px; box-sizing: border-box;">
+<div style="width: 380px; display: flex; flex-direction: column; align-items: stretch;">
+<div style="background: #1F130B; color: #F4ECE1; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px; border: 3px solid #C9933B;"><img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 30px; height: 42px; object-fit: contain;"><span style="font-weight: 800; font-size: 24px; letter-spacing: 2px;">DUNGEON CAFÉ</span></div>
+<div style="height: 34px; background: repeating-linear-gradient(90deg, #C9933B 0 38px, #1F130B 38px 76px);"></div>
+<div style="height: 140px; background: #F4ECE1; border-left: 8px solid #5A3526; border-right: 8px solid #5A3526; display: flex; align-items: end; justify-content: center; gap: 12px; padding-bottom: 10px; box-sizing: border-box;">
+<div style="width: 34px; height: 54px; background: #134E35;"></div><div style="width: 34px; height: 54px; background: #35164D;"></div><div style="width: 34px; height: 54px; background: #19181D;"></div><div style="width: 34px; height: 54px; background: #8F3410;"></div><div style="width: 34px; height: 54px; background: #4A1423;"></div>
+</div>
+<div style="height: 70px; background: #5A3526; border-top: 6px solid #C9933B; display: flex; align-items: center; justify-content: center; font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 2px; color: #F4ECE1;">PONTO DE RETIRADA · TAVERNA</div>
+</div>
+</div>
+<div style="font-size: 13px; line-height: 1.45;"><b>Ponto de retirada no campus.</b> Como o Dungeon Café é um clube on-line, o ambiente físico é um balcão de retirada, uma pequena taverna: madeira, toldo listrado em Masmorra e Ouro e a vitrine com os cinco cafés.</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 14px;">
+<div style="background: #FFFAF3; border: 2px solid #2A1810; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; position: relative;">
+<svg width="120" height="150" viewBox="0 0 120 150" aria-hidden="true"><path d="M30 10 h60 v30 l20 10 v95 h-100 v-95 l20 -10 z" fill="#1F130B"></path><path d="M30 10 q30 -10 60 0" stroke="#C9933B" stroke-width="4" fill="none"></path><rect x="10" y="118" width="100" height="6" fill="#C9933B"></rect></svg>
+<img loading="lazy" src="assets/img/logo-neg.png" alt="" style="position: absolute; top: 52%; left: 50%; width: 30px; height: 42px; object-fit: contain; transform: translate(-50%, -50%);">
+<div style="font-size: 13px; font-weight: 600;">Avental do atendente</div>
+</div>
+<div style="background: #FFFAF3; border: 2px solid #2A1810; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; position: relative;">
+<svg width="150" height="140" viewBox="0 0 150 140" aria-hidden="true"><path d="M50 10 l-40 20 l12 30 l18 -8 v80 h70 v-80 l18 8 l12 -30 l-40 -20 q-25 16 -50 0 z" fill="#1F130B"></path></svg>
+<div style="position: absolute; top: 44%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 2px;"><img loading="lazy" src="assets/img/logo-neg.png" alt="" style="width: 30px; height: 42px; object-fit: contain;"></div>
+<div style="font-size: 13px; font-weight: 600;">Camiseta da comunidade</div>
+</div>
+<div style="background: #FFFAF3; border: 2px solid #2A1810; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; position: relative;">
+<svg width="130" height="120" viewBox="0 0 130 120" aria-hidden="true"><rect x="15" y="15" width="80" height="95" fill="#F4ECE1" stroke="#2A1810" stroke-width="3"></rect><path d="M95 35 h15 a12 12 0 0 1 0 45 h-15" fill="none" stroke="#2A1810" stroke-width="6"></path><rect x="15" y="15" width="80" height="12" fill="#C9933B"></rect></svg>
+<img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="position: absolute; top: 48%; left: 43%; width: 34px; height: 48px; object-fit: contain; transform: translate(-50%, -50%);">
+<div style="font-size: 13px; font-weight: 600;">Caneca colecionável</div>
+</div>
+<div style="background: #1F130B; color: #E8D3B9; padding: 14px; font-size: 13px; line-height: 1.5; display: flex; flex-direction: column; justify-content: center; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 2px; color: #C9933B;">REGRAS</div>
+Em tecidos escuros, use a versão negativa. A caneca é o brinde de quem vence o chefe final, o Mapinguari.
+</div>
+</div>
+</div>
+</div></div></figure>
+    <figure class="prancha prancha--html" aria-label="Página 16 do manual: Redes sociais"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 44px 56px; background: #1F130B; color: #F4ECE1; font-family: 'Texturina', Georgia, serif; display: flex; flex-direction: column; gap: 18px;">
+<div style="display: flex; justify-content: space-between; font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">
+<span>DUNGEON CAFÉ · MANUAL DE IDENTIDADE VISUAL</span><span>16</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 3px; color: #C9933B;">07 · APLICAÇÕES</div>
+<h2 style="margin: 0; font-size: 44px; font-weight: 800; line-height: 1.05;">Redes sociais</h2>
+</div>
+<div style="display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; flex-grow: 1;">
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<div style="background: #2A1810; border: 2px solid #5A3526;">
+<img loading="lazy" src="assets/img/banner-crop.jpg" alt="Capa: cenário em pixel art da taverna do campus" style="display: block; width: 100%; height: 190px; object-fit: cover;">
+<div style="display: flex; align-items: end; gap: 16px; padding: 0 18px 18px; margin-top: -48px;">
+<div style="width: 104px; height: 104px; border-radius: 50%; background: #1F130B; border: 4px solid #C9933B; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img loading="lazy" src="assets/img/xicara-icone.png" alt="Avatar: símbolo da xícara" style="width: 46px; height: 64px; object-fit: contain;"></div>
+<div style="padding-bottom: 6px;"><div style="font-weight: 800; font-size: 22px;">Dungeon Café</div><div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; color: #E8D3B9;">[@perfil] · Clube de cafés especiais</div></div>
+</div>
+<div style="padding: 0 18px 18px; font-size: 14px; line-height: 1.5; color: #E8D3B9;">A jornada do herói cafeeiro começa aqui. Cinco regiões, cinco mentores, um café por nível.</div>
+</div>
+<div style="font-size: 13px; line-height: 1.5; color: #E8D3B9;"><b style="color: #F4ECE1;">Perfil:</b> avatar com o símbolo sobre Masmorra e anel Ouro Taverna; capa com o cenário em pixel art do campus. O símbolo deve ficar inteiro dentro do círculo.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;">
+<div style="aspect-ratio: 1 / 1; background: #F4ECE1; border: 6px solid #134E35; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 10px; color: #2A1810;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 11px; letter-spacing: 1px; color: #134E35;">REGIÃO NORTE</div>
+<img loading="lazy" src="assets/img/mentor-norte.png" alt="Post: mentora Simone" style="width: 100%; height: 130px; object-fit: contain; image-rendering: pixelated;">
+<div style="font-weight: 800; font-size: 15px; text-align: center; line-height: 1.15;">Conheça sua mentora: Simone</div>
+</div>
+<div style="aspect-ratio: 1 / 1; background: #2A1810; border: 6px solid #C9933B; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 12px; text-align: center;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">NÍVEL 5</div>
+<div style="font-weight: 800; font-size: 24px; line-height: 1.1;">O Boitatá despertou</div>
+<div style="font-size: 12px; color: #E8D3B9; line-height: 1.4;">Escaneie seu quinto pacote e enfrente a serpente de fogo.</div>
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; background: #C9933B; color: #1F130B; padding: 6px 10px;">ACEITAR MISSÃO</div>
+</div>
+</div>
+<div style="border: 2px solid #5A3526; padding: 12px 14px; font-size: 13px; line-height: 1.5; color: #E8D3B9;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 2px; color: #C9933B; margin-bottom: 4px;">POSTS</div>
+Formato 1080 × 1080 px. Moldura na cor da região quando o post é sobre um mentor; moldura Ouro Taverna para missões e chefes. Título em Texturina, chamadas em Pixelify Sans.
+</div>
+</div>
+</div>
+</div></div></figure>
+    <figure class="prancha prancha--html" aria-label="Página 17 do manual: Interface web"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 44px 56px; background: #F4ECE1; color: #2A1810; font-family: 'Texturina', Georgia, serif; display: flex; flex-direction: column; gap: 18px;">
+<div style="display: flex; justify-content: space-between; font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">
+<span>DUNGEON CAFÉ · MANUAL DE IDENTIDADE VISUAL</span><span>17</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 3px; color: #6B4A38;">07 · APLICAÇÕES</div>
+<h2 style="margin: 0; font-size: 44px; font-weight: 800; line-height: 1.05;">Interface web</h2>
+</div>
+<div style="display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr) minmax(0, 0.95fr); gap: 22px; flex-grow: 1;">
+<img loading="lazy" src="assets/img/site-hero.jpg" alt="Página inicial do site: cabeçalho, chamada e banner em pixel art" style="width: 100%; height: 520px; object-fit: contain; object-position: top; background: #1F130B; border: 2px solid #2A1810;">
+<img loading="lazy" src="assets/img/site-regioes.jpg" alt="Seção As cinco regiões com as embalagens" style="width: 100%; height: 520px; object-fit: contain; object-position: top; background: #1F130B; border: 2px solid #2A1810;">
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px; line-height: 1.5;">
+<div style="border-top: 3px solid #2A1810; padding-top: 10px;"><div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 2px; color: #6B4A38; margin-bottom: 4px;">ESTRUTURA</div>Banner da taverna, área do aventureiro, jornada em quatro passos, cinco regiões, mentores e planos com compra avulsa.</div>
+<div style="border-top: 3px solid #2A1810; padding-top: 10px;"><div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 2px; color: #6B4A38; margin-bottom: 4px;">COMPONENTES</div>Botões com sombra sólida que "afundam" ao clique, cartões de pergaminho com moldura dupla e cor de destaque de cada mentor.</div>
+<div style="border-top: 3px solid #2A1810; padding-top: 10px;"><div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 2px; color: #6B4A38; margin-bottom: 4px;">ACESSIBILIDADE</div>Contraste mínimo de 4,5:1 nos textos (WCAG AA), foco visível no teclado e Pixelify Sans só em rótulos curtos.</div>
+<div style="background: #1F130B; color: #E8D3B9; padding: 12px 14px; font-size: 13px;">Cores do site = cores das embalagens. Qualquer mudança de paleta deve ser feita nas duas ao mesmo tempo.</div>
+</div>
+</div>
+</div></div></figure>
+    <figure class="prancha prancha--html" aria-label="Página 18 do manual: Contracapa"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 36px; background: #1F130B; color: #F4ECE1; font-family: 'Texturina', Georgia, serif;">
+<div style="height: 100%; box-sizing: border-box; border: 3px solid #C9933B; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; padding: 48px;">
+<img loading="lazy" src="assets/img/logo-neg.png" alt="Logotipo em versão negativa" style="width: 90px; height: 126px; object-fit: contain;">
+<h2 style="margin: 0; font-weight: 800; font-size: 40px; letter-spacing: 2px;">DUNGEON CAFÉ</h2>
+<div style="font-size: 20px; color: #E8D3B9;">Cada xícara é um passo da aventura.</div>
+<div style="margin-top: 36px; font-size: 14px; color: #E8D3B9; text-align: center; line-height: 1.6;">Manual de Identidade Visual · Versão 1.0 · 2026<br>Bruno Freitas de Souza · Tecnólogo em Design Gráfico<br>Instituto Federal de Roraima · Campus Boa Vista Zona Oeste<br>Orientação: Prof. Vagner Martins</div>
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 2px; color: #C9933B; margin-top: 10px;">MARCA FICTÍCIA · PROJETO ACADÊMICO</div>
+</div>
+</div></div></figure>
+  </section>
+
+  <section class="autoria" aria-labelledby="autoria-titulo">
+    <div class="eyebrow">Ficha técnica</div>
+    <h2 id="autoria-titulo">Ferramentas e autoria</h2>
+    <ul class="autoria__lista">
+      <li class="autoria__item">
+        <span class="autoria__icone autoria__icone--ps" aria-hidden="true">Ps</span>
+        <span class="autoria__nome"><span class="sr-only">Adobe </span>Photoshop</span>
+        <span class="autoria__papel">Pixel art e tratamento</span>
+      </li>
+      <li class="autoria__item">
+        <span class="autoria__icone autoria__icone--ai" aria-hidden="true">Ai</span>
+        <span class="autoria__nome"><span class="sr-only">Adobe </span>Illustrator</span>
+        <span class="autoria__papel">Vetorização e embalagens</span>
+      </li>
+      <li class="autoria__item">
+        <span class="autoria__icone autoria__icone--ff" aria-hidden="true">Ff</span>
+        <span class="autoria__nome"><span class="sr-only">Adobe Firefly, com modelo de IA do Google, usado na posição de alguns personagens</span><span aria-hidden="true">Firefly</span></span>
+        <span class="autoria__papel" aria-hidden="true">Personagens · posições</span>
+      </li>
+      <li class="autoria__item">
+        <span class="autoria__icone autoria__icone--claude" aria-hidden="true">
+          <!-- Símbolo do Claude: simple-icons@13.21.0 (icons/claude.svg), colado inline -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg>
+        </span>
+        <span class="autoria__nome">Claude</span>
+        <span class="autoria__papel">Texto e revisão, correção de bugs</span>
+      </li>
+      <li class="autoria__item">
+        <img class="autoria__icone autoria__foto" src="assets/img/perfil-bruno.jpg" alt="Foto de Bruno Freitas de Souza" width="240" height="240" loading="lazy">
+        <span class="autoria__nome">Bruno Freitas de Souza</span>
+        <span class="autoria__papel">Autor do projeto</span>
+      </li>
+    </ul>
+    <p class="autoria__nota">Os personagens foram gerados no Adobe Firefly com um modelo do Google, a partir de fotos dos professores, que autorizaram o uso, e depois redesenhados e vetorizados pelo autor. As imagens trazem a marca d'água SynthID do Google.</p>
+  </section>
+
+  <section class="fim" aria-labelledby="fim-titulo">
+    <div class="fim__box">
+      <img src="assets/img/xicara-icone.png" alt="" width="60" height="84">
+      <h2 id="fim-titulo">Leve o manual com você</h2>
+      <p>O manual completo, com todas as diretrizes de uso da marca, em PDF para leitura e impressão ou em PowerPoint para apresentação.</p>
+      <div class="acoes">
+        <a class="btn btn--ouro" href="assets/downloads/Dungeon_Cafe_Manual_de_Identidade_Visual.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 3v12M6 10l6 6 6-6M4 21h16"/></svg>
+          Baixar PDF <small>9,1 MB</small>
+        </a>
+        <a class="btn btn--linha" href="assets/downloads/Dungeon_Cafe_Manual_de_Identidade_Visual.pptx" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 3v12M6 10l6 6 6-6M4 21h16"/></svg>
+          Baixar PowerPoint <small>4,9 MB</small>
+        </a>
+        <a class="btn btn--linha" href="index.html">Voltar à taverna</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  Projeto de Extensão 2 · Tecnólogo em Design Gráfico · IFRR Campus Boa Vista Zona Oeste · 2026 · Marca fictícia, projeto acadêmico.
+</footer>
+<dialog class="zoom" aria-label="Página do manual ampliada">
+  <div class="zoom__barra"><span>Arraste para navegar pela página</span><button type="button">Fechar</button></div>
+  <div class="zoom__area"><div class="zoom__box"></div></div>
+</dialog>
+<script>
+/* Menu hambúrguer: mesmo comportamento do js/main.js da home (o main.js inteiro não é
+   carregado aqui porque procura o login e a janela dos cafés, que só existem na home). */
+(()=>{const t=document.querySelector('.nav-toggle'),n=document.getElementById('menu');if(!t||!n)return;
+const set=o=>{t.setAttribute('aria-expanded',String(o));t.querySelector('.sr-only').textContent=o?'Fechar menu':'Abrir menu';n.classList.toggle('is-open',o);};
+t.addEventListener('click',()=>set(t.getAttribute('aria-expanded')!=='true'));
+n.addEventListener('click',e=>{if(e.target.closest('a'))set(false);});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')set(false);});})();
+(()=>{const f=[...document.querySelectorAll('.prancha--html')];
+const fit=()=>f.forEach(e=>e.style.setProperty('--s',e.clientWidth/1123));
+fit();if('ResizeObserver'in window){const r=new ResizeObserver(fit);f.forEach(e=>r.observe(e));}else addEventListener('resize',fit);
+const d=document.querySelector('.zoom');if(!d||!d.showModal)return;
+const box=d.querySelector('.zoom__box');
+d.querySelector('button').addEventListener('click',()=>d.close());
+d.addEventListener('close',()=>{box.innerHTML='';});
+f.forEach(e=>e.addEventListener('click',()=>{
+  if(innerWidth>760)return;
+  const z=Math.max(0.7,innerWidth/1123),pg=e.querySelector('.pg').cloneNode(true);
+  pg.style.transform='scale('+z+')';pg.querySelectorAll('img').forEach(i=>i.removeAttribute('loading'));
+  box.style.width=1123*z+'px';box.style.height=794*z+'px';box.replaceChildren(pg);
+  d.setAttribute('aria-label',e.getAttribute('aria-label')+' (ampliada)');d.showModal();
+  d.querySelector('.zoom__area').scrollTo(0,0);}));
+})();
+</script>
+</body>
+</html>
