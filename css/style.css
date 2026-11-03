@@ -179,17 +179,10 @@ a { color: inherit; }
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   text-decoration: none;
 }
-.brand img { width: 30px; height: auto; }
-.brand__name {
-  font-weight: 800;
-  font-size: 1.375rem;
-  letter-spacing: 0.02em;
-  color: var(--parchment);
-}
-.brand__name em { font-style: normal; color: var(--gold); }
+.brand img { width: auto; height: 32.5px; }  /* logotipo horizontal oficial: xícara com 26 px */
 
 .nav { display: flex; align-items: center; gap: 28px; }
 .nav a:not(.btn) {

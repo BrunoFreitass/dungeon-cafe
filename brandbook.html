@@ -44,10 +44,8 @@
     font-family:'Texturina',Georgia,serif;font-size:17px;line-height:1.6;
   }
   .topbar :focus-visible{outline-color:var(--gold-light)}
-  .topbar .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
-  .topbar .brand img{width:30px;height:auto}
-  .topbar .brand__name{font-weight:800;font-size:1.375rem;letter-spacing:.02em;color:var(--parchment)}
-  .topbar .brand__name em{font-style:normal;color:var(--gold)}
+  .topbar .brand{display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+  .topbar .brand img{width:auto;height:32.5px}  /* logotipo horizontal oficial: xícara com 26 px */
   .topbar .nav{display:flex;align-items:center;gap:28px}
   .topbar .nav a:not(.btn){text-decoration:none;font-weight:600;color:var(--latte);position:relative}
   .topbar .nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .2s ease}
@@ -178,8 +176,7 @@
 <!-- Cabeçalho igual ao da home; links de seção apontam para index.html#secao -->
 <header class="topbar">
   <a class="brand" href="index.html" aria-label="Dungeon Café — início">
-    <img src="assets/img/xicara-icone.png" alt="" width="36" height="50">
-    <span class="brand__name">Dungeon <em>Café</em></span>
+    <img src="assets/img/logo/logo-horizontal-escuro.svg" alt="" width="233" height="33">
   </a>
 
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
@@ -206,11 +203,11 @@
       <div class="acoes">
         <a class="btn btn--ouro" href="assets/downloads/Dungeon_Cafe_Manual_de_Identidade_Visual.pdf" download>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 3v12M6 10l6 6 6-6M4 21h16"/></svg>
-          Baixar PDF <small>9,1 MB</small>
+          Baixar PDF <small>6,5 MB</small>
         </a>
         <a class="btn btn--linha" href="assets/downloads/Dungeon_Cafe_Manual_de_Identidade_Visual.pptx" download>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 3v12M6 10l6 6 6-6M4 21h16"/></svg>
-          Baixar PowerPoint <small>4,9 MB</small>
+          Baixar PowerPoint <small>5,1 MB</small>
         </a>
       </div>
     </div>
@@ -231,15 +228,14 @@
 <div style="height: 100%; box-sizing: border-box; border: 3px solid #C9933B; outline: 2px solid #5A3526; outline-offset: -12px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 48px 56px;">
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 4px; color: #C9933B;">LINHA MESTRES DO BRASIL · IFRR ZONA OESTE</div>
 <div style="display: flex; flex-direction: column; align-items: center; gap: 14px;">
-<img src="assets/img/xicara.png" alt="Símbolo do Dungeon Café: xícara de café em pixel art" style="width: 168px; height: 235px; object-fit: contain;">
-<h2 style="margin: 0; font-weight: 800; font-size: 88px; line-height: 1; letter-spacing: 3px;">DUNGEON CAFÉ</h2>
-<div style="width: 360px; height: 3px; background: #C9933B; margin-top: 10px;"></div>
-<div style="font-weight: 600; font-size: 32px; color: #E8D3B9; margin-top: 4px;">Manual de Identidade Visual</div>
+<h2 style="margin: 0; line-height: 0;"><img src="assets/img/logo/logo-principal-escuro.svg" alt="Dungeon Café" style="width: 540px; height: 241px;"></h2>
+<div style="width: 360px; height: 3px; background: #C9933B; margin-top: 8px;"></div>
+<div style="font-weight: 600; font-size: 30px; color: #E8D3B9;">Manual de Identidade Visual</div>
 </div>
 <div style="display: flex; justify-content: space-between; width: 100%; font-size: 14px; color: #E8D3B9;">
 <span>Bruno Freitas de Souza</span>
 <span>Projeto de Extensão 2 · Tecnólogo em Design Gráfico · IFRR · 2026</span>
-<span>Versão 1.0</span>
+<span>Versão 1.1</span>
 </div>
 </div>
 </div></div></figure>
@@ -353,24 +349,27 @@
 <h2 style="margin: 0; font-size: 44px; font-weight: 800; line-height: 1.05;">Versão principal</h2>
 </div>
 <div style="display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 40px; flex-grow: 1;">
-<div style="border: 3px solid #2A1810; background: #FFFAF3; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;">
-<img loading="lazy" src="assets/img/xicara.png" alt="Símbolo: xícara de café em pixel art com vapor" style="width: 150px; height: 210px; object-fit: contain;">
-<div style="font-weight: 800; font-size: 56px; letter-spacing: 3px; line-height: 1; color: #1F130B;">DUNGEON CAFÉ</div>
+<div style="border: 3px solid #2A1810; background: #F4ECE1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;">
+<img loading="lazy" src="assets/img/logo/logo-principal-claro.svg" alt="Logotipo Dungeon Café, versão principal sobre fundo claro" style="width: 440px; height: 196px;">
 </div>
-<div style="display: flex; flex-direction: column; gap: 16px; font-size: 15px; line-height: 1.55;">
+<div style="display: flex; flex-direction: column; gap: 14px; font-size: 15px; line-height: 1.5;">
 <div style="border-top: 3px solid #2A1810; padding-top: 10px;">
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">SÍMBOLO</div>
 <div style="margin-top: 6px;">Xícara em pixel art, redesenhada a partir de uma xícara real. O vapor sugere a "poção" de energia e foco; o pixel liga a marca aos RPGs de 16 bits.</div>
 </div>
 <div style="border-top: 3px solid #2A1810; padding-top: 10px;">
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">LOGOTIPO</div>
-<div style="margin-top: 6px;">"DUNGEON CAFÉ" em Texturina ExtraBold, caixa-alta, com espaçamento levemente aberto. A serifa de inspiração medieval traz a taverna sem perder a legibilidade.</div>
+<div style="margin-top: 6px;">"Dungeon Café" em Texturina ExtraBold (800), em maiúsculas e minúsculas, convertido em contornos. Fundo claro: "Dungeon" em Tinta #2A1810 e "Café" em Ouro Escuro #8F6103. Fundo escuro: Pergaminho #F4ECE1 e Ouro Taverna #C9933B.</div>
 </div>
 <div style="border-top: 3px solid #2A1810; padding-top: 10px;">
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">COMPOSIÇÃO</div>
-<div style="margin-top: 6px;">Símbolo centralizado acima do nome. A largura do nome define o bloco; a xícara ocupa cerca de 30% dessa largura. Não separar nem reposicionar os elementos.</div>
+<div style="margin-top: 6px;">"Dungeon" na 1ª linha; "Café" e a xícara na 2ª, centralizados pelo desenho visível, com o pires na linha de base de "Café". Para espaços baixos, use a horizontal (página 05). Não separar nem reposicionar os elementos.</div>
 </div>
-<div style="background: #1F130B; color: #F4ECE1; padding: 12px 16px; font-size: 14px; line-height: 1.5;">Arquivo-mestre: vetorizar em Illustrator (.ai, .eps e .pdf) e exportar PNG em alta resolução, conforme as diretrizes técnicas do projeto.</div>
+<div style="border-top: 3px solid #2A1810; padding-top: 10px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">RÓTULOS NÃO SÃO O LOGOTIPO</div>
+<div style="margin-top: 6px;">Textos como "DUNGEON CAFÉ · MANUAL DE IDENTIDADE VISUAL", em Pixelify Sans e caixa alta, são rótulos de interface. Eles nunca substituem o logotipo.</div>
+</div>
+<div style="background: #1F130B; color: #F4ECE1; padding: 12px 16px; font-size: 14px; line-height: 1.5;">Arquivos oficiais: SVG em contornos (web) e PNG de 2000 px (impressão e apresentações). Use sempre os arquivos; nunca redigite o nome.</div>
 </div>
 </div>
 </div></div></figure>
@@ -382,41 +381,36 @@
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 3px; color: #6B4A38;">03 · LOGOTIPO</div>
 <h2 style="margin: 0; font-size: 44px; font-weight: 800; line-height: 1.05;">Versões</h2>
 </div>
-<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; flex-grow: 1;">
-<div style="display: flex; flex-direction: column; gap: 10px;">
-<div style="flex-grow: 1; background: #1F130B; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
-<img loading="lazy" src="assets/img/xicara-icone.png" alt="Versão principal colorida sobre fundo escuro" style="width: 90px; height: 126px; object-fit: contain;">
-<div style="font-weight: 800; font-size: 19px; letter-spacing: 1px; white-space: nowrap; color: #F4ECE1;">DUNGEON CAFÉ</div>
-</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 16px 20px; flex-grow: 1;">
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="flex-grow: 1; display: grid; grid-template-columns: 1fr 1fr; border: 2px solid #2A1810;"><div style="background: #F4ECE1; display: flex; align-items: center; justify-content: center;"><img loading="lazy" src="assets/img/logo/logo-principal-claro.svg" alt="Versão principal sobre fundo claro" style="width: 140px; height: 62.5px;"></div><div style="background: #1F130B; display: flex; align-items: center; justify-content: center;"><img loading="lazy" src="assets/img/logo/logo-principal-escuro.svg" alt="Versão principal sobre fundo escuro" style="width: 140px; height: 62.5px;"></div></div>
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">PRINCIPAL</div>
-<div style="font-size: 14px; line-height: 1.45;">Colorida. Preferencial em fundos Masmorra ou Pergaminho.</div>
+<div style="font-size: 13px; line-height: 1.4; min-height: 55px;">Preferencial. Claro: "Dungeon" Tinta #2A1810, "Café" Ouro Escuro #8F6103. Escuro: Pergaminho #F4ECE1 e Ouro Taverna #C9933B.</div>
 </div>
-<div style="display: flex; flex-direction: column; gap: 10px;">
-<div style="flex-grow: 1; background: #FFFAF3; border: 2px solid #2A1810; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
-<img loading="lazy" src="assets/img/logo-mono.png" alt="Versão monocromática em Marrom Masmorra" style="width: 90px; height: 126px; object-fit: contain;">
-<div style="font-weight: 800; font-size: 19px; letter-spacing: 1px; white-space: nowrap; color: #1F130B;">DUNGEON CAFÉ</div>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="flex-grow: 1; display: grid; grid-template-rows: 1fr 1fr; border: 2px solid #2A1810;"><div style="background: #F4ECE1; display: flex; align-items: center; justify-content: center;"><img loading="lazy" src="assets/img/logo/logo-horizontal-claro.svg" alt="Versão horizontal sobre fundo claro" style="width: 260px; height: 36.3px;"></div><div style="background: #1F130B; display: flex; align-items: center; justify-content: center;"><img loading="lazy" src="assets/img/logo/logo-horizontal-escuro.svg" alt="Versão horizontal sobre fundo escuro" style="width: 260px; height: 36.3px;"></div></div>
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">HORIZONTAL</div>
+<div style="font-size: 13px; line-height: 1.4; min-height: 55px;">Xícara à esquerda e o nome numa linha. Para cabeçalhos, rodapés, faixas e espaços baixos.</div>
 </div>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="flex-grow: 1; display: flex; align-items: center; justify-content: center; border: 2px solid #2A1810; background: linear-gradient(rgba(31, 19, 11, 0.6), rgba(31, 19, 11, 0.6)), url(assets/img/banner-crop.jpg) center / cover;"><img loading="lazy" src="assets/img/logo/logo-mono-negativo.svg" alt="Versão mono negativa sobre foto" style="width: 190px; height: 84.8px;"></div>
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">SOBRE FOTOS</div>
+<div style="font-size: 13px; line-height: 1.4; min-height: 55px;">Sobre fotos, escureça ou clareie a área e use só as versões de uma cor: mono negativa no escuro, mono no claro.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="flex-grow: 1; display: flex; align-items: center; justify-content: center; background: #FFFAF3; border: 2px solid #2A1810;"><img loading="lazy" src="assets/img/logo/logo-mono.svg" alt="Versão monocromática em Tinta" style="width: 200px; height: 89.3px;"></div>
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">MONOCROMÁTICA</div>
-<div style="font-size: 14px; line-height: 1.45;">Uma cor (Masmorra). Para carimbo, gravação, impressão a uma cor e fundos claros.</div>
+<div style="font-size: 13px; line-height: 1.4; min-height: 55px;">Uma cor (Tinta #2A1810), inclusive a xícara. Para carimbo, gravação e impressão a uma cor.</div>
 </div>
-<div style="display: flex; flex-direction: column; gap: 10px;">
-<div style="flex-grow: 1; background: #1F130B; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
-<img loading="lazy" src="assets/img/logo-neg.png" alt="Versão negativa em Pergaminho sobre fundo escuro" style="width: 90px; height: 126px; object-fit: contain;">
-<div style="font-weight: 800; font-size: 19px; letter-spacing: 1px; white-space: nowrap; color: #F4ECE1;">DUNGEON CAFÉ</div>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="flex-grow: 1; display: flex; align-items: center; justify-content: center; background: #1F130B;"><img loading="lazy" src="assets/img/logo/logo-mono-negativo.svg" alt="Versão mono negativa em Pergaminho" style="width: 200px; height: 89.3px;"></div>
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">MONO NEGATIVA</div>
+<div style="font-size: 13px; line-height: 1.4; min-height: 55px;">Uma cor clara (Pergaminho #F4ECE1) sobre fundos escuros, fotos e tecidos.</div>
 </div>
-<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">NEGATIVA</div>
-<div style="font-size: 14px; line-height: 1.45;">Uma cor clara (Pergaminho) sobre fundos escuros ou fotos.</div>
-</div>
-<div style="display: flex; flex-direction: column; gap: 10px;">
-<div style="flex-grow: 1; background: #FFFAF3; border: 2px solid #2A1810; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px;">
-<img loading="lazy" src="assets/img/xicara-icone.png" alt="Versão reduzida: somente o símbolo" style="width: 64px; height: 90px; object-fit: contain;">
-<div style="display: flex; align-items: end; gap: 18px;">
-<div style="display: flex; flex-direction: column; align-items: center; gap: 4px;"><img loading="lazy" src="assets/img/favicon-64.png" alt="Favicon 64 px" style="width: 64px; height: 64px; image-rendering: pixelated;"><span style="font-family: 'Pixelify Sans', monospace; font-size: 12px;">64 px</span></div>
-<div style="display: flex; flex-direction: column; align-items: center; gap: 4px;"><img loading="lazy" src="assets/img/favicon-32.png" alt="Favicon 32 px" style="width: 32px; height: 32px; image-rendering: pixelated;"><span style="font-family: 'Pixelify Sans', monospace; font-size: 12px;">32 px</span></div>
-</div>
-</div>
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div style="flex-grow: 1; display: flex; align-items: center; justify-content: center; gap: 22px; background: #FFFAF3; border: 2px solid #2A1810;"><img loading="lazy" src="assets/img/xicara-icone.png" alt="Versão reduzida: somente o símbolo" style="width: 52px; height: 73px; object-fit: contain;"><div style="display: flex; flex-direction: column; align-items: center; gap: 4px;"><img loading="lazy" src="assets/img/favicon-64.png" alt="Favicon 64 px" style="width: 64px; height: 64px; image-rendering: pixelated;"><span style="font-family: 'Pixelify Sans', monospace; font-size: 12px;">64 px</span></div><div style="display: flex; flex-direction: column; align-items: center; gap: 4px;"><img loading="lazy" src="assets/img/favicon-32.png" alt="Favicon 32 px" style="width: 32px; height: 32px; image-rendering: pixelated;"><span style="font-family: 'Pixelify Sans', monospace; font-size: 12px;">32 px</span></div></div>
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">REDUZIDA / FAVICON</div>
-<div style="font-size: 14px; line-height: 1.45;">Só o símbolo, para avatar, favicon e espaços abaixo do tamanho mínimo.</div>
+<div style="font-size: 13px; line-height: 1.4; min-height: 55px;">Só a xícara, para avatar, favicon e espaços abaixo do tamanho mínimo.</div>
 </div>
 </div>
 </div></div></figure>
@@ -428,40 +422,34 @@
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 3px; color: #6B4A38;">03 · LOGOTIPO</div>
 <h2 style="margin: 0; font-size: 44px; font-weight: 800; line-height: 1.05;">Grid de construção e área de proteção</h2>
 </div>
-<div style="display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 40px; flex-grow: 1;">
-<div style="position: relative; background-color: #FFFAF3; background-image: linear-gradient(#E3D3BD 1px, transparent 1px), linear-gradient(90deg, #E3D3BD 1px, transparent 1px); background-size: 20px 20px; border: 2px solid #2A1810; display: flex; align-items: center; justify-content: center;">
-<div style="position: relative; border: 2px dashed #A3321F; padding: 28px; margin-right: 70px;">
-<div style="position: relative; outline: 1px solid #2A1810; width: max-content; display: flex; flex-direction: column; align-items: center; gap: 14px;">
-<img loading="lazy" src="assets/img/xicara-icone.png" alt="Símbolo sobre o grid" style="width: 70px; height: 98px; object-fit: contain;">
-<div style="font-weight: 800; font-size: 39px; letter-spacing: 2px; line-height: 28px; height: 28px; white-space: nowrap; color: #1F130B;">DUNGEON CAFÉ</div>
+<div style="display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 36px; flex-grow: 1;">
+<div style="background-color: #FFFAF3; background-image: linear-gradient(#E3D3BD 1px, transparent 1px), linear-gradient(90deg, #E3D3BD 1px, transparent 1px); background-size: 14px 14px; border: 2px solid #2A1810; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px;">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><div style="position: relative; width: 396px; height: 233.0px; outline: 2px dashed #A3321F;"><img loading="lazy" src="assets/img/logo/logo-principal-claro-protecao.svg" alt="" style="width: 396px; height: 233.0px; display: block;"><div style="position: absolute; left: 12.831%; right: 12.831%; top: 21.807%; bottom: 21.807%; outline: 1px solid #2A1810;"></div><div style="position: absolute; width: 12.831%; height: 21.807%; background: rgba(163, 50, 31, 0.16); display: flex; align-items: center; justify-content: center; font-family: 'Pixelify Sans', monospace; font-size: 13px; color: #A3321F; left: 0; top: 0;">x</div><div style="position: absolute; width: 12.831%; height: 21.807%; background: rgba(163, 50, 31, 0.16); display: flex; align-items: center; justify-content: center; font-family: 'Pixelify Sans', monospace; font-size: 13px; color: #A3321F; right: 0; bottom: 0;">x</div></div><div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; color: #2A1810;">principal: 5,8x × 2,6x · xícara 1,44x · entrelinha 1,58x</div></div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px;"><div style="position: relative; width: 440px; height: 124.0px; outline: 2px dashed #A3321F;"><img loading="lazy" src="assets/img/logo/logo-horizontal-claro-protecao.svg" alt="" style="width: 440px; height: 124.0px; display: block;"><div style="position: absolute; left: 8.252%; right: 8.252%; top: 29.287%; bottom: 29.287%; outline: 1px solid #2A1810;"></div><div style="position: absolute; width: 8.252%; height: 29.287%; background: rgba(163, 50, 31, 0.16); display: flex; align-items: center; justify-content: center; font-family: 'Pixelify Sans', monospace; font-size: 13px; color: #A3321F; left: 0; top: 0;">x</div><div style="position: absolute; width: 8.252%; height: 29.287%; background: rgba(163, 50, 31, 0.16); display: flex; align-items: center; justify-content: center; font-family: 'Pixelify Sans', monospace; font-size: 13px; color: #A3321F; right: 0; bottom: 0;">x</div></div><div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; color: #2A1810;">horizontal: 10,1x × 1,41x · xícara 1,13x na linha de base</div></div>
 </div>
-<div style="position: absolute; left: 0; top: 0; width: 28px; height: 28px; background: rgba(163, 50, 31, 0.16); display: flex; align-items: center; justify-content: center; font-family: 'Pixelify Sans', monospace; font-size: 14px; color: #A3321F;">x</div>
-<div style="position: absolute; right: 0; bottom: 0; width: 28px; height: 28px; background: rgba(163, 50, 31, 0.16); display: flex; align-items: center; justify-content: center; font-family: 'Pixelify Sans', monospace; font-size: 14px; color: #A3321F;">x</div>
-<div style="position: absolute; right: -66px; top: 28px; height: 98px; border-left: 2px solid #2A1810; padding-left: 8px; display: flex; align-items: center; font-family: 'Pixelify Sans', monospace; font-size: 13px;">3,5x</div>
-<div style="position: absolute; right: -66px; top: 126px; height: 14px; border-left: 2px solid #6B4A38; padding-left: 8px; display: flex; align-items: center; font-family: 'Pixelify Sans', monospace; font-size: 13px;">0,5x</div>
-<div style="position: absolute; right: -66px; top: 140px; height: 28px; border-left: 2px solid #2A1810; padding-left: 8px; display: flex; align-items: center; font-family: 'Pixelify Sans', monospace; font-size: 13px;">1x</div>
-</div>
-</div>
-<div style="display: flex; flex-direction: column; gap: 14px; font-size: 15px; line-height: 1.5;">
-<div style="border-top: 3px solid #2A1810; padding-top: 10px;">
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px; line-height: 1.45;">
+<div style="border-top: 3px solid #2A1810; padding-top: 8px;">
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">MÓDULO X</div>
-<div style="margin-top: 6px;">x = altura da letra "D" do logotipo. O símbolo tem 3,5x de altura, o espaço entre símbolo e nome é 0,5x e o nome tem 1x.</div>
+<div style="margin-top: 4px;">x = altura do "D". Principal: xícara com 1,44x, pires na linha de base de "Café", entrelinha de 1,58x e vão de 0,31x entre "Café" e a xícara; a 2ª linha é centralizada pelo desenho visível. Horizontal: xícara com 1,13x, apoiada na linha de base, a 0,31x do nome.</div>
 </div>
-<div style="border-top: 3px solid #2A1810; padding-top: 10px;">
+<div style="border-top: 3px solid #2A1810; padding-top: 8px;">
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">ÁREA DE PROTEÇÃO</div>
-<div style="margin-top: 6px;">Mínimo de 1x livre em todos os lados (linha tracejada). Nenhum texto, borda ou imagem pode invadir esse espaço.</div>
+<div style="margin-top: 4px;">Mínimo de 1x livre em todos os lados (tracejado). Os arquivos com sufixo -protecao já trazem essa margem.</div>
 </div>
-<div style="border-top: 3px solid #2A1810; padding-top: 10px;">
+<div style="border-top: 3px solid #2A1810; padding-top: 8px;">
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">TAMANHO MÍNIMO</div>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 12px; margin-top: 6px;">
-<span>Impresso, completo</span><b>25 mm de largura</b>
-<span>Digital, completo</span><b>160 px de largura</b>
-<span>Só o símbolo</span><b>6 mm / 16 px</b>
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 3px 12px; margin-top: 4px;">
+<span>Principal, digital</span><b>64 px de altura</b>
+<span>Principal, impressa</span><b>20 mm de largura</b>
+<span>Horizontal, digital</span><b>32,5 px de altura (xícara de 26 px)</b>
+<span>Horizontal, impressa</span><b>30 mm de largura</b>
+<span>Só o símbolo</span><b>16 px / 6 mm</b>
 </div>
+<div style="margin-top: 4px; font-size: 13px; color: #6B4A38;">Abaixo disso, use a versão reduzida (só a xícara).</div>
 </div>
-<div style="border-top: 3px solid #2A1810; padding-top: 10px;">
+<div style="border-top: 3px solid #2A1810; padding-top: 8px;">
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">GRID DE PIXEL</div>
-<div style="margin-top: 6px;">O símbolo é desenhado sobre uma grade de pixels. Ao ampliar, use escalas inteiras (2x, 3x, 4x) e o modo "vizinho mais próximo", para não borrar os pixels.</div>
+<div style="margin-top: 4px;">A xícara é pixel art: nos arquivos ela é renderizada com "image-rendering: pixelated". Ao ampliar a imagem isolada, use escalas inteiras (2x, 3x, 4x) e o modo "vizinho mais próximo".</div>
 </div>
 </div>
 </div>
@@ -474,48 +462,62 @@
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 3px; color: #6B4A38;">03 · LOGOTIPO</div>
 <h2 style="margin: 0; font-size: 44px; font-weight: 800; line-height: 1.05;">Usos incorretos</h2>
 </div>
-<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 18px; flex-grow: 1;">
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 16px 18px; flex-grow: 1;">
 <div style="display: flex; flex-direction: column; gap: 8px;">
-<div style="position: relative; flex-grow: 1; background: #FFFAF3; border: 2px solid #2A1810; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; overflow: hidden;">
-<div style="transform: scaleX(1.6); display: flex; flex-direction: column; align-items: center; gap: 6px;"><img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 50px; height: 70px; object-fit: contain;"><div style="font-weight: 800; font-size: 18px; letter-spacing: 1px;">DUNGEON CAFÉ</div></div>
-<svg width="34" height="34" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
+<div style="position: relative; flex-grow: 1; background: #FFFAF3; border: 2px solid #2A1810; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+<img loading="lazy" src="assets/img/logo/logo-principal-claro.svg" alt="" style="width: 170px; height: 75.9px; transform: scaleX(1.5) scaleY(0.8);">
+<svg width="30" height="30" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
 </div>
-<div style="font-size: 15px;">Não distorcer nem esticar.</div>
-</div>
-<div style="display: flex; flex-direction: column; gap: 8px;">
-<div style="position: relative; flex-grow: 1; background: #FFFAF3; border: 2px solid #2A1810; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;">
-<img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 50px; height: 70px; object-fit: contain; filter: hue-rotate(150deg) saturate(1.6);"><div style="font-weight: 800; font-size: 18px; letter-spacing: 1px; color: #1F7A8C;">DUNGEON CAFÉ</div>
-<svg width="34" height="34" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
-</div>
-<div style="font-size: 15px;">Não alterar as cores fora da paleta.</div>
-</div>
-<div style="display: flex; flex-direction: column; gap: 8px;">
-<div style="position: relative; flex-grow: 1; background: #C9933B; border: 2px solid #2A1810; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;">
-<img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 50px; height: 70px; object-fit: contain;"><div style="font-weight: 800; font-size: 18px; letter-spacing: 1px; color: #B07A2A;">DUNGEON CAFÉ</div>
-<svg width="34" height="34" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
-</div>
-<div style="font-size: 15px;">Não aplicar sobre fundo de baixo contraste.<span class="sr-only"> (exemplo incorreto)</span></div>
+<div style="font-size: 14px; line-height: 1.35;">Não distorcer nem esticar.</div>
 </div>
 <div style="display: flex; flex-direction: column; gap: 8px;">
 <div style="position: relative; flex-grow: 1; background: #FFFAF3; border: 2px solid #2A1810; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-<div style="transform: rotate(-18deg); display: flex; flex-direction: column; align-items: center; gap: 6px;"><img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 50px; height: 70px; object-fit: contain;"><div style="font-weight: 800; font-size: 18px; letter-spacing: 1px;">DUNGEON CAFÉ</div></div>
-<svg width="34" height="34" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
+<img loading="lazy" src="assets/img/logo/logo-principal-claro.svg" alt="" style="width: 170px; height: 75.9px; filter: hue-rotate(150deg) saturate(1.6);">
+<svg width="30" height="30" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
 </div>
-<div style="font-size: 15px;">Não girar nem inclinar.</div>
-</div>
-<div style="display: flex; flex-direction: column; gap: 8px;">
-<div style="position: relative; flex-grow: 1; background: #FFFAF3; border: 2px solid #2A1810; display: flex; align-items: center; justify-content: center; gap: 10px;">
-<div style="font-weight: 400; font-size: 18px; font-family: Arial, sans-serif;">Dungeon café</div><img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 40px; height: 56px; object-fit: contain;">
-<svg width="34" height="34" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
-</div>
-<div style="font-size: 15px;">Não trocar a fonte nem reposicionar os elementos.</div>
+<div style="font-size: 14px; line-height: 1.35;">Não alterar as cores fora da paleta.</div>
 </div>
 <div style="display: flex; flex-direction: column; gap: 8px;">
-<div style="position: relative; flex-grow: 1; background: #FFFAF3; border: 2px solid #2A1810; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;">
-<img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 50px; height: 70px; object-fit: contain; filter: drop-shadow(6px 6px 4px rgba(0,0,0,0.6)) blur(0.6px);"><div style="font-weight: 800; font-size: 18px; letter-spacing: 1px; text-shadow: 3px 3px 4px rgba(0,0,0,0.5), 0 0 10px #F0C24B;">DUNGEON CAFÉ</div>
-<svg width="34" height="34" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
+<div style="position: relative; flex-grow: 1; background: #E8D3B9; border: 2px solid #2A1810; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+<img loading="lazy" src="assets/img/logo/logo-principal-escuro.svg" alt="" style="width: 170px; height: 75.9px;">
+<svg width="30" height="30" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
 </div>
-<div style="font-size: 15px;">Não aplicar sombras, brilhos ou desfoque.</div>
+<div style="font-size: 14px; line-height: 1.35;">Não aplicar sobre fundo de baixo contraste.<span class="sr-only"> (exemplo incorreto)</span></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="position: relative; flex-grow: 1; background: #FFFAF3; border: 2px solid #2A1810; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+<img loading="lazy" src="assets/img/logo/logo-principal-claro.svg" alt="" style="width: 170px; height: 75.9px; transform: rotate(-18deg);">
+<svg width="30" height="30" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
+</div>
+<div style="font-size: 14px; line-height: 1.35;">Não girar nem inclinar.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="position: relative; flex-grow: 1; background: #FFFAF3; border: 2px solid #2A1810; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+<div style="display: flex; align-items: center; gap: 8px;"><div style="font-family: Texturina, Georgia, serif; font-weight: 800; font-size: 21px; letter-spacing: 2px; line-height: 1.05; color: #2A1810; text-align: center;">DUNGEON<br><span style="color: #8F6103;">CAFÉ</span></div><img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 30px; height: 42px; object-fit: contain;"></div>
+<svg width="30" height="30" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
+</div>
+<div style="font-size: 14px; line-height: 1.35;">Não escrever o nome tudo em caixa alta.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="position: relative; flex-grow: 1; background: #1F130B; border: 2px solid #2A1810; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+<img loading="lazy" src="assets/img/logo/logo-principal-claro.svg" alt="" style="width: 170px; height: 75.9px;">
+<svg width="30" height="30" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
+</div>
+<div style="font-size: 14px; line-height: 1.35;">Não usar a versão para fundo claro sobre fundo escuro.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="position: relative; flex-grow: 1; background: #FFFAF3; border: 2px solid #2A1810; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+<div style="display: flex; align-items: center; gap: 10px;"><div style="font-weight: 400; font-size: 18px; font-family: Arial, sans-serif;">Dungeon café</div><img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 36px; height: 50px; object-fit: contain;"></div>
+<svg width="30" height="30" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
+</div>
+<div style="font-size: 14px; line-height: 1.35;">Não redigitar o nome, trocar a fonte nem reposicionar os elementos.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="position: relative; flex-grow: 1; background: #FFFAF3; border: 2px solid #2A1810; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+<img loading="lazy" src="assets/img/logo/logo-principal-claro.svg" alt="" style="width: 170px; height: 75.9px; filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.6)) drop-shadow(0 0 8px #F0C24B) blur(0.5px);">
+<svg width="30" height="30" viewBox="0 0 24 24" style="position: absolute; top: 8px; right: 8px;" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#A3321F"></circle><path d="M8 8l8 8M16 8l-8 8" stroke="#FFFAF3" stroke-width="2.5" stroke-linecap="square"></path></svg>
+</div>
+<div style="font-size: 14px; line-height: 1.35;">Não aplicar sombras, brilhos ou desfoque.</div>
 </div>
 </div>
 </div></div></figure>
@@ -535,7 +537,7 @@
 </div>
 <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; flex-grow: 1;">
 <div style="display: flex; flex-direction: column; border: 2px solid #2A1810; background: #FFFAF3;">
-<div style="height: 210px; background: #1F130B;"></div>
+<div style="height: 140px; background: #1F130B;"></div>
 <div style="padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; font-size: 14px;">
 <div style="font-size: 22px; font-weight: 800;">Marrom Masmorra</div>
 <div style="color: #6B4A38; line-height: 1.4;">Fundo principal; torra intensa e madeira da taverna.</div>
@@ -543,7 +545,7 @@
 </div>
 </div>
 <div style="display: flex; flex-direction: column; border: 2px solid #2A1810; background: #FFFAF3;">
-<div style="height: 210px; background: #C9933B;"></div>
+<div style="height: 140px; background: #C9933B;"></div>
 <div style="padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; font-size: 14px;">
 <div style="font-size: 22px; font-weight: 800;">Ouro Taverna</div>
 <div style="color: #6B4A38; line-height: 1.4;">Destaques, botões e conquistas.</div>
@@ -551,7 +553,7 @@
 </div>
 </div>
 <div style="display: flex; flex-direction: column; border: 2px solid #2A1810; background: #FFFAF3;">
-<div style="height: 210px; background: #F4ECE1; border-bottom: 2px solid #2A1810;"></div>
+<div style="height: 140px; background: #F4ECE1; border-bottom: 2px solid #2A1810;"></div>
 <div style="padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; font-size: 14px;">
 <div style="font-size: 22px; font-weight: 800;">Pergaminho</div>
 <div style="color: #6B4A38; line-height: 1.4;">Fundo de leitura, cartões e rótulos.</div>
@@ -559,12 +561,21 @@
 </div>
 </div>
 <div style="display: flex; flex-direction: column; border: 2px solid #2A1810; background: #FFFAF3;">
-<div style="height: 210px; background: #D4A017;"></div>
+<div style="height: 140px; background: #D4A017;"></div>
 <div style="padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; font-size: 14px;">
 <div style="font-size: 22px; font-weight: 800;">Dourado (apoio)</div>
 <div style="color: #6B4A38; line-height: 1.4;">Nome dos mentores e detalhes das molduras.</div>
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; line-height: 1.7; margin-top: 4px;">HEX #D4A017<br>RGB 212 160 23<br>CMYK 0 25 89 17</div>
 </div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #6B4A38;">CORES DO LOGOTIPO</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; font-size: 13px; line-height: 1.35;">
+<div style="display: flex; gap: 8px; align-items: start;"><span style="width: 22px; height: 22px; background: #2A1810; flex-shrink: 0;"></span><div><b>Tinta #2A1810</b><br>"Dungeon" em fundo claro · 14,50:1 sobre Pergaminho</div></div>
+<div style="display: flex; gap: 8px; align-items: start;"><span style="width: 22px; height: 22px; background: #F4ECE1; border: 1px solid #2A1810; flex-shrink: 0;"></span><div><b>Pergaminho #F4ECE1</b><br>"Dungeon" em fundo escuro · 15,51:1 sobre Masmorra</div></div>
+<div style="display: flex; gap: 8px; align-items: start;"><span style="width: 22px; height: 22px; background: #C9933B; flex-shrink: 0;"></span><div><b>Ouro Taverna #C9933B</b><br>"Café" em fundo escuro · 6,68:1 sobre Masmorra</div></div>
+<div style="display: flex; gap: 8px; align-items: start;"><span style="width: 22px; height: 22px; background: #8F6103; flex-shrink: 0;"></span><div><b>Ouro Escuro #8F6103</b><br>"Café" em fundo claro, em qualquer tamanho · 4,62:1 sobre Pergaminho</div></div>
 </div>
 </div>
 <div style="display: flex; flex-direction: column; gap: 8px;">
@@ -641,7 +652,7 @@
 <div style="font-size: 120px; font-weight: 800; line-height: 1;">Aa</div>
 <div style="font-size: 22px; line-height: 1.35;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 · ç ã é ô</div>
 <div style="display: flex; gap: 18px; font-size: 18px;"><span style="font-weight: 400;">Regular</span><span style="font-weight: 600;">SemiBold</span><span style="font-weight: 800;">ExtraBold</span></div>
-<div style="font-size: 14px; color: #E8D3B9; line-height: 1.5;">Serifada de inspiração medieval, com boa leitura em telas e impressos. Usada no logotipo, em títulos, nomes de regiões e textos corridos.</div>
+<div style="font-size: 14px; color: #E8D3B9; line-height: 1.5;">Serifada de inspiração medieval, com boa leitura em telas e impressos. Usada no logotipo (sempre em maiúsculas e minúsculas), em títulos, nomes de regiões e textos corridos.</div>
 </div>
 <div style="display: flex; flex-direction: column; gap: 12px; border-top: 3px solid #C9933B; padding-top: 14px;">
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">SECUNDÁRIA · PIXELIFY SANS</div>
@@ -794,28 +805,27 @@ Título: Texturina ExtraBold · Subtítulo: Texturina SemiBold · Corpo: Texturi
 <div style="display: flex; gap: 32px; flex-grow: 1; align-items: start;">
 <div style="display: flex; flex-direction: column; gap: 18px;">
 <div style="width: 272px; height: 176px; background: #1F130B; box-shadow: 4px 4px 0 #2A1810; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; border: 2px solid #C9933B; box-sizing: border-box;">
-<img loading="lazy" src="assets/img/xicara-icone.png" alt="Cartão de visita, frente" style="width: 54px; height: 76px; object-fit: contain;">
-<div style="font-weight: 800; font-size: 22px; letter-spacing: 1.5px; color: #F4ECE1;">DUNGEON CAFÉ</div>
+<img loading="lazy" src="assets/img/logo/logo-principal-escuro.svg" alt="Cartão de visita, frente" style="width: 200px; height: 89px;">
 </div>
 <div style="width: 272px; height: 176px; background: #F4ECE1; box-shadow: 4px 4px 0 #2A1810; box-sizing: border-box; padding: 16px 18px; display: flex; flex-direction: column; justify-content: space-between; border-left: 10px solid #C9933B;">
 <div><div style="font-weight: 800; font-size: 19px;">Bruno Freitas</div><div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 1px; color: #6B4A38;">DESIGNER · CLASSE AVENTUREIRO</div></div>
 <div style="font-size: 12px; line-height: 1.5;">[e-mail]<br>[@instagram] · [site]<br>Boa Vista · RR</div>
 </div>
-<div style="font-size: 13px; line-height: 1.45; max-width: 272px;"><b>Cartão de visita</b> 85 × 55 mm. Frente em Masmorra com o logotipo; verso em Pergaminho com faixa Ouro Taverna.</div>
+<div style="font-size: 13px; line-height: 1.45; max-width: 272px;"><b>Cartão de visita</b> 85 × 55 mm. Frente em Masmorra com o logotipo empilhado; verso em Pergaminho com faixa Ouro Taverna.</div>
 </div>
 <div style="display: flex; flex-direction: column; gap: 10px;">
 <div style="width: 250px; height: 354px; background: #FFFAF3; box-shadow: 4px 4px 0 #2A1810; box-sizing: border-box; padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
-<div style="display: flex; align-items: center; gap: 8px; border-bottom: 2px solid #C9933B; padding-bottom: 8px;"><img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 22px; height: 31px; object-fit: contain;"><span style="font-weight: 800; font-size: 13px; letter-spacing: 1px;">DUNGEON CAFÉ</span></div>
+<div style="border-bottom: 2px solid #C9933B; padding-bottom: 8px;"><img loading="lazy" src="assets/img/logo/logo-horizontal-claro.svg" alt="" style="width: 129px; height: 18px; display: block;"></div>
 <div style="display: flex; flex-direction: column; gap: 6px;">
 <div style="height: 4px; background: #D9CBB7; width: 70%;"></div><div style="height: 4px; background: #D9CBB7;"></div><div style="height: 4px; background: #D9CBB7;"></div><div style="height: 4px; background: #D9CBB7; width: 85%;"></div><div style="height: 4px; background: #D9CBB7;"></div><div style="height: 4px; background: #D9CBB7; width: 60%;"></div>
 </div>
 <div style="background: #1F130B; color: #E8D3B9; font-size: 9px; padding: 6px 8px; letter-spacing: 0.5px;">Linha Mestres do Brasil · Boa Vista · RR</div>
 </div>
-<div style="font-size: 13px; line-height: 1.45; max-width: 250px;"><b>Papel timbrado</b> A4. Cabeçalho com logotipo horizontal reduzido; rodapé em Masmorra.</div>
+<div style="font-size: 13px; line-height: 1.45; max-width: 250px;"><b>Papel timbrado</b> A4. Cabeçalho com o logotipo horizontal; rodapé em Masmorra.</div>
 </div>
 <div style="display: flex; flex-direction: column; gap: 10px;">
 <div style="width: 330px; height: 165px; background: #F4ECE1; box-shadow: 4px 4px 0 #2A1810; box-sizing: border-box; position: relative; overflow: hidden; border-top: 12px solid #1F130B;">
-<div style="position: absolute; left: 16px; top: 14px; display: flex; align-items: center; gap: 8px;"><img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 24px; height: 34px; object-fit: contain;"><span style="font-weight: 800; font-size: 14px; letter-spacing: 1px;">DUNGEON CAFÉ</span></div>
+<div style="position: absolute; left: 16px; top: 14px;"><img loading="lazy" src="assets/img/logo/logo-horizontal-claro.svg" alt="" style="width: 144px; height: 20px; display: block;"></div>
 <div style="position: absolute; right: 22px; bottom: 22px; font-size: 11px; line-height: 1.5; text-align: left;">Para: Aventureiro(a)<br>[endereço]<br>Boa Vista · RR</div>
 <div style="position: absolute; left: 0; bottom: 0; width: 100%; height: 8px; background: #C9933B;"></div>
 </div>
@@ -836,7 +846,7 @@ Título: Texturina ExtraBold · Subtítulo: Texturina SemiBold · Corpo: Texturi
 <div style="display: flex; flex-direction: column; gap: 10px;">
 <div style="flex-grow: 1; background: #DCCFBD; border: 2px solid #2A1810; display: flex; align-items: end; justify-content: center; padding-bottom: 18px; box-sizing: border-box;">
 <div style="width: 380px; display: flex; flex-direction: column; align-items: stretch;">
-<div style="background: #1F130B; color: #F4ECE1; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 10px; border: 3px solid #C9933B;"><img loading="lazy" src="assets/img/xicara-icone.png" alt="" style="width: 30px; height: 42px; object-fit: contain;"><span style="font-weight: 800; font-size: 24px; letter-spacing: 2px;">DUNGEON CAFÉ</span></div>
+<div style="background: #1F130B; display: flex; align-items: center; justify-content: center; padding: 12px; border: 3px solid #C9933B;"><img loading="lazy" src="assets/img/logo/logo-horizontal-escuro.svg" alt="" style="width: 229px; height: 32px; display: block;"></div>
 <div style="height: 34px; background: repeating-linear-gradient(90deg, #C9933B 0 38px, #1F130B 38px 76px);"></div>
 <div style="height: 140px; background: #F4ECE1; border-left: 8px solid #5A3526; border-right: 8px solid #5A3526; display: flex; align-items: end; justify-content: center; gap: 12px; padding-bottom: 10px; box-sizing: border-box;">
 <div style="width: 34px; height: 54px; background: #134E35;"></div><div style="width: 34px; height: 54px; background: #35164D;"></div><div style="width: 34px; height: 54px; background: #19181D;"></div><div style="width: 34px; height: 54px; background: #8F3410;"></div><div style="width: 34px; height: 54px; background: #4A1423;"></div>
@@ -864,7 +874,7 @@ Título: Texturina ExtraBold · Subtítulo: Texturina SemiBold · Corpo: Texturi
 </div>
 <div style="background: #1F130B; color: #E8D3B9; padding: 14px; font-size: 13px; line-height: 1.5; display: flex; flex-direction: column; justify-content: center; gap: 6px;">
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 2px; color: #C9933B;">REGRAS</div>
-Em tecidos escuros, use a versão negativa. A caneca é o brinde de quem vence o chefe final, o Mapinguari.
+Na placa, o logotipo horizontal sobre Masmorra. Em tecidos escuros, use a versão mono negativa (só a xícara ou o logotipo inteiro). A caneca é o brinde de quem vence o chefe final, o Mapinguari.
 </div>
 </div>
 </div>
@@ -931,10 +941,9 @@ Formato 1080 × 1080 px. Moldura na cor da região quando o post é sobre um men
 </div></div></figure>
     <figure class="prancha prancha--html" aria-label="Página 18 do manual: Contracapa"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 36px; background: #1F130B; color: #F4ECE1; font-family: 'Texturina', Georgia, serif;">
 <div style="height: 100%; box-sizing: border-box; border: 3px solid #C9933B; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; padding: 48px;">
-<img loading="lazy" src="assets/img/logo-neg.png" alt="Logotipo em versão negativa" style="width: 90px; height: 126px; object-fit: contain;">
-<h2 style="margin: 0; font-weight: 800; font-size: 40px; letter-spacing: 2px;">DUNGEON CAFÉ</h2>
+<h2 style="margin: 0; line-height: 0;"><img loading="lazy" src="assets/img/logo/logo-principal-escuro.svg" alt="Dungeon Café" style="width: 380px; height: 170px;"></h2>
 <div style="font-size: 20px; color: #E8D3B9;">Cada xícara é um passo da aventura.</div>
-<div style="margin-top: 36px; font-size: 14px; color: #E8D3B9; text-align: center; line-height: 1.6;">Manual de Identidade Visual · Versão 1.0 · 2026<br>Bruno Freitas de Souza · Tecnólogo em Design Gráfico<br>Instituto Federal de Roraima · Campus Boa Vista Zona Oeste<br>Orientação: Prof. Vagner Martins</div>
+<div style="margin-top: 36px; font-size: 14px; color: #E8D3B9; text-align: center; line-height: 1.6;">Manual de Identidade Visual · Versão 1.1 · 2026<br>Bruno Freitas de Souza · Tecnólogo em Design Gráfico<br>Instituto Federal de Roraima · Campus Boa Vista Zona Oeste<br>Orientação: Prof. Vagner Martins</div>
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 2px; color: #C9933B; margin-top: 10px;">MARCA FICTÍCIA · PROJETO ACADÊMICO</div>
 </div>
 </div></div></figure>
@@ -984,11 +993,11 @@ Formato 1080 × 1080 px. Moldura na cor da região quando o post é sobre um men
       <div class="acoes">
         <a class="btn btn--ouro" href="assets/downloads/Dungeon_Cafe_Manual_de_Identidade_Visual.pdf" download>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 3v12M6 10l6 6 6-6M4 21h16"/></svg>
-          Baixar PDF <small>9,1 MB</small>
+          Baixar PDF <small>6,5 MB</small>
         </a>
         <a class="btn btn--linha" href="assets/downloads/Dungeon_Cafe_Manual_de_Identidade_Visual.pptx" download>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 3v12M6 10l6 6 6-6M4 21h16"/></svg>
-          Baixar PowerPoint <small>4,9 MB</small>
+          Baixar PowerPoint <small>5,1 MB</small>
         </a>
         <a class="btn btn--linha" href="index.html">Voltar à taverna</a>
       </div>
