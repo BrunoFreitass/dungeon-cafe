@@ -1,46 +1,9 @@
 /* =========================================================
    Dungeon Café — interações da página inicial
-   Login é apenas uma SIMULAÇÃO de front-end (sem servidor):
-   guarda só o nome de exibição; a senha nunca é armazenada.
    ========================================================= */
 
 (() => {
   "use strict";
-
-  const SESSION_KEY = "dungeon-cafe:session";
-
-  /* ---------- Armazenamento seguro (pode falhar em aba anônima) ---------- */
-  const storage = {
-    read() {
-      for (const store of ["localStorage", "sessionStorage"]) {
-        try {
-          const raw = window[store].getItem(SESSION_KEY);
-          if (raw) return JSON.parse(raw);
-        } catch { /* ignora */ }
-      }
-      return null;
-    },
-    write(session, remember) {
-      try {
-        window[remember ? "localStorage" : "sessionStorage"].setItem(SESSION_KEY, JSON.stringify(session));
-      } catch { /* sessão só nesta visita */ }
-    },
-    clear() {
-      for (const store of ["localStorage", "sessionStorage"]) {
-        try { window[store].removeItem(SESSION_KEY); } catch { /* ignora */ }
-      }
-    },
-  };
-
-  /* ---------- Toast ---------- */
-  const toastEl = document.getElementById("toast");
-  let toastTimer;
-  function toast(message) {
-    toastEl.textContent = message;
-    toastEl.hidden = false;
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => { toastEl.hidden = true; }, 3200);
-  }
 
   /* ---------- Menu mobile ---------- */
   const navToggle = document.querySelector(".nav-toggle");
@@ -54,133 +17,6 @@
   navToggle.addEventListener("click", () => setMenu(navToggle.getAttribute("aria-expanded") !== "true"));
   nav.addEventListener("click", (e) => { if (e.target.closest("a")) setMenu(false); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
-
-  /* ---------- Login ---------- */
-  const form = document.getElementById("login-form");
-  const welcome = document.getElementById("login-welcome");
-  const welcomeName = document.getElementById("welcome-name");
-  const userInput = document.getElementById("login-user");
-  const passInput = document.getElementById("login-pass");
-  const remember = document.getElementById("login-remember");
-  const togglePass = document.getElementById("toggle-pass");
-  const logoutBtn = document.getElementById("logout");
-
-  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-  const MATRICULA_RE = /^\d{6,14}$/;
-
-  function setError(input, message) {
-    const error = document.getElementById(`${input.id}-error`);
-    error.textContent = message;
-    input.setAttribute("aria-invalid", message ? "true" : "false");
-  }
-
-  function validate() {
-    const user = userInput.value.trim();
-    const pass = passInput.value;
-    let ok = true;
-
-    if (!user) {
-      setError(userInput, "Informe seu e-mail ou matrícula.");
-      ok = false;
-    } else if (!EMAIL_RE.test(user) && !MATRICULA_RE.test(user)) {
-      setError(userInput, "Use um e-mail válido ou uma matrícula só com números.");
-      ok = false;
-    } else {
-      setError(userInput, "");
-    }
-
-    if (!pass) {
-      setError(passInput, "Informe sua senha.");
-      ok = false;
-    } else if (pass.length < 6) {
-      setError(passInput, "A senha precisa ter pelo menos 6 caracteres.");
-      ok = false;
-    } else {
-      setError(passInput, "");
-    }
-
-    return ok;
-  }
-
-  function displayName(user) {
-    if (user.includes("@")) {
-      const local = user.split("@")[0].split(/[._-]/)[0];
-      return local.charAt(0).toUpperCase() + local.slice(1);
-    }
-    return `#${user.slice(-4)}`;
-  }
-
-  function showSession(session) {
-    welcomeName.textContent = session.name;
-    form.hidden = true;
-    welcome.hidden = false;
-  }
-
-  function showForm() {
-    welcome.hidden = true;
-    form.hidden = false;
-    form.reset();
-    passInput.type = "password";
-    togglePass.textContent = "Mostrar";
-    togglePass.setAttribute("aria-pressed", "false");
-    setError(userInput, "");
-    setError(passInput, "");
-  }
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    if (!validate()) {
-      form.querySelector('[aria-invalid="true"]')?.focus();
-      return;
-    }
-
-    const submit = form.querySelector('button[type="submit"]');
-    const label = submit.querySelector(".btn__label");
-    submit.disabled = true;
-    label.textContent = "Abrindo a taverna…";
-
-    // Simula a ida ao servidor
-    setTimeout(() => {
-      const session = { name: displayName(userInput.value.trim()) };
-      storage.write(session, remember.checked);
-      submit.disabled = false;
-      label.textContent = "Entrar";
-      showSession(session);
-      toast(`Bem-vindo à taverna, ${session.name}! ☕`);
-    }, 700);
-  });
-
-  // Limpa o erro assim que o usuário corrige o campo
-  [userInput, passInput].forEach((input) => {
-    input.addEventListener("input", () => {
-      if (input.getAttribute("aria-invalid") === "true") setError(input, "");
-    });
-  });
-
-  togglePass.addEventListener("click", () => {
-    const show = passInput.type === "password";
-    passInput.type = show ? "text" : "password";
-    togglePass.textContent = show ? "Ocultar" : "Mostrar";
-    togglePass.setAttribute("aria-pressed", String(show));
-  });
-
-  logoutBtn.addEventListener("click", () => {
-    storage.clear();
-    showForm();
-    toast("Você saiu da taverna. Até a próxima xícara!");
-    userInput.focus();
-  });
-
-  const saved = storage.read();
-  if (saved?.name) showSession(saved);
-
-  /* ---------- Links ainda não implementados ---------- */
-  document.querySelectorAll("[data-soon]").forEach((el) => {
-    el.addEventListener("click", (e) => {
-      e.preventDefault();
-      toast(`${el.dataset.soon}: em breve na taverna!`);
-    });
-  });
 
   /* ---------- Abas dos mentores (padrão ARIA tabs) ---------- */
   const tabs = Array.from(document.querySelectorAll('.roster [role="tab"]'));
@@ -341,7 +177,7 @@
   });
 
   /* ---------- Revelar seções ao rolar ---------- */
-  const revealTargets = document.querySelectorAll(".step, .boss, .region, .plan, .section__title, .section__lead");
+  const revealTargets = document.querySelectorAll(".step, .boss, .region, .plan, .mentors-cta, .section__title, .section__lead");
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {

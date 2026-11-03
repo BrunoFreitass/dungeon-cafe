@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#entrar">Pular para o login</a>
+  <a class="skip-link" href="#jornada">Pular para o conteúdo</a>
 
   <!-- ===== Cabeçalho ===== -->
   <header class="topbar">
@@ -35,7 +35,7 @@
       <a href="#mentores">Os Mentores</a>
       <a href="#planos">Assinatura</a>
       <a href="brandbook.html">Brandbook</a>
-      <a class="btn btn--small btn--gold" href="#entrar">Entrar</a>
+      <a class="btn btn--small btn--gold" href="https://dungeon-cafe-app.pages.dev/entrar">Entrar</a>
     </nav>
   </header>
 
@@ -53,7 +53,7 @@
             vira nível, item e batalha contra os chefes do folclore brasileiro.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--gold" href="#entrar">Entrar na taverna</a>
+            <a class="btn btn--gold" href="https://dungeon-cafe-app.pages.dev/entrar">Entrar na taverna</a>
             <a class="btn btn--ghost" href="#planos">Ver planos</a>
           </div>
           <ul class="hero__stats" aria-label="Destaques">
@@ -61,76 +61,6 @@
             <li><strong>10</strong> níveis de jornada</li>
             <li><strong>2</strong> chefes lendários</li>
           </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Login ===== -->
-    <section class="section section--dark taverna" aria-labelledby="taverna-title">
-      <div class="container taverna__inner">
-        <div class="taverna__copy">
-          <p class="eyebrow">Área do aventureiro</p>
-          <h2 class="section__title" id="taverna-title">Sua caneca está esperando</h2>
-          <p class="section__lead">
-            Entre com seu e-mail ou matrícula para acompanhar seu nível, ver os itens conquistados
-            e escolher o próximo café da jornada.
-          </p>
-        </div>
-
-        <!-- Cartão de login (pergaminho) -->
-        <div class="login" id="entrar">
-          <form class="login__form" id="login-form" novalidate>
-            <h3 class="login__title">Entrar na Taverna</h3>
-            <p class="login__subtitle">Identifique-se, aventureiro.</p>
-
-            <div class="field">
-              <label for="login-user">E-mail ou matrícula</label>
-              <input id="login-user" name="user" type="text" autocomplete="username" inputmode="email"
-                     placeholder="voce@ifrr.edu.br" required aria-describedby="login-user-error">
-              <p class="field__error" id="login-user-error" aria-live="polite"></p>
-            </div>
-
-            <div class="field">
-              <label for="login-pass">Senha</label>
-              <div class="field__pass">
-                <input id="login-pass" name="password" type="password" autocomplete="current-password"
-                       placeholder="••••••••" required minlength="6" aria-describedby="login-pass-error">
-                <button type="button" class="field__toggle" id="toggle-pass" aria-pressed="false" aria-controls="login-pass">
-                  Mostrar
-                </button>
-              </div>
-              <p class="field__error" id="login-pass-error" aria-live="polite"></p>
-            </div>
-
-            <div class="login__row">
-              <label class="check">
-                <input type="checkbox" name="remember" id="login-remember">
-                <span>Lembrar de mim</span>
-              </label>
-              <a href="#" class="link" data-soon="Recuperação de senha">Esqueci a senha</a>
-            </div>
-
-            <button class="btn btn--gold btn--block" type="submit">
-              <span class="btn__label">Entrar</span>
-            </button>
-
-            <p class="login__footer">
-              Novo na taverna? <a href="#planos" class="link">Escolha seu plano</a>
-            </p>
-          </form>
-
-          <!-- Estado logado (preenchido via JS) -->
-          <div class="login__welcome" id="login-welcome" hidden>
-            <img src="assets/img/xicara-icone.png" alt="" width="64" height="90" class="login__cup">
-            <h3 class="login__title">Bem-vindo de volta!</h3>
-            <p class="login__subtitle">Aventureiro <strong id="welcome-name"></strong>, sua caneca está cheia.</p>
-            <div class="xp" aria-label="Progresso da jornada: nível 1 de 10">
-              <div class="xp__label"><span>Nível 1</span><span>0 / 10</span></div>
-              <div class="xp__bar"><span style="width: 4%"></span></div>
-            </div>
-            <a href="#mentores" class="btn btn--gold btn--block">Escolher mentor</a>
-            <button type="button" class="btn btn--ghost btn--block" id="logout">Sair da taverna</button>
-          </div>
         </div>
       </div>
     </section>
@@ -292,7 +222,7 @@
             <p class="coffee__note">Cada pacote traz um QR Code de uso único para subir de nível.</p>
             <div class="coffee__actions">
               <button class="btn btn--small" type="button" data-coffee-action="mentor">Conhecer o mentor</button>
-              <button class="btn btn--small btn--gold" type="button" data-coffee-action="buy">Comprar avulso · R$ 34,90</button>
+              <a class="btn btn--small btn--gold" href="https://dungeon-cafe-app.pages.dev/entrar">Comprar avulso · R$ 34,90</a>
             </div>
           </div>
         </div>
@@ -496,6 +426,11 @@
             </ul>
           </div>
         </article>
+
+        <div class="mentors-cta">
+          <p class="mentors-cta__text">Escolha seu mentor e comece a jornada</p>
+          <a class="btn btn--gold" href="https://dungeon-cafe-app.pages.dev/entrar">Jogar agora</a>
+        </div>
       </div>
     </section>
 
@@ -516,7 +451,7 @@
               <li>QR Code para subir de nível</li>
               <li>Retirada gratuita no campus</li>
             </ul>
-            <a href="#entrar" class="btn btn--ghost btn--block">Assinar agora</a>
+            <a href="https://dungeon-cafe-app.pages.dev/entrar" class="btn btn--ghost btn--block">Assinar agora</a>
           </article>
 
           <article class="plan plan--featured">
@@ -530,7 +465,7 @@
               <li>Acesso às batalhas contra chefes</li>
               <li>Retirada gratuita no campus</li>
             </ul>
-            <a href="#entrar" class="btn btn--gold btn--block">Assinar agora</a>
+            <a href="https://dungeon-cafe-app.pages.dev/entrar" class="btn btn--gold btn--block">Assinar agora</a>
           </article>
 
           <article class="plan">
@@ -545,7 +480,7 @@
               <li>Item exclusivo de mentor</li>
               <li>Retirada gratuita no campus ou entrega em Boa Vista</li>
             </ul>
-            <a href="#entrar" class="btn btn--ghost btn--block">Assinar agora</a>
+            <a href="https://dungeon-cafe-app.pages.dev/entrar" class="btn btn--ghost btn--block">Assinar agora</a>
           </article>
         </div>
 
@@ -558,7 +493,7 @@
           </div>
           <div class="plan__single-buy">
             <p class="plan__price"><span class="plan__currency">R$</span>34<span>,90</span><small>/pacote</small></p>
-            <a href="#entrar" class="btn btn--gold btn--block">Comprar avulso</a>
+            <a href="https://dungeon-cafe-app.pages.dev/entrar" class="btn btn--gold btn--block">Comprar avulso</a>
           </div>
         </article>
         <p class="plans__note">* Valores ilustrativos para o projeto de extensão.</p>
@@ -577,8 +512,6 @@
         <a href="brandbook.html">Brandbook</a></p>
     </div>
   </footer>
-
-  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
   <script src="js/main.js" defer></script>
 </body>
