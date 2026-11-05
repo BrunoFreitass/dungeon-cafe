@@ -54,9 +54,9 @@
   const COFFEES = {
     simone: {
       regiao: "Norte",
-      terroir: "Roraima — Matas & Lavrado",
+      terroir: "Amazônia — Robustas Amazônicos",
       tipo: "Café Especial Sustentável",
-      especie: "100% Robusta Roraimense",
+      especie: "100% Canéfora · Robustas Amazônicos",
       notas: "Corpo potente e aveludado, notas de cacau selvagem, castanhas e toque herbal da Amazônia.",
       mentor: "Profª. Simone",
       classe: "Guerreira",

@@ -33,7 +33,7 @@
   --simone:       #498065;
   --vagner-text:  #35164d;   /* Púrpura Centro-Oeste */
   --vagner:       #8768a5;
-  --ellem-text:   #19181d;   /* Cinza Sudeste */
+  --ellem-text:   #19181d;   /* Preto Sudeste */
   --ellem:        #75747a;
   --vitor-text:   #8f3410;   /* Ocre Nordeste */
   --vitor:        #b85a39;
@@ -707,7 +707,7 @@ body:has(.coffee[open]) { overflow: hidden; }
   list-style: none;
   padding: 0; margin: 0;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);  /* um poder por mentor (espec. seção 3) */
   gap: 14px;
 }
 .spell {

@@ -13,7 +13,7 @@
 <style>
   :root{
     --masmorra:#1F130B; --masmorra-2:#2A1810; --madeira:#5A3526;
-    --ouro:#C9933B; --ouro-escuro:#9C7410; --pergaminho:#F4ECE1; --papel:#FFFAF3;
+    --ouro:#C9933B; --ouro-escuro:#8F6103; --pergaminho:#F4ECE1; --papel:#FFFAF3;
     --latte:#E8D3B9; --tinta:#2A1810; --tinta-suave:#6B4A38;
     --serif:'Texturina', Georgia, serif; --pixel:'Pixelify Sans', 'Courier New', monospace;
     --max:1240px;
@@ -159,6 +159,8 @@
   .autoria__icone--ps{--bg:#001E36;--fg:#31A8FF}
   .autoria__icone--ai{--bg:#330000;--fg:#FF9A00}
   .autoria__icone--ff{--bg:#2B0A0A;--fg:#FF4E3A}
+  .autoria__icone--ag{--bg:#0B1F33;--fg:#7CC4FA}
+  .autoria__icone--ge{--bg:#1B1B3A;--fg:#A8C7FA}
   .autoria__icone--claude{--bg:#F4ECE1;--fg:#D97757}
   .autoria__foto{object-fit:cover;background:var(--masmorra-2)}
   .autoria__nome{font-family:var(--serif);font-weight:600;font-size:16px;line-height:1.3;color:var(--pergaminho)}
@@ -326,9 +328,9 @@
 <div style="padding: 9px 0; border-bottom: 1px solid #5A3526; font-weight: 600;">Poção</div><div style="padding: 9px 0; border-bottom: 1px solid #5A3526; color: #E8D3B9;">O café, fonte de foco e restauração</div>
 <div style="padding: 9px 0; border-bottom: 1px solid #5A3526; font-weight: 600;">Mentor</div><div style="padding: 9px 0; border-bottom: 1px solid #5A3526; color: #E8D3B9;">Professor que guia cada região</div>
 <div style="padding: 9px 0; border-bottom: 1px solid #5A3526; font-weight: 600;">Terroir</div><div style="padding: 9px 0; border-bottom: 1px solid #5A3526; color: #E8D3B9;">Origem de cada café</div>
-<div style="padding: 9px 0; border-bottom: 1px solid #5A3526; font-weight: 600;">XP e níveis</div><div style="padding: 9px 0; border-bottom: 1px solid #5A3526; color: #E8D3B9;">Cada pacote escaneado vale um nível (1 a 10)</div>
-<div style="padding: 9px 0; border-bottom: 1px solid #5A3526; font-weight: 600;">Chefes</div><div style="padding: 9px 0; border-bottom: 1px solid #5A3526; color: #E8D3B9;">Boitatá (nível 5) e Mapinguari (nível 10)</div>
-<div style="padding: 9px 0; font-weight: 600;">Lenda do Grão</div><div style="padding: 9px 0; color: #E8D3B9;">Título de quem vence o chefe final</div>
+<div style="padding: 9px 0; border-bottom: 1px solid #5A3526; font-weight: 600;">Fases</div><div style="padding: 9px 0; border-bottom: 1px solid #5A3526; color: #E8D3B9;">Cada QR Code lido libera a próxima fase da trilha (1 a 10)</div>
+<div style="padding: 9px 0; border-bottom: 1px solid #5A3526; font-weight: 600;">Chefes</div><div style="padding: 9px 0; border-bottom: 1px solid #5A3526; color: #E8D3B9;">Boitatá (fase 5) e Mapinguari (fase 10)</div>
+<div style="padding: 9px 0; font-weight: 600;">Cupom</div><div style="padding: 9px 0; color: #E8D3B9;">10% (Boitatá) ou 20% (Mapinguari) para 1 pacote avulso, vencendo com os 3 corações</div>
 </div>
 <div style="font-size: 14px; color: #E8D3B9; line-height: 1.5; margin-top: 6px;">Tom de voz: acolhedor como uma taverna e animado como o início de uma aventura. Evitar jargão técnico de café sem explicação e linguagem comercial fria.</div>
 </div>
@@ -657,11 +659,11 @@
 <div style="display: flex; flex-direction: column; gap: 12px; border-top: 3px solid #C9933B; padding-top: 14px;">
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">SECUNDÁRIA · PIXELIFY SANS</div>
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 120px; font-weight: 600; line-height: 1;">Aa</div>
-<div style="font-family: 'Pixelify Sans', monospace; font-size: 20px; line-height: 1.4;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 · XP · NÍVEL 5</div>
-<div style="font-size: 14px; color: #E8D3B9; line-height: 1.5;">Fonte pixelada, restrita a rótulos curtos, botões, níveis e indicadores de jogo. Nunca em textos longos.</div>
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 20px; line-height: 1.4;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 · FASE 5 · 3/10</div>
+<div style="font-size: 14px; color: #E8D3B9; line-height: 1.5;">Fonte pixelada, restrita a rótulos curtos, botões, fases e indicadores de jogo. Nunca em textos longos.</div>
 <div style="border: 2px solid #5A3526; padding: 12px 14px; font-size: 14px; line-height: 1.55; color: #E8D3B9;">
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 2px; color: #C9933B; margin-bottom: 4px;">HIERARQUIA</div>
-Título: Texturina ExtraBold · Subtítulo: Texturina SemiBold · Corpo: Texturina Regular · Rótulo e botão: Pixelify Sans SemiBold, caixa-alta, espaçamento aberto.<br>Nas embalagens, informações técnicas em Arial e notas sensoriais em Georgia Itálico.
+Título: Texturina ExtraBold · Subtítulo: Texturina SemiBold · Corpo: Texturina Regular · Rótulo e botão: Pixelify Sans SemiBold, caixa-alta, espaçamento aberto.<br>Nas embalagens, informações técnicas em Arial; notas sensoriais e nome do mentor em Georgia Itálico.
 </div>
 </div>
 </div>
@@ -727,7 +729,7 @@ Título: Texturina ExtraBold · Subtítulo: Texturina SemiBold · Corpo: Texturi
 </div>
 <div style="display: flex; gap: 24px; font-size: 13px; line-height: 1.5; color: #6B4A38;">
 <div style="flex: 1;"><b style="color: #2A1810;">Uso:</b> sempre em pixel art, de corpo inteiro, sobre Pergaminho ou com moldura dourada. Não recortar o rosto, não redesenhar em outro estilo e não usar fora do contexto da marca.</div>
-<div style="flex: 1;"><b style="color: #2A1810;">Chefes do folclore:</b> Boitatá, "a serpente de fogo" (nível 5), e Mapinguari, "o guardião da floresta" (nível 10). Veja a página seguinte.</div>
+<div style="flex: 1;"><b style="color: #2A1810;">Chefes do folclore:</b> Boitatá, "a serpente de fogo" (fase 5), e Mapinguari, "o guardião da floresta" (fase 10). Veja a página seguinte.</div>
 </div>
 </div></div></figure>
     <figure class="prancha prancha--html" aria-label="Página 12 do manual: Chefes do folclore"><div class="pg"><div style="width: 1123px; height: 794px; box-sizing: border-box; padding: 44px 56px; background: #1F130B; color: #F4ECE1; font-family: 'Texturina', Georgia, serif; display: flex; flex-direction: column; gap: 18px;">
@@ -747,9 +749,9 @@ Título: Texturina ExtraBold · Subtítulo: Texturina SemiBold · Corpo: Texturi
 <img loading="lazy" src="assets/img/chefe-boitata.png" alt="Boitatá, a serpente de fogo, em pixel art" style="height: 330px; width: auto; image-rendering: pixelated;">
 </div>
 <div style="padding: 16px 20px; display: flex; flex-direction: column; gap: 6px; border-top: 2px solid #5A3526;">
-<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">NÍVEL 5 · MEIO DA JORNADA</div>
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">FASE 5 · MEIO DA JORNADA</div>
 <div style="font-size: 26px; font-weight: 800;">Boitatá, a serpente de fogo</div>
-<div style="font-size: 14px; line-height: 1.5; color: #E8D3B9;">Guardiã dos campos contra o fogo. Recompensa: título "Guardião da Torra", item raro em forma de grão e 5% de desconto.</div>
+<div style="font-size: 14px; line-height: 1.5; color: #E8D3B9;">Guardiã dos campos contra o fogo. Vença terminando com os 3 corações e ganhe um cupom de 10% para 1 pacote avulso.</div>
 </div>
 </div>
 <div style="display: flex; flex-direction: column; border: 3px solid #C9933B; background: #2A1810;">
@@ -757,9 +759,9 @@ Título: Texturina ExtraBold · Subtítulo: Texturina SemiBold · Corpo: Texturi
 <img loading="lazy" src="assets/img/chefe-mapinguari.png" alt="Mapinguari, o guardião da floresta, em pixel art" style="height: 350px; width: auto; image-rendering: pixelated;">
 </div>
 <div style="padding: 16px 20px; display: flex; flex-direction: column; gap: 6px; border-top: 2px solid #C9933B;">
-<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">NÍVEL 10 · CHEFE FINAL</div>
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">FASE 10 · CHEFE FINAL</div>
 <div style="font-size: 26px; font-weight: 800;">Mapinguari, o guardião da floresta</div>
-<div style="font-size: 14px; line-height: 1.5; color: #E8D3B9;">A fera amazônica com a boca na barriga. Recompensa: título "Lenda do Grão", Hall da Fama, um pacote grátis e a caneca colecionável.</div>
+<div style="font-size: 14px; line-height: 1.5; color: #E8D3B9;">A fera amazônica com a boca na barriga. Vença terminando com os 3 corações e ganhe um cupom de 20% para 1 pacote avulso.</div>
 </div>
 </div>
 </div>
@@ -777,9 +779,9 @@ Título: Texturina ExtraBold · Subtítulo: Texturina SemiBold · Corpo: Texturi
 </div>
 <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; align-items: end; flex-grow: 1;">
 <img loading="lazy" src="assets/img/emb-norte.png" alt="Embalagem Região Norte" style="width: 100%; height: 360px; object-fit: contain;">
+<img loading="lazy" src="assets/img/emb-nordeste.png" alt="Embalagem Região Nordeste" style="width: 100%; height: 360px; object-fit: contain;">
 <img loading="lazy" src="assets/img/emb-centro-oeste.png" alt="Embalagem Região Centro-Oeste" style="width: 100%; height: 360px; object-fit: contain;">
 <img loading="lazy" src="assets/img/emb-sudeste.png" alt="Embalagem Região Sudeste" style="width: 100%; height: 360px; object-fit: contain;">
-<img loading="lazy" src="assets/img/emb-nordeste.png" alt="Embalagem Região Nordeste" style="width: 100%; height: 360px; object-fit: contain;">
 <img loading="lazy" src="assets/img/emb-sul.png" alt="Embalagem Região Sul" style="width: 100%; height: 360px; object-fit: contain;">
 </div>
 <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; font-size: 14px; line-height: 1.5; color: #2A1810;">
@@ -849,7 +851,7 @@ Título: Texturina ExtraBold · Subtítulo: Texturina SemiBold · Corpo: Texturi
 <div style="background: #1F130B; display: flex; align-items: center; justify-content: center; padding: 12px; border: 3px solid #C9933B;"><img loading="lazy" src="assets/img/logo/logo-horizontal-escuro.svg" alt="" style="width: 229px; height: 32px; display: block;"></div>
 <div style="height: 34px; background: repeating-linear-gradient(90deg, #C9933B 0 38px, #1F130B 38px 76px);"></div>
 <div style="height: 140px; background: #F4ECE1; border-left: 8px solid #5A3526; border-right: 8px solid #5A3526; display: flex; align-items: end; justify-content: center; gap: 12px; padding-bottom: 10px; box-sizing: border-box;">
-<div style="width: 34px; height: 54px; background: #134E35;"></div><div style="width: 34px; height: 54px; background: #35164D;"></div><div style="width: 34px; height: 54px; background: #19181D;"></div><div style="width: 34px; height: 54px; background: #8F3410;"></div><div style="width: 34px; height: 54px; background: #4A1423;"></div>
+<div style="width: 34px; height: 54px; background: #134E35;"></div><div style="width: 34px; height: 54px; background: #8F3410;"></div><div style="width: 34px; height: 54px; background: #35164D;"></div><div style="width: 34px; height: 54px; background: #19181D;"></div><div style="width: 34px; height: 54px; background: #4A1423;"></div>
 </div>
 <div style="height: 70px; background: #5A3526; border-top: 6px solid #C9933B; display: flex; align-items: center; justify-content: center; font-family: 'Pixelify Sans', monospace; font-size: 14px; letter-spacing: 2px; color: #F4ECE1;">PONTO DE RETIRADA · TAVERNA</div>
 </div>
@@ -874,7 +876,7 @@ Título: Texturina ExtraBold · Subtítulo: Texturina SemiBold · Corpo: Texturi
 </div>
 <div style="background: #1F130B; color: #E8D3B9; padding: 14px; font-size: 13px; line-height: 1.5; display: flex; flex-direction: column; justify-content: center; gap: 6px;">
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 2px; color: #C9933B;">REGRAS</div>
-Na placa, o logotipo horizontal sobre Masmorra. Em tecidos escuros, use a versão mono negativa (só a xícara ou o logotipo inteiro). A caneca é o brinde de quem vence o chefe final, o Mapinguari.
+Na placa, o logotipo horizontal sobre Masmorra. Em tecidos escuros, use a versão mono negativa (só a xícara ou o logotipo inteiro). A caneca é item promocional da comunidade.
 </div>
 </div>
 </div>
@@ -895,7 +897,7 @@ Na placa, o logotipo horizontal sobre Masmorra. Em tecidos escuros, use a versã
 <div style="width: 104px; height: 104px; border-radius: 50%; background: #1F130B; border: 4px solid #C9933B; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img loading="lazy" src="assets/img/xicara-icone.png" alt="Avatar: símbolo da xícara" style="width: 46px; height: 64px; object-fit: contain;"></div>
 <div style="padding-bottom: 6px;"><div style="font-weight: 800; font-size: 22px;">Dungeon Café</div><div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; color: #E8D3B9;">[@perfil] · Clube de cafés especiais</div></div>
 </div>
-<div style="padding: 0 18px 18px; font-size: 14px; line-height: 1.5; color: #E8D3B9;">A jornada do herói cafeeiro começa aqui. Cinco regiões, cinco mentores, um café por nível.</div>
+<div style="padding: 0 18px 18px; font-size: 14px; line-height: 1.5; color: #E8D3B9;">A jornada do herói cafeeiro começa aqui. Cinco regiões, cinco mentores, um café por fase.</div>
 </div>
 <div style="font-size: 13px; line-height: 1.5; color: #E8D3B9;"><b style="color: #F4ECE1;">Perfil:</b> avatar com o símbolo sobre Masmorra e anel Ouro Taverna; capa com o cenário em pixel art do campus. O símbolo deve ficar inteiro dentro do círculo.</div>
 </div>
@@ -907,9 +909,9 @@ Na placa, o logotipo horizontal sobre Masmorra. Em tecidos escuros, use a versã
 <div style="font-weight: 800; font-size: 15px; text-align: center; line-height: 1.15;">Conheça sua mentora: Simone</div>
 </div>
 <div style="aspect-ratio: 1 / 1; background: #2A1810; border: 6px solid #C9933B; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 12px; text-align: center;">
-<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">NÍVEL 5</div>
+<div style="font-family: 'Pixelify Sans', monospace; font-size: 13px; letter-spacing: 2px; color: #C9933B;">FASE 5</div>
 <div style="font-weight: 800; font-size: 24px; line-height: 1.1;">O Boitatá despertou</div>
-<div style="font-size: 12px; color: #E8D3B9; line-height: 1.4;">Escaneie seu quinto pacote e enfrente a serpente de fogo.</div>
+<div style="font-size: 12px; color: #E8D3B9; line-height: 1.4;">Leia o QR Code do seu quinto pacote e enfrente a serpente de fogo.</div>
 <div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; background: #C9933B; color: #1F130B; padding: 6px 10px;">ACEITAR MISSÃO</div>
 </div>
 </div>
@@ -932,7 +934,7 @@ Formato 1080 × 1080 px. Moldura na cor da região quando o post é sobre um men
 <img loading="lazy" src="assets/img/site-hero.jpg" alt="Página inicial do site: cabeçalho, chamada e banner em pixel art" style="width: 100%; height: 520px; object-fit: contain; object-position: top; background: #1F130B; border: 2px solid #2A1810;">
 <img loading="lazy" src="assets/img/site-regioes.jpg" alt="Seção As cinco regiões com as embalagens" style="width: 100%; height: 520px; object-fit: contain; object-position: top; background: #1F130B; border: 2px solid #2A1810;">
 <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px; line-height: 1.5;">
-<div style="border-top: 3px solid #2A1810; padding-top: 10px;"><div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 2px; color: #6B4A38; margin-bottom: 4px;">ESTRUTURA</div>Banner da taverna, área do aventureiro, jornada em quatro passos, cinco regiões, mentores e planos com compra avulsa.</div>
+<div style="border-top: 3px solid #2A1810; padding-top: 10px;"><div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 2px; color: #6B4A38; margin-bottom: 4px;">ESTRUTURA</div>Banner da taverna, botão "Entrar" que leva à plataforma, jornada em quatro passos, cinco regiões, mentores e planos com compra avulsa.</div>
 <div style="border-top: 3px solid #2A1810; padding-top: 10px;"><div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 2px; color: #6B4A38; margin-bottom: 4px;">COMPONENTES</div>Botões com sombra sólida que "afundam" ao clique, cartões de pergaminho com moldura dupla e cor de destaque de cada mentor.</div>
 <div style="border-top: 3px solid #2A1810; padding-top: 10px;"><div style="font-family: 'Pixelify Sans', monospace; font-size: 12px; letter-spacing: 2px; color: #6B4A38; margin-bottom: 4px;">ACESSIBILIDADE</div>Contraste mínimo de 4,5:1 nos textos (WCAG AA), foco visível no teclado e Pixelify Sans só em rótulos curtos.</div>
 <div style="background: #1F130B; color: #E8D3B9; padding: 12px 14px; font-size: 13px;">Cores do site = cores das embalagens. Qualquer mudança de paleta deve ser feita nas duas ao mesmo tempo.</div>
@@ -956,17 +958,27 @@ Formato 1080 × 1080 px. Moldura na cor da região quando o post é sobre um men
       <li class="autoria__item">
         <span class="autoria__icone autoria__icone--ps" aria-hidden="true">Ps</span>
         <span class="autoria__nome"><span class="sr-only">Adobe </span>Photoshop</span>
-        <span class="autoria__papel">Pixel art e tratamento</span>
+        <span class="autoria__papel">Tratamento e chefes</span>
       </li>
       <li class="autoria__item">
         <span class="autoria__icone autoria__icone--ai" aria-hidden="true">Ai</span>
         <span class="autoria__nome"><span class="sr-only">Adobe </span>Illustrator</span>
-        <span class="autoria__papel">Vetorização e embalagens</span>
+        <span class="autoria__papel">Vetorização, chefes e embalagens</span>
       </li>
       <li class="autoria__item">
         <span class="autoria__icone autoria__icone--ff" aria-hidden="true">Ff</span>
-        <span class="autoria__nome"><span class="sr-only">Adobe Firefly, com modelo de IA do Google, usado na posição de alguns personagens</span><span aria-hidden="true">Firefly</span></span>
-        <span class="autoria__papel" aria-hidden="true">Personagens · posições</span>
+        <span class="autoria__nome"><span class="sr-only">Adobe </span>Firefly<span class="sr-only">, com modelo de imagem do Google</span></span>
+        <span class="autoria__papel">Mentores e imagens de apoio</span>
+      </li>
+      <li class="autoria__item">
+        <span class="autoria__icone autoria__icone--ag" aria-hidden="true">Ag</span>
+        <span class="autoria__nome"><span class="sr-only">Google </span>Antigravity</span>
+        <span class="autoria__papel">Chibis e aparências</span>
+      </li>
+      <li class="autoria__item">
+        <span class="autoria__icone autoria__icone--ge" aria-hidden="true">Ge</span>
+        <span class="autoria__nome">Gemini</span>
+        <span class="autoria__papel">Lições e sugestão por foto</span>
       </li>
       <li class="autoria__item">
         <span class="autoria__icone autoria__icone--claude" aria-hidden="true">
@@ -974,7 +986,7 @@ Formato 1080 × 1080 px. Moldura na cor da região quando o post é sobre um men
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg>
         </span>
         <span class="autoria__nome">Claude</span>
-        <span class="autoria__papel">Correção de bugs</span>
+        <span class="autoria__papel">Pesquisa, código e revisão</span>
       </li>
       <li class="autoria__item">
         <img class="autoria__icone autoria__foto" src="assets/img/perfil-bruno.jpg" alt="Foto de Bruno Freitas de Souza" width="240" height="240" loading="lazy">
@@ -982,7 +994,7 @@ Formato 1080 × 1080 px. Moldura na cor da região quando o post é sobre um men
         <span class="autoria__papel">Autor do projeto</span>
       </li>
     </ul>
-    <p class="autoria__nota">Os personagens foram gerados no Adobe Firefly com um modelo do Google, a partir de fotos dos professores, que autorizaram o uso, e depois redesenhados e vetorizados pelo autor. As imagens trazem a marca d'água SynthID do Google.</p>
+    <p class="autoria__nota">O Adobe Firefly, com modelo de imagem do Google, gerou as ilustrações dos mentores a partir de fotos dos professores, que autorizaram o uso, a imagem de referência do Mapinguari e imagens de apoio da embalagem e do banner. O Google Antigravity gerou as versões chibi e as aparências dos avatares. O Gemini redigiu as lições a partir de trechos de fontes e sugere, de forma opcional, a aparência do avatar por foto. O Claude, da Anthropic, foi usado no levantamento de referências, na pesquisa e auditoria do conteúdo, no código e na revisão do texto. Os chefes foram compostos pelo autor a partir de imagens de referência, tratadas e vetorizadas no Photoshop e no Illustrator. Todo conteúdo gerado foi revisado e aprovado pelo autor.</p>
   </section>
 
   <section class="fim" aria-labelledby="fim-titulo">

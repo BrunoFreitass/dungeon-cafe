@@ -49,7 +49,8 @@
           <h1 id="hero-title">A jornada do herói <span>cafeeiro</span> começa aqui.</h1>
           <p class="hero__lead">
             Cafés especiais das cinco regiões do Brasil na sua porta — e cada pacote
-            vira nível, item e batalha contra os chefes do folclore brasileiro.
+            libera uma fase da jornada, com lições do seu mentor e batalhas contra os chefes
+            do folclore brasileiro.
           </p>
           <div class="hero__actions">
             <a class="btn btn--gold" href="https://dungeon-cafe-app.pages.dev/entrar">Entrar na taverna</a>
@@ -57,7 +58,7 @@
           </div>
           <ul class="hero__stats" aria-label="Destaques">
             <li><strong>5</strong> regiões cafeeiras</li>
-            <li><strong>10</strong> níveis de jornada</li>
+            <li><strong>10</strong> fases por região</li>
             <li><strong>2</strong> chefes lendários</li>
           </ul>
         </div>
@@ -83,38 +84,38 @@
           <li class="step">
             <span class="step__num">2</span>
             <h3>Receba o pacote</h3>
-            <p>Cada embalagem representa uma região cafeeira e traz um QR Code de uso único.</p>
+            <p>Cada embalagem representa uma região cafeeira e traz um QR Code: de uso único na versão comercial; no protótipo, o código é fixo.</p>
           </li>
           <li class="step">
             <span class="step__num">3</span>
-            <h3>Suba de nível</h3>
-            <p>Escaneie o QR Code, ganhe XP e equipe itens inspirados em grãos de café torrado.</p>
+            <h3>Libere a próxima fase</h3>
+            <p>Leia o QR Code, libere a próxima fase da trilha e aprenda com o seu mentor sobre o café da região.</p>
           </li>
           <li class="step">
             <span class="step__num">4</span>
             <h3>Derrote os chefes</h3>
-            <p>No nível 5 e no nível 10, enfrente lendas do folclore e ganhe recompensas reais.</p>
+            <p>Na fase 5 e na fase 10, enfrente lendas do folclore e ganhe cupons de desconto.</p>
           </li>
         </ol>
 
         <div class="bosses">
           <article class="boss">
             <figure class="boss__art">
-              <img src="assets/img/chefes/boitata.png" alt="Boitatá, a serpente de fogo do folclore brasileiro, em pixel art: chefe do nível 5" width="477" height="538" loading="lazy">
+              <img src="assets/img/chefes/boitata.png" alt="Boitatá, a serpente de fogo do folclore brasileiro, em pixel art: chefe da fase 5" width="477" height="538" loading="lazy">
             </figure>
-            <p class="boss__lvl">Nível 5 · Meio da jornada</p>
+            <p class="boss__lvl">Fase 5 · Meio da jornada</p>
             <h3>Boitatá, a serpente de fogo</h3>
-            <p>Vença e receba o título <strong>Guardião da Torra</strong>, um item raro em forma de grão
-              e <strong>5% de desconto</strong> na próxima compra ou mensalidade.</p>
+            <p>Vença terminando com os 3 corações e ganhe um cupom de <strong>10%</strong>
+              para <strong>1 pacote avulso</strong>.</p>
           </article>
           <article class="boss boss--final">
             <figure class="boss__art">
-              <img src="assets/img/chefes/mapinguari.png" alt="Mapinguari, o guardião da floresta, em pixel art: chefe final do nível 10" width="561" height="576" loading="lazy">
+              <img src="assets/img/chefes/mapinguari.png" alt="Mapinguari, o guardião da floresta, em pixel art: chefe final da fase 10" width="561" height="576" loading="lazy">
             </figure>
-            <p class="boss__lvl">Nível 10 · Chefe final</p>
+            <p class="boss__lvl">Fase 10 · Chefe final</p>
             <h3>Mapinguari, o guardião da floresta</h3>
-            <p>Conquiste o título <strong>Lenda do Grão</strong>, entre no Hall da Fama e ganhe
-              <strong>1 pacote especial grátis</strong> + brinde colecionável.</p>
+            <p>Vença terminando com os 3 corações e ganhe um cupom de <strong>20%</strong>
+              para <strong>1 pacote avulso</strong>.</p>
           </article>
         </div>
       </div>
@@ -134,11 +135,24 @@
               <img src="assets/img/embalagens/Dungeon_Cafe_01_Norte_Roraima-01-01.png" alt="Embalagem de 250 g do Dungeon Café Região Norte, com a mentora Simone" width="448" height="811" loading="lazy">
             </figure>
             <h3 class="region__name"><span>Região</span> Norte</h3>
-            <p class="region__terroir"><span>Terroir</span> Roraima — Lavrado e matas roraimenses</p>
+            <p class="region__terroir"><span>Terroir</span> Amazônia — Robustas Amazônicos</p>
             <p class="region__mentor">Mentora: <strong>Simone · Guerreira</strong></p>
             <div class="region__actions">
               <button class="btn btn--small btn--gold btn--block" type="button" data-coffee="simone" aria-haspopup="dialog">Ver café<span class="sr-only">: Região Norte</span></button>
               <a class="btn btn--small btn--block" href="#mentores" data-goto-hero="simone">Conhecer o mentor<span class="sr-only">: Simone, Região Norte</span></a>
+            </div>
+          </li>
+
+          <li class="region" data-hero="vitor">
+            <figure class="region__art">
+              <img src="assets/img/embalagens/Dungeon_Cafe_04_Nodeste-04-01.png" alt="Embalagem de 250 g do Dungeon Café Região Nordeste, com o mentor Vitor" width="448" height="811" loading="lazy">
+            </figure>
+            <h3 class="region__name"><span>Região</span> Nordeste</h3>
+            <p class="region__terroir"><span>Terroir</span> Chapada Diamantina, Bahia</p>
+            <p class="region__mentor">Mentor: <strong>Vitor · Bardo</strong></p>
+            <div class="region__actions">
+              <button class="btn btn--small btn--gold btn--block" type="button" data-coffee="vitor" aria-haspopup="dialog">Ver café<span class="sr-only">: Região Nordeste</span></button>
+              <a class="btn btn--small btn--block" href="#mentores" data-goto-hero="vitor">Conhecer o mentor<span class="sr-only">: Vitor, Região Nordeste</span></a>
             </div>
           </li>
 
@@ -168,20 +182,6 @@
             </div>
           </li>
 
-          <li class="region" data-hero="vitor">
-            <figure class="region__art">
-              <img src="assets/img/embalagens/Dungeon_Cafe_04_Nodeste-04-01.png" alt="Embalagem de 250 g do Dungeon Café Região Nordeste, com o mentor Vitor" width="448" height="811" loading="lazy">
-            </figure>
-            <h3 class="region__name"><span>Região</span> Nordeste</h3>
-            <p class="region__terroir"><span>Terroir</span> Chapada Diamantina, Bahia</p>
-            <p class="region__mentor">Mentor: <strong>Vitor · Bardo</strong></p>
-            <div class="region__actions">
-              <button class="btn btn--small btn--gold btn--block" type="button" data-coffee="vitor" aria-haspopup="dialog">Ver café<span class="sr-only">: Região Nordeste</span></button>
-              <a class="btn btn--small btn--block" href="#mentores" data-goto-hero="vitor">Conhecer o mentor<span class="sr-only">: Vitor, Região Nordeste</span></a>
-            </div>
-          </li>
-          
-          
           <li class="region" data-hero="viviane">
             <figure class="region__art">
               <img src="assets/img/embalagens/Dungeon_Cafe_05_Sul-05-01.png" alt="Embalagem de 250 g do Dungeon Café Região Sul, com a mentora Viviane" width="448" height="747" loading="lazy">
@@ -218,7 +218,7 @@
               </div>
             </div>
             <dl class="coffee__sheet" id="coffee-sheet"></dl>
-            <p class="coffee__note">Cada pacote traz um QR Code de uso único para subir de nível.</p>
+            <p class="coffee__note">Cada pacote traz um QR Code que libera a próxima fase da jornada: de uso único na versão comercial; no protótipo, o código é fixo.</p>
             <div class="coffee__actions">
               <button class="btn btn--small" type="button" data-coffee-action="mentor">Conhecer o mentor</button>
               <a class="btn btn--small btn--gold" href="https://dungeon-cafe-app.pages.dev/entrar">Comprar avulso · R$ 34,90</a>
@@ -244,6 +244,11 @@
             <span class="roster__name">Simone</span>
             <span class="roster__region">Norte</span>
           </button>
+          <button class="roster__item" role="tab" id="tab-vitor" aria-controls="panel-vitor" aria-selected="false" tabindex="-1" data-hero="vitor">
+            <img src="assets/img/heroi-vitor.png" alt="" width="364" height="640" loading="lazy">
+            <span class="roster__name">Vitor</span>
+            <span class="roster__region">Nordeste</span>
+          </button>
           <button class="roster__item" role="tab" id="tab-vagner" aria-controls="panel-vagner" aria-selected="false" tabindex="-1" data-hero="vagner">
             <img src="assets/img/heroi-vagner.png" alt="" width="426" height="640" loading="lazy">
             <span class="roster__name">Vagner</span>
@@ -253,11 +258,6 @@
             <img src="assets/img/heroi-ellem.png" alt="" width="330" height="640" loading="lazy">
             <span class="roster__name">Ellem</span>
             <span class="roster__region">Sudeste</span>
-          </button>
-          <button class="roster__item" role="tab" id="tab-vitor" aria-controls="panel-vitor" aria-selected="false" tabindex="-1" data-hero="vitor">
-            <img src="assets/img/heroi-vitor.png" alt="" width="364" height="640" loading="lazy">
-            <span class="roster__name">Vitor</span>
-            <span class="roster__region">Nordeste</span>
           </button>
           <button class="roster__item" role="tab" id="tab-viviane" aria-controls="panel-viviane" aria-selected="false" tabindex="-1" data-hero="viviane">
             <img src="assets/img/heroi-viviane.png" alt="" width="397" height="640" loading="lazy">
@@ -274,89 +274,20 @@
           <div class="hero-card__body">
             <p class="hero-card__class">Guerreira · Região Norte</p>
             <h3 class="hero-card__name">Profª. Simone</h3>
-            <p class="hero-card__origin"><span>Terroir</span> Roraima — Lavrado e matas roraimenses</p>
+            <p class="hero-card__origin"><span>Terroir</span> Amazônia — Robustas Amazônicos</p>
             <p class="hero-card__lore">
-              Primeira a erguer a espada pelo Dungeon Café, Simone protege as lavouras pioneiras do extremo
-              Norte, onde o café cresce entre o Lavrado e a floresta. Sua lição é a da coragem sustentável:
-              colher sem ferir a terra e servir, em cada xícara, a força da Amazônia.
+              Primeira a erguer a espada pelo Dungeon Café, Simone guarda o café da Amazônia, terra
+              dos Robustas Amazônicos, a canéfora que cresce sob o calor e as chuvas da floresta. Sua
+              lição é a do treino: conhecer o terreno antes de cada batalha e servir, em cada xícara,
+              a força da Amazônia.
             </p>
-            <h4 class="spells__title">Magias</h4>
+            <h4 class="spells__title">Poder</h4>
             <ul class="spells">
               <li class="spell">
-                <span class="spell__type">Ataque</span>
-                <strong>Lâmina do Lavrado</strong>
-                <p>Um golpe dourado que corta a névoa do sono e desperta todo o grupo para a primeira aula.</p>
-                <span class="spell__cost">Custo: 2 ☕</span>
-              </li>
-              <li class="spell">
-                <span class="spell__type">Defesa</span>
-                <strong>Escudo da Mata Viva</strong>
-                <p>Folhas de cafeeiro envolvem a guerreira e bloqueiam o cansaço durante a semana de provas.</p>
-                <span class="spell__cost">Custo: 3 ☕</span>
-              </li>
-            </ul>
-          </div>
-        </article>
-
-        <!-- Vagner -->
-        <article class="hero-card" role="tabpanel" id="panel-vagner" aria-labelledby="tab-vagner" data-hero="vagner" hidden>
-          <figure class="hero-card__art">
-            <img src="assets/img/heroi-vagner.png" alt="Prof. Vagner em pixel art: manto rúnico vermelho e dourado, cajado com cristal azul e grimório aberto" width="426" height="640" loading="lazy">
-          </figure>
-          <div class="hero-card__body">
-            <p class="hero-card__class">Mago · Região Centro-Oeste</p>
-            <h3 class="hero-card__name">Prof. Vagner</h3>
-            <p class="hero-card__origin"><span>Terroir</span> Cerrado do Planalto Central</p>
-            <p class="hero-card__lore">
-              Guardião do grimório da torra, Vagner estuda o grão como um alquimista estuda o ouro.
-              No solo vermelho do Cerrado, ele descobriu que o tempo e o fogo certos transformam
-              uma semente verde em pura energia — e ensina essa alquimia a quem tiver paciência.
-            </p>
-            <h4 class="spells__title">Magias</h4>
-            <ul class="spells">
-              <li class="spell">
-                <span class="spell__type">Alquimia</span>
-                <strong>Alquimia da Torra</strong>
-                <p>Converte grãos verdes em grãos dourados, liberando aromas de chocolate e caramelo.</p>
-                <span class="spell__cost">Custo: 3 ☕</span>
-              </li>
-              <li class="spell">
-                <span class="spell__type">Suporte</span>
-                <strong>Runas do Cerrado</strong>
-                <p>Inscrições arcanas que ampliam a concentração do grupo por uma sessão inteira de estudos.</p>
-                <span class="spell__cost">Custo: 2 ☕</span>
-              </li>
-            </ul>
-          </div>
-        </article>
-
-        <!-- Ellem -->
-        <article class="hero-card" role="tabpanel" id="panel-ellem" aria-labelledby="tab-ellem" data-hero="ellem" hidden>
-          <figure class="hero-card__art">
-            <img src="assets/img/heroi-ellem.png" alt="Profª. Ellem em pixel art: armadura de couro preto com cravos, botas de combate e uma guitarra em forma de machado de guerra" width="330" height="640" loading="lazy">
-          </figure>
-          <div class="hero-card__body">
-            <p class="hero-card__class">Bárbara · Região Sudeste</p>
-            <h3 class="hero-card__name">Profª. Ellem</h3>
-            <p class="hero-card__origin"><span>Terroir</span> Montanhas de Minas Gerais e Alta Mogiana</p>
-            <p class="hero-card__lore">
-              Vinda das montanhas do Sudeste, berço do ciclo histórico do café, Ellem troca o silêncio
-              da serra pelo rugido da guitarra-machado. Sua fúria é pura energia: ela ensina que
-              intensidade e paixão fazem um grão — e uma turma inteira — chegar ao ponto certo.
-            </p>
-            <h4 class="spells__title">Magias</h4>
-            <ul class="spells">
-              <li class="spell">
-                <span class="spell__type">Ataque</span>
-                <strong>Riff da Montanha</strong>
-                <p>Um golpe de guitarra-machado que estilhaça o desânimo e mói o sono em pó fino, pronto para um espresso encorpado.</p>
-                <span class="spell__cost">Custo: 3 ☕</span>
-              </li>
-              <li class="spell">
-                <span class="spell__type">Fúria</span>
-                <strong>Grito da Serra</strong>
-                <p>Um brado que ecoa pelas montanhas e restaura a moral do grupo depois de uma derrota difícil.</p>
-                <span class="spell__cost">Custo: 2 ☕</span>
+                <span class="spell__type">Escudo</span>
+                <strong>Escudo de Guerra</strong>
+                <p>O próximo erro não custa coração. Se você acertar antes, o escudo continua ativo até o próximo erro.</p>
+                <span class="spell__cost">1 vez por batalha</span>
               </li>
             </ul>
           </div>
@@ -376,19 +307,65 @@
               Diamantina cantando os cafés especiais que brotam entre pedras e cachoeiras.
               Cada canção sua ensina que café bom é aquele partilhado em roda, com prosa e música.
             </p>
-            <h4 class="spells__title">Magias</h4>
+            <h4 class="spells__title">Poder</h4>
             <ul class="spells">
               <li class="spell">
-                <span class="spell__type">Suporte</span>
-                <strong>Balada do Espresso</strong>
-                <p>Uma melodia animada que concede +foco e +ânimo a todos os aliados que a ouvem.</p>
-                <span class="spell__cost">Custo: 2 ☕</span>
+                <span class="spell__type">Pista</span>
+                <strong>Canção da Pista</strong>
+                <p>Mostra uma dica: o fato do Pergaminho do Saber ligado à pergunta atual.</p>
+                <span class="spell__cost">1 vez por batalha</span>
               </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Vagner -->
+        <article class="hero-card" role="tabpanel" id="panel-vagner" aria-labelledby="tab-vagner" data-hero="vagner" hidden>
+          <figure class="hero-card__art">
+            <img src="assets/img/heroi-vagner.png" alt="Prof. Vagner em pixel art: manto rúnico vermelho e dourado, cajado com cristal azul e grimório aberto" width="426" height="640" loading="lazy">
+          </figure>
+          <div class="hero-card__body">
+            <p class="hero-card__class">Mago · Região Centro-Oeste</p>
+            <h3 class="hero-card__name">Prof. Vagner</h3>
+            <p class="hero-card__origin"><span>Terroir</span> Cerrado do Planalto Central</p>
+            <p class="hero-card__lore">
+              Guardião do grimório da torra, Vagner estuda o grão como um alquimista estuda o ouro.
+              No solo vermelho do Cerrado, ele descobriu que o tempo e o fogo certos transformam
+              uma semente verde em pura energia — e ensina essa alquimia a quem tiver paciência.
+            </p>
+            <h4 class="spells__title">Poder</h4>
+            <ul class="spells">
               <li class="spell">
-                <span class="spell__type">Controle</span>
-                <strong>Acorde da Chapada</strong>
-                <p>Um acorde que ecoa pelos vales e distrai os chefes, abrindo espaço para o ataque do grupo.</p>
-                <span class="spell__cost">Custo: 3 ☕</span>
+                <span class="spell__type">Revelação</span>
+                <strong>Revelação Arcana</strong>
+                <p>Elimina 2 alternativas erradas da pergunta atual.</p>
+                <span class="spell__cost">1 vez por batalha</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Ellem -->
+        <article class="hero-card" role="tabpanel" id="panel-ellem" aria-labelledby="tab-ellem" data-hero="ellem" hidden>
+          <figure class="hero-card__art">
+            <img src="assets/img/heroi-ellem.png" alt="Profª. Ellem em pixel art: armadura de couro preto com cravos, botas de combate e uma guitarra em forma de machado de guerra" width="330" height="640" loading="lazy">
+          </figure>
+          <div class="hero-card__body">
+            <p class="hero-card__class">Bárbara · Região Sudeste</p>
+            <h3 class="hero-card__name">Profª. Ellem</h3>
+            <p class="hero-card__origin"><span>Terroir</span> Montanhas de Minas Gerais e Alta Mogiana</p>
+            <p class="hero-card__lore">
+              Vinda das montanhas do Sudeste, berço do ciclo histórico do café, Ellem troca o silêncio
+              da serra pelo rugido da guitarra-machado. Sua fúria é pura energia: ela ensina que
+              intensidade e paixão fazem um grão — e uma turma inteira — chegar ao ponto certo.
+            </p>
+            <h4 class="spells__title">Poder</h4>
+            <ul class="spells">
+              <li class="spell">
+                <span class="spell__type">Fúria</span>
+                <strong>Fúria do Rock</strong>
+                <p>O próximo acerto causa 2 de dano no chefe. Se você errar antes, a fúria continua ativa até o próximo acerto.</p>
+                <span class="spell__cost">1 vez por batalha</span>
               </li>
             </ul>
           </div>
@@ -408,19 +385,13 @@
               e todos os métodos de extração — do coado ao cold brew. Para ela, cada xícara é
               um remédio para o corpo cansado e um carinho para a mente de quem estuda.
             </p>
-            <h4 class="spells__title">Magias</h4>
+            <h4 class="spells__title">Poder</h4>
             <ul class="spells">
               <li class="spell">
                 <span class="spell__type">Cura</span>
-                <strong>Poção do Coado Restaurador</strong>
-                <p>Um coado doce e equilibrado que recupera a energia de um aliado após a madrugada de estudos.</p>
-                <span class="spell__cost">Custo: 2 ☕</span>
-              </li>
-              <li class="spell">
-                <span class="spell__type">Cura em área</span>
-                <strong>Elixir da Extração Lenta</strong>
-                <p>Um cold brew preparado sob a lua que regenera todo o grupo aos poucos, durante o dia inteiro.</p>
-                <span class="spell__cost">Custo: 4 ☕</span>
+                <strong>Toque Restaurador</strong>
+                <p>Recupera 1 coração, até o máximo de 3. Com os corações cheios, o poder não é gasto.</p>
+                <span class="spell__cost">1 vez por batalha</span>
               </li>
             </ul>
           </div>
@@ -447,7 +418,7 @@
             <p class="plan__price"><span class="plan__currency">R$</span>54<span>,90</span><small>/mês</small></p>
             <ul class="plan__perks">
               <li>2 pacotes de 250 g por mês</li>
-              <li>QR Code para subir de nível</li>
+              <li>QR Code para liberar fases</li>
               <li>Retirada gratuita no campus</li>
             </ul>
             <a href="https://dungeon-cafe-app.pages.dev/entrar" class="btn btn--ghost btn--block">Assinar agora</a>
@@ -460,8 +431,8 @@
             <p class="plan__price"><span class="plan__currency">R$</span>79<span>,90</span><small>/mês</small></p>
             <ul class="plan__perks">
               <li>3 pacotes de 250 g por mês</li>
-              <li>Uma região nova a cada mês</li>
-              <li>Acesso às batalhas contra chefes</li>
+              <li>QR Code para liberar fases</li>
+              <li>Uma região nova por mês</li>
               <li>Retirada gratuita no campus</li>
             </ul>
             <a href="https://dungeon-cafe-app.pages.dev/entrar" class="btn btn--gold btn--block">Assinar agora</a>
@@ -473,10 +444,9 @@
             <p class="plan__price"><span class="plan__currency">R$</span>99<span>,90</span><small>/mês</small></p>
             <ul class="plan__perks">
               <li>4 pacotes de 250 g por mês</li>
-              <li>Uma região nova a cada mês</li>
-              <li>Acesso às batalhas contra chefes</li>
-              <li>XP em dobro na jornada</li>
-              <li>Item exclusivo de mentor</li>
+              <li>QR Code para liberar fases</li>
+              <li>Uma região nova por mês</li>
+              <li>Frete grátis</li>
               <li>Retirada gratuita no campus ou entrega em Boa Vista</li>
             </ul>
             <a href="https://dungeon-cafe-app.pages.dev/entrar" class="btn btn--ghost btn--block">Assinar agora</a>
@@ -488,7 +458,8 @@
             <h3 class="plan__name" id="avulsa-title">Compra avulsa</h3>
             <p class="plan__desc">Pacote de 250 g · sem assinatura</p>
             <p class="plan__single-text">Prefere experimentar antes? Compre um pacote de 250 g da Linha Mestres do Brasil,
-              da região que quiser, com QR Code para subir de nível.</p>
+              da região que quiser, com QR Code para liberar fases. É aqui que valem os cupons
+              conquistados contra os chefes.</p>
           </div>
           <div class="plan__single-buy">
             <p class="plan__price"><span class="plan__currency">R$</span>34<span>,90</span><small>/pacote</small></p>
