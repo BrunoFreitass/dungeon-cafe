@@ -17,7 +17,7 @@
   --gold-light:#e9b25f;
   --gold-dark: #8f6103;      /* texto sobre pergaminho: 4,62:1 */
   --parchment: #f4ece1;      /* Pergaminho */
-  --paper:     #fffaf3;      /* campos e cartões de magia */
+  --paper:     #fffaf3;      /* campos e cartões de poder */
   --ink:       var(--roast-700);
   --ink-soft:  #6b4a38;
   --placeholder: color-mix(in srgb, var(--ink-soft) 80%, var(--paper));  /* 4,59:1 sobre --paper */
