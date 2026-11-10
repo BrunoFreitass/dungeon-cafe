@@ -2,6 +2,9 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
+<!-- CSP: só o próprio site, Google Fonts e o VLibras (vlibras.gov.br + jsDelivr do VLibras), igual ao app.
+     O PostHog que o VLibras tenta carregar fica bloqueado de propósito. Sem scripts inline: use js/. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://vlibras.gov.br https://cdn.jsdelivr.net/gh/spbgovbr-vlibras/; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://vlibras.gov.br https://cdn.jsdelivr.net/gh/spbgovbr-vlibras/; font-src 'self' data: https://fonts.gstatic.com https://vlibras.gov.br https://cdn.jsdelivr.net/gh/spbgovbr-vlibras/; img-src 'self' data: blob: https://vlibras.gov.br https://cdn.jsdelivr.net/gh/spbgovbr-vlibras/; connect-src 'self' https://vlibras.gov.br https://cdn.jsdelivr.net/gh/spbgovbr-vlibras/; frame-src https://vlibras.gov.br https://cdn.jsdelivr.net/gh/spbgovbr-vlibras/; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Brandbook · Dungeon Café</title>
 <meta name="description" content="Manual de identidade visual do Dungeon Café: conceito, logotipo, cores, tipografia, mentores, embalagens e aplicações.">
@@ -1363,29 +1366,6 @@ Formato 1080 × 1080 px. Moldura na cor da região quando o post é sobre um men
   <div class="zoom__barra"><span>Arraste para navegar pela página</span><button type="button">Fechar</button></div>
   <div class="zoom__area"><div class="zoom__box"></div></div>
 </dialog>
-<script>
-/* Menu hambúrguer: mesmo comportamento do js/main.js da home (o main.js inteiro não é
-   carregado aqui porque procura o login e a janela dos cafés, que só existem na home). */
-(()=>{const t=document.querySelector('.nav-toggle'),n=document.getElementById('menu');if(!t||!n)return;
-const set=o=>{t.setAttribute('aria-expanded',String(o));t.querySelector('.sr-only').textContent=o?'Fechar menu':'Abrir menu';n.classList.toggle('is-open',o);};
-t.addEventListener('click',()=>set(t.getAttribute('aria-expanded')!=='true'));
-n.addEventListener('click',e=>{if(e.target.closest('a'))set(false);});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')set(false);});})();
-(()=>{const f=[...document.querySelectorAll('.prancha--html')];
-const fit=()=>f.forEach(e=>e.style.setProperty('--s',e.clientWidth/1123));
-fit();if('ResizeObserver'in window){const r=new ResizeObserver(fit);f.forEach(e=>r.observe(e));}else addEventListener('resize',fit);
-const d=document.querySelector('.zoom');if(!d||!d.showModal)return;
-const box=d.querySelector('.zoom__box');
-d.querySelector('button').addEventListener('click',()=>d.close());
-d.addEventListener('close',()=>{box.innerHTML='';});
-f.forEach(e=>e.addEventListener('click',()=>{
-  if(innerWidth>760)return;
-  const z=Math.max(0.7,innerWidth/1123),pg=e.querySelector('.pg').cloneNode(true);
-  pg.style.transform='scale('+z+')';pg.querySelectorAll('img').forEach(i=>i.removeAttribute('loading'));
-  box.style.width=1123*z+'px';box.style.height=794*z+'px';box.replaceChildren(pg);
-  d.setAttribute('aria-label',e.getAttribute('aria-label')+' (ampliada)');d.showModal();
-  d.querySelector('.zoom__area').scrollTo(0,0);}));
-})();
-</script>
+<script src="js/brandbook.js"></script>
 </body>
 </html>
