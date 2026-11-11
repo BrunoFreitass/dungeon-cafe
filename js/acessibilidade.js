@@ -244,23 +244,31 @@
   // O plugin atual do VLibras (7.x) se monta sozinho: cria #vlibras-access-wrapper (com Shadow DOM)
   // e, ao clicar no botão dele, carrega vlibras-plugin-app.js, que cria #vlibras-app-root.
   const VLIBRAS_NOS = "#vlibras-access-wrapper, #vlibras-app-root, script[src*='vlibras-plugin-app'], [data-a11y-vlibras-js]";
+  // Remoção pendente (o avatar leva até 600 ms para fechar). Religar nesse intervalo cancela a
+  // remoção e reaproveita o que já está na página: nunca dois scripts nem dois widgets.
+  let vlibrasRemocao = 0;
   function alternarVlibras(sim) {
     const existente = document.querySelector("[data-a11y-vlibras-js]");
-    if (sim && !existente) {
+    if (sim) {
+      if (vlibrasRemocao) { clearTimeout(vlibrasRemocao); vlibrasRemocao = 0; }
+      if (existente) { existente.setAttribute("data-a11y-vlibras-js", ""); return; }
       const s = document.createElement("script");
       s.src = VLIBRAS_JS; s.async = true; s.setAttribute("data-a11y-vlibras-js", "");
       s.onload = () => {
+        // Desligado enquanto o script carregava: não cria o widget.
+        if (!ligado("vlibras") || s.getAttribute("data-a11y-vlibras-js") === "desligando") return;
         try { new window.VLibras.Widget(VLIBRAS_APP); } catch (e) { console.warn("[acessibilidade] O VLibras não pôde iniciar:", e); }
       };
       s.onerror = () => console.warn("[acessibilidade] Não foi possível carregar o VLibras (vlibras.gov.br).");
       document.body.appendChild(s);
-    } else if (!sim && existente) {
+    } else if (existente && existente.getAttribute("data-a11y-vlibras-js") !== "desligando") {
       // Aberto, o VLibras captura os cliques da página (para traduzir o texto clicado). Primeiro
       // fecha o avatar pelo próprio atributo dele, para ele soltar esses ouvintes; depois remove.
       const app = document.getElementById("vlibras-app-root");
       if (app) app.dataset.active = "false";
-      existente.removeAttribute("data-a11y-vlibras-js");
-      setTimeout(() => {
+      existente.setAttribute("data-a11y-vlibras-js", "desligando");
+      vlibrasRemocao = setTimeout(() => {
+        vlibrasRemocao = 0;
         if (ligado("vlibras")) return; // religado nesse meio-tempo
         for (const no of document.querySelectorAll(`${VLIBRAS_NOS}, script[src*='vlibras']`)) no.remove();
         for (const el of document.querySelectorAll("[class*='vlibras--']")) {
