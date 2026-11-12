@@ -432,6 +432,10 @@ a { color: inherit; }
   background: radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--accent) 30%, transparent), transparent 70%);
 }
 .region__art img { width: auto; max-height: 320px; cursor: zoom-in; }
+/* <picture> com WebP: só o <img> entra na grade da figura, como antes. O <source> não tem
+   display: none no navegador e, com display: contents, viraria um item vazio da grade. */
+.region__picture { display: contents; }
+.region__picture > source { display: none; }
 .region__name { font-size: 1.375rem; font-weight: 800; color: var(--accent-text); cursor: pointer; }
 .region__name span {
   display: block;
